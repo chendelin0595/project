@@ -1,0 +1,1725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>订单中心</title>
+    <link rel="stylesheet" href="../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../javascript/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../stylesheet/color.css">
+    <link rel="stylesheet" href="../stylesheet/common.css">
+    <link rel="stylesheet" href="../stylesheet/main.css">
+    <script src="../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../javascript/common.js"></script>
+    <script src="../javascript/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../javascript/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script src="../javascript/bootstrap-datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script>
+</head>
+<body>
+<div class="page">
+    <div class="left-part">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 mgh30"><img src="../images/logo.png" alt="" width="100"></div>
+            </div>
+            <div class="row">
+                <ul class="text-center l-uiList">
+                    <a href="#common" data-toggle="tab"><li><img src="../images/ico0.png" alt="">概况</li></a>
+                    <a href="#shop" data-toggle="tab"><li><img src="../images/ico1.png" alt="">店铺</li></a>
+                    <a href="#product" data-toggle="tab"><li><img src="../images/ico2.png" alt="">商品</li></a>
+                    <a href="#team" data-toggle="tab"><li><img src="../images/ico3.png" alt="">商家</li></a>
+                    <a href="#order" data-toggle="tab"><li class="active"><img src="images/ico4.png" alt="">订单</li></a>
+                    <a href="#authen" data-toggle="tab"><li><img src="../images/ico5.png" alt="">审核</li></a>
+                    <a href="#sale" data-toggle="tab"><li><img src="../images/ico6.png" alt="">营销</li></a>
+                    <a href="#data" data-toggle="tab"><li><img src="../images/ico7.png" alt="">数据</li></a>
+                    <a href="#assets" data-toggle="tab"><li><img src="../images/ico8.png" alt="">资产</li></a>
+                    <a href="#setting" data-toggle="tab"><li><img src="../images/ico9.png" alt="">设置</li></a>
+                </ul>
+                <div class="row dropup fixed pdh10 pdw5 cur-po">
+                    <div id="l-l-btn">
+                        <img src="../images/ico_nav3_2.png" class="pull-left"/>
+                        <p class="ellipsis" style="width:78px;">xxx小卖部啊</p>
+                        <span class="caret pull-right abs"></span>
+                    </div>
+                    <ul id="l-loginBox" class="abs pdw6 bg-white text-center img-rounded" data-btn="no">
+                        <li><a href="#" class="text-939393">修改密码</a></li>
+                        <li><a href="#" class="text-939393">退出登录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="item-tab tab-content">
+            <div role="tabpanel" class="tab-pane fade" id="shop">
+                <div class="pdh20 text-color fs16 bold text-center">店铺中心</div>
+                <ul class="text-center">
+                    <a href=""><li class="active">店铺概况</li></a>
+                    <a href=""><li>微页面</li></a>
+                    <a href=""><li>页面分类</li></a>
+                    <a href=""><li>店铺主页</li></a>
+                    <a href=""><li>店铺导航</li></a>
+                    <a href=""><li>公共广告</li></a>
+                    <a href=""><li>自定义模块</li></a>
+                    <a href=""><li>我的文件</li></a>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane fade in active" id="order">
+                <div class="pdh20 text-color fs16 bold text-center">订单中心</div>
+                <ul class="text-center">
+                    <a href=""><li class="active">全部订单</li></a>
+                    <a href=""><li>平台自营</li></a>
+                    <a href=""><li>平台分销</li></a>
+                    <a href=""><li>售后订单</li></a>
+                    <a href=""><li>评价管理</li></a>
+                    <a href=""><li>举报订单</li></a>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="sale">
+                <div class="pdh20 text-color fs16 bold text-center">营销中心</div>
+                <ul class="text-center">
+                    <a href=""><li class="active">拼团</li></a>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="data">
+                <div class="pdh20 text-color fs16 bold text-center">数据中心</div>
+                <ul class="text-center">
+                    <a href=""><li class="active">数据概况</li></a>
+                    <a href=""><li>交易数据</li></a>
+                    <a href=""><li>产品数据</li></a>
+                    <a href=""><li>收支数据</li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container-fluid">
+            <ul class="row fs14 conTop-ul">
+                <li class="pdh10 mgw10 active"><a href="#">全部订单</a></li>
+                <li class="pdh10 mgw10"><a href="#">平台自营</a></li>
+                <li class="pdh10 mgw10"><a href="#">平台分销</a></li>
+                <li class="pdh10 mgw10"><a href="#">售后订单</a></li>
+            </ul>
+            <div class="row mgh20 search">
+                <div class="col-sm-12 flex mgh5">
+                    <div class="mgw15 nml">
+                        <font>订单号:</font>
+                        <input type="text" placeholder="sony 索尼"/>
+                    </div>
+                    <div class="mgw15 nml">
+                        <font>所属商城:</font>
+                        <select name="" class="bg-eeefef fs12">
+                            <option value="">平台自营</option>
+                            <option value="">平台自营</option>
+                            <option value="">平台自营</option>
+                        </select>
+                    </div>
+                    <div class="mgw15 nml">
+                        <font>销售商家:</font>
+                        <input type="text" placeholder="建宁商城"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 flex mgh5">
+                    <div class="mgw15 nml">
+                        <font>商品名:</font>
+                        <input type="text" placeholder="索尼爱立信然后呢"/>
+                    </div>
+                    <div class="mgw15 nml">
+                        <font>订单类型:</font>
+                        <select name="" class="bg-eeefef fs12">
+                            <option value="">平台自营</option>
+                            <option value="">平台自营</option>
+                            <option value="">平台自营</option>
+                        </select>
+                    </div>
+                    <div class="mgw15 nml">
+                        <font>发货商家:</font>
+                        <input type="text" placeholder="王二小"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 flex mgh5">
+                    <div class="mgw15 nml">
+                        <font>手机号:</font>
+                        <input type="text" placeholder="15159597047"/>
+                    </div>
+                    <div class="mgw15 nml">
+                        <font>物流配送:</font>
+                        <select name="" class="bg-eeefef fs12">
+                            <option value="">圆通速递</option>
+                            <option value="">圆通速递</option>
+                            <option value="">圆通速递</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-12 flex mgh5">
+                    <font class="pdh6">申请时间:</font>
+                    <div class="nml re ">
+                        <div class="input-append date date-picker re">
+                            <input size="16" type="text" value="">
+                            <span class="add-on abs" style="right:5px;top:10px;"><i class="glyphicon glyphicon-calendar"></i></span>
+                        </div>
+                    </div>
+                    <font class="mgw10 pdh6">至</font>
+                    <div class="mgw15 nml re">
+                        <div class="input-append date date-picker re">
+                            <input size="16" type="text" value="" readonly>
+                            <span class="add-on abs" style="right:5px;top:10px;"><i class="glyphicon glyphicon-calendar"></i></span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn text-337ab7">最近7天</a>
+                    <a href="#" class="btn text-337ab7">最近14天</a>
+                    <a href="#" class="btn mgw10 pdw35 bg-color pull-left">搜索</a>
+                </div>
+                <div class="col-sm-12 flex mgh5 text-333333">
+                    <a href="#" class="btn mgw10 pdw5 border-a pull-left">批量导出订单</a>
+                    <a href="javascript:;" id="yx-formBtn" class="btn mgw10 pdw5 border-a">查看已生成的报表</a>
+                </div>
+            </div>
+
+            <div>
+                <ul class="yx-torder-ul bg-f5f5f5 overhide">
+                    <li class="pdw20 pdh6 active">
+                        <a href="#order-li1" data-toggle="tab">全部</a>
+                    </li>
+                    <li class="pdw20 pdh6">
+                        <a href="#order-li2" data-toggle="tab">待支付</a>
+                    </li>
+                    <li class="pdw20 pdh6">
+                        <a href="#order-li3" data-toggle="tab">待发货</a>
+                    </li>
+                    <li class="pdw20 pdh6">
+                        <a href="#order-li4" data-toggle="tab">已发货</a>
+                    </li>
+                    <li class="pdw20 pdh6">
+                        <a href="#order-li5" data-toggle="tab">已完成</a>
+                    </li>
+                    <li class="pdw20 pdh6">
+                        <a href="#order-li6" data-toggle="tab">已关闭</a>
+                    </li>
+                    <li class="pdw20 pdh6">
+                        <a href="#order-li7" data-toggle="tab">退款中</a>
+                    </li>
+                    <li class="pdw20 pdh6">
+                        <a href="#order-li8" data-toggle="tab">已退款</a>
+                    </li>
+                </ul>
+                <div class="yx-torM-title text-center mgh10 bg-eeefef">
+                    <div class="col-xs-3">商品</div>
+                    <div class="col-xs-2">手机号</div>
+                    <div class="col-xs-1">订单类型</div>
+                    <div class="col-xs-2">发货商家</div>
+                    <div class="col-xs-1">订单状态</div>
+                    <div class="col-xs-1">所属商城</div>
+                    <div class="col-xs-1">订单总额</div>
+                    <div class="col-xs-1">操作</div>
+                </div>
+                <div class="yx-torM-con tab-content">
+                    <div id="order-li1" class="tab-pane fade in active" role="tabpanel">
+                        <div>
+                            <div class="bg-eeefef pdh5">
+                                <input style="vertical-align: text-bottom; margin-left:5px;" type="checkbox"/>
+                                <span>销售商家：多多旗舰店</span>
+                                <span>订单号：2016091015874</span>
+                                <span>2016-09-10 16:40</span>
+                                <span>物流信息：圆通快递 8565989021553</span>
+                                <a class="text-337ab7" href="#">物流详情</a>
+                            </div>
+                            <table cellpadding="0" cellspacing="0" class="border-a no-border-t text-center overhide yx-torM-listBox">
+                                <tr>
+                                    <td class="col-xs-3 pdh15 pdw5 text-left border-r">
+                                        <div class="yx-torM-li1">
+                                            <img class="pull-left" src="../images/yx-torder-img2.png"/>
+                                            <p class="ellipsis-2">nike男鞋黑白奥额的后前往恶化奥...</p>
+                                            <p><span>¥49.99</span><span>*5</span></p>
+                                        </div>
+                                    </td>
+                                    <td class="col-xs-2 border-r pdh15" rowspan="2">
+                                        <p>15159597047</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>平台自营</p>
+                                    </td>
+                                    <td class="col-xs-2 border-r pdh15" rowspan="2">
+                                        <p>多多旗舰店</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>待发货</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>建宁商城</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>86.00</p>
+                                        <p>(含运费:9.0)</p>
+                                    </td>
+                                    <td class="col-xs-1 pdh5" rowspan="2">
+                                        <div class="col-xs-12 pdw0 pdh5">
+                                            <a class="text-337ab7 detail-btn yx-t-btn yx-t-btn" href="javascript:;">查看订单</a>
+                                        </div>
+                                        <div class="col-xs-12 pdw0 pdh5">
+                                            <a class="text-color" href="#">查看评价</a>
+                                        </div>
+                                        <div class="col-xs-12 pdw0 pdh5">
+                                            <a class="text-color" href="#">查看举报</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-xs-3 pdh15 pdw5 text-left border-r border-t">
+                                        <div class="yx-torM-li1">
+                                            <img class="pull-left" src="../images/yx-torder-img2.png"/>
+                                            <p class="ellipsis-2">nike男鞋黑白奥额的后前往恶化奥...</p>
+                                            <p><span>¥49.99</span><span>*5</span></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <div class="bg-eeefef pdh5">
+                                <input style="vertical-align: text-bottom; margin-left:5px;" type="checkbox"/>
+                                <span>销售商家：多多旗舰店</span>
+                                <span>订单号：2016091015874</span>
+                                <span>2016-09-10 16:40</span>
+                                <span>物流信息：圆通快递 8565989021553</span>
+                                <!--<a class="text-337ab7" href="#">物流详情</a>-->
+                                <span>物流详情:暂无</span>
+                            </div>
+                            <table cellpadding="0" cellspacing="0" class="border-a no-border-t text-center overhide yx-torM-listBox">
+                                <tr>
+                                    <td class="col-xs-3 pdh15 pdw5 text-left border-r">
+                                        <div class="yx-torM-li1">
+                                            <img class="pull-left" src="../images/yx-torder-img2.png"/>
+                                            <p class="ellipsis-2">nike男鞋黑白奥额的后前往恶化奥...</p>
+                                            <p><span>¥49.99</span><span>*5</span></p>
+                                        </div>
+                                    </td>
+                                    <td class="col-xs-2 text-left border-r pdh15" rowspan="2">
+                                        <p>15159597047</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>平台自营</p>
+                                    </td>
+                                    <td class="col-xs-2 border-r pdh15" rowspan="2">
+                                        <p>多多旗舰店</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>已关闭</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>建宁商城</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>86.00</p>
+                                        <p>(含运费:9.0)</p>
+                                    </td>
+                                    <td class="col-xs-1 pdh5" rowspan="2">
+                                        <div class="col-xs-12 pdw0 pdh5">
+                                            <a class="text-337ab7 yx-t-btn1" href="javascript:;">查看订单</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-xs-3 pdh15 pdw5 text-left border-r border-t">
+                                        <div class="yx-torM-li1">
+                                            <img class="pull-left" src="../images/yx-torder-img2.png"/>
+                                            <p class="ellipsis-2">nike男鞋黑白奥额的后前往恶化奥...</p>
+                                            <p><span>¥49.99</span><span>*5</span></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <div class="bg-eeefef pdh5">
+                                <input style="vertical-align: text-bottom; margin-left:5px;" type="checkbox"/>
+                                <span>销售商家：多多旗舰店</span>
+                                <span>订单号：2016091015874</span>
+                                <span>2016-09-10 16:40</span>
+                                <span>物流信息：圆通快递 8565989021553</span>
+                                <a class="text-337ab7" href="#">物流详情</a>
+                            </div>
+                            <table cellpadding="0" cellspacing="0" class="border-a no-border-t text-center overhide yx-torM-listBox">
+                                <tr>
+                                    <td class="col-xs-3 pdh15 pdw5 text-left border-r">
+                                        <div class="yx-torM-li1">
+                                            <img class="pull-left" src="../images/yx-torder-img2.png"/>
+                                            <p class="ellipsis-2">nike男鞋黑白奥额的后前往恶化奥...</p>
+                                            <p><span>¥49.99</span><span>*5</span></p>
+                                        </div>
+                                    </td>
+                                    <td class="col-xs-2 text-left border-r pdh15" rowspan="1">
+                                        <p>15159597047</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="1">
+                                        <p>平台自营</p>
+                                    </td>
+                                    <td class="col-xs-2 border-r pdh15" rowspan="1">
+                                        <p>多多旗舰店</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="1">
+                                        <p>退款中</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="1">
+                                        <p>建宁商城</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="1">
+                                        <p>86.00</p>
+                                        <p>(含运费:9.0)</p>
+                                    </td>
+                                    <td class="col-xs-1 pdh5" rowspan="1">
+                                        <div class="col-xs-12 pdw0 pdh5">
+                                            <a class="text-337ab7 yx-t-btn2" href="javascript:;">查看订单</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <div class="bg-eeefef pdh5">
+                                <input style="vertical-align: text-bottom; margin-left:5px;" type="checkbox"/>
+                                <span>销售商家：多多旗舰店</span>
+                                <span>订单号：2016091015874</span>
+                                <span>2016-09-10 16:40</span>
+                                <span>物流信息：圆通快递 8565989021553</span>
+                                <!--<a class="text-337ab7" href="#">物流详情</a>-->
+                                <span>物流详情:暂无</span>
+                            </div>
+                            <table cellpadding="0" cellspacing="0" class="border-a no-border-t text-center overhide yx-torM-listBox">
+                                <tr>
+                                    <td class="col-xs-3 pdh15 pdw5 text-left border-r">
+                                        <div class="yx-torM-li1">
+                                            <img class="pull-left" src="../images/yx-torder-img2.png"/>
+                                            <p class="ellipsis-2">nike男鞋黑白奥额的后前往恶化奥...</p>
+                                            <p><span>¥49.99</span><span>*5</span></p>
+                                        </div>
+                                    </td>
+                                    <td class="col-xs-2 text-left border-r pdh15">
+                                        <p>15159597047</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15">
+                                        <p>平台自营</p>
+                                    </td>
+                                    <td class="col-xs-2 border-r pdh15">
+                                        <p>多多旗舰店</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15">
+                                        <p>待发货</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15">
+                                        <p>建宁商城</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15">
+                                        <p>86.00</p>
+                                        <p>(含运费:9.0)</p>
+                                    </td>
+                                    <td class="col-xs-1 pdh5">
+                                        <div class="col-xs-12 pdw0 pdh5">
+                                            <a class="text-337ab7 yx-t-btn" href="javascript:;">查看订单</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- 分页 -->
+                        <div class="row">
+                            <div class="col-sm-12 mgh20">
+                                <ul class="pageBox">
+                                    <li><a href="#">上一页</a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">6</a></li>
+                                    <li><a href="#">7</a></li>
+                                    <li><a href="#">8</a></li>
+                                    <li><a href="#">9</a></li>
+                                    <li><a href="#">下一页</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="order-li2" class="tab-pane fade" role="tabpanel">
+                        <div>
+                            <div class="bg-eeefef pdh5">
+                                <input style="vertical-align: text-bottom; margin-left:5px;" type="checkbox"/>
+                                <span>销售商家：多多旗舰店</span>
+                                <span>订单号：2016091015874</span>
+                                <span>2016-09-10 16:40</span>
+                                <span>物流信息：圆通快递 8565989021553</span>
+                                <!--<a class="text-337ab7" href="#">物流详情</a>-->
+                                <span>物流详情:暂无</span>
+                            </div>
+                            <table cellpadding="0" cellspacing="0" class="border-a no-border-t text-center overhide yx-torM-listBox">
+                                <tr>
+                                    <td class="col-xs-3 pdh15 pdw5 text-left border-r">
+                                        <div class="yx-torM-li1">
+                                            <img class="pull-left" src="../images/yx-torder-img2.png"/>
+                                            <p class="ellipsis-2">nike男鞋黑白奥额的后前往恶化奥...</p>
+                                            <p><span>¥49.99</span><span>*5</span></p>
+                                        </div>
+                                    </td>
+                                    <td class="col-xs-2 text-left border-r pdh15">
+                                        <p>15159597047</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15">
+                                        <p>平台自营</p>
+                                    </td>
+                                    <td class="col-xs-2 border-r pdh15">
+                                        <p>多多旗舰店</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15">
+                                        <p>待发货</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15">
+                                        <p>建宁商城</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15">
+                                        <p>86.00</p>
+                                        <p>(含运费:9.0)</p>
+                                    </td>
+                                    <td class="col-xs-1 pdh5">
+                                        <div class="col-xs-12 pdw0 pdh5">
+                                            <a class="text-337ab7 yx-t-btn" href="javascript:;">查看订单</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- 分页 -->
+                        <div class="row">
+                            <div class="col-sm-12 mgh20">
+                                <ul class="pageBox">
+                                    <li><a href="#">上一页</a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">6</a></li>
+                                    <li><a href="#">7</a></li>
+                                    <li><a href="#">8</a></li>
+                                    <li><a href="#">9</a></li>
+                                    <li><a href="#">下一页</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="order-li3" class="tab-pane fade" role="tabpanel">
+                        <div>
+                            <div class="bg-eeefef pdh5">
+                                <input style="vertical-align: text-bottom; margin-left:5px;" type="checkbox"/>
+                                <span>销售商家：多多旗舰店</span>
+                                <span>订单号：2016091015874</span>
+                                <span>2016-09-10 16:40</span>
+                                <span>物流信息：圆通快递 8565989021553</span>
+                                <a class="text-337ab7" href="#">物流详情</a>
+                            </div>
+                            <table cellpadding="0" cellspacing="0" class="border-a no-border-t text-center overhide yx-torM-listBox">
+                                <tr>
+                                    <td class="col-xs-3 pdh15 pdw5 text-left border-r">
+                                        <div class="yx-torM-li1">
+                                            <img class="pull-left" src="../images/yx-torder-img2.png"/>
+                                            <p class="ellipsis-2">nike男鞋黑白奥额的后前往恶化奥...</p>
+                                            <p><span>¥49.99</span><span>*5</span></p>
+                                        </div>
+                                    </td>
+                                    <td class="col-xs-2 text-left border-r pdh15" rowspan="1">
+                                        <p>15159597047</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="1">
+                                        <p>平台自营</p>
+                                    </td>
+                                    <td class="col-xs-2 border-r pdh15" rowspan="1">
+                                        <p>多多旗舰店</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="1">
+                                        <p>待发货</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="1">
+                                        <p>建宁商城</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="1">
+                                        <p>86.00</p>
+                                        <p>(含运费:9.0)</p>
+                                    </td>
+                                    <td class="col-xs-1 pdh5" rowspan="1">
+                                        <div class="col-xs-12 pdw0 pdh5">
+                                            <a class="text-337ab7 yx-t-btn" href="javascript:;">查看订单</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <div class="bg-eeefef pdh5">
+                                <input style="vertical-align: text-bottom; margin-left:5px;" type="checkbox"/>
+                                <span>销售商家：多多旗舰店</span>
+                                <span>订单号：2016091015874</span>
+                                <span>2016-09-10 16:40</span>
+                                <span>物流信息：圆通快递 8565989021553</span>
+                                <!--<a class="text-337ab7" href="#">物流详情</a>-->
+                                <span>物流详情:暂无</span>
+                            </div>
+                            <table cellpadding="0" cellspacing="0" class="border-a no-border-t text-center overhide yx-torM-listBox">
+                                <tr>
+                                    <td class="col-xs-3 pdh15 pdw5 text-left border-r">
+                                        <div class="yx-torM-li1">
+                                            <img class="pull-left" src="../images/yx-torder-img2.png"/>
+                                            <p class="ellipsis-2">nike男鞋黑白奥额的后前往恶化奥...</p>
+                                            <p><span>¥49.99</span><span>*5</span></p>
+                                        </div>
+                                    </td>
+                                    <td class="col-xs-2 text-left border-r pdh15">
+                                        <p>15159597047</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15">
+                                        <p>平台自营</p>
+                                    </td>
+                                    <td class="col-xs-2 border-r pdh15">
+                                        <p>多多旗舰店</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15">
+                                        <p>待发货</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15">
+                                        <p>建宁商城</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15">
+                                        <p>86.00</p>
+                                        <p>(含运费:9.0)</p>
+                                    </td>
+                                    <td class="col-xs-1 pdh5">
+                                        <div class="col-xs-12 pdw0 pdh5">
+                                            <a class="text-337ab7" href="#">查看订单</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- 分页 -->
+                        <div class="row">
+                            <div class="col-sm-12 mgh20">
+                                <ul class="pageBox">
+                                    <li><a href="#">上一页</a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">6</a></li>
+                                    <li><a href="#">7</a></li>
+                                    <li><a href="#">8</a></li>
+                                    <li><a href="#">9</a></li>
+                                    <li><a href="#">下一页</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="order-li4" class="tab-pane fade" role="tabpanel">
+                        <div>
+                            <div class="bg-eeefef pdh5">
+                                <input style="vertical-align: text-bottom; margin-left:5px;" type="checkbox"/>
+                                <span>销售商家：多多旗舰店</span>
+                                <span>订单号：2016091015874</span>
+                                <span>2016-09-10 16:40</span>
+                                <span>物流信息：圆通快递 8565989021553</span>
+                                <a class="text-337ab7" href="#">物流详情</a>
+                            </div>
+                            <table cellpadding="0" cellspacing="0" class="border-a no-border-t text-center overhide yx-torM-listBox">
+                                <tr>
+                                    <td class="col-xs-3 pdh15 pdw5 text-left border-r">
+                                        <div class="yx-torM-li1">
+                                            <img class="pull-left" src="../images/yx-torder-img2.png"/>
+                                            <p class="ellipsis-2">nike男鞋黑白奥额的后前往恶化奥...</p>
+                                            <p><span>¥49.99</span><span>*5</span></p>
+                                        </div>
+                                    </td>
+                                    <td class="col-xs-2 text-left border-r pdh15" rowspan="2">
+                                        <p>15159597047</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>平台自营</p>
+                                    </td>
+                                    <td class="col-xs-2 border-r pdh15" rowspan="2">
+                                        <p>多多旗舰店</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>待发货</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>建宁商城</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>86.00</p>
+                                        <p>(含运费:9.0)</p>
+                                    </td>
+                                    <td class="col-xs-1 pdh5" rowspan="2">
+                                        <div class="col-xs-12 pdw0 pdh5">
+                                            <a class="text-337ab7" href="#">查看订单</a>
+                                        </div>
+                                        <div class="col-xs-12 pdw0 pdh5">
+                                            <a class="text-color" href="#">查看评价</a>
+                                        </div>
+                                        <div class="col-xs-12 pdw0 pdh5">
+                                            <a class="text-color" href="#">查看举报</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-xs-3 pdh15 pdw5 text-left border-r border-t">
+                                        <div class="yx-torM-li1">
+                                            <img class="pull-left" src="../images/yx-torder-img2.png"/>
+                                            <p class="ellipsis-2">nike男鞋黑白奥额的后前往恶化奥...</p>
+                                            <p><span>¥49.99</span><span>*5</span></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- 分页 -->
+                        <div class="row">
+                            <div class="col-sm-12 mgh20">
+                                <ul class="pageBox">
+                                    <li><a href="#">上一页</a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">6</a></li>
+                                    <li><a href="#">7</a></li>
+                                    <li><a href="#">8</a></li>
+                                    <li><a href="#">9</a></li>
+                                    <li><a href="#">下一页</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="order-li5" class="tab-pane fade" role="tabpanel">
+                        <div>
+                            <div class="bg-eeefef pdh5">
+                                <input style="vertical-align: text-bottom; margin-left:5px;" type="checkbox"/>
+                                <span>销售商家：多多旗舰店</span>
+                                <span>订单号：2016091015874</span>
+                                <span>2016-09-10 16:40</span>
+                                <span>物流信息：圆通快递 8565989021553</span>
+                                <a class="text-337ab7" href="#">物流详情</a>
+                            </div>
+                            <table cellpadding="0" cellspacing="0" class="border-a no-border-t text-center overhide yx-torM-listBox">
+                                <tr>
+                                    <td class="col-xs-3 pdh15 pdw5 text-left border-r">
+                                        <div class="yx-torM-li1">
+                                            <img class="pull-left" src="../images/yx-torder-img2.png"/>
+                                            <p class="ellipsis-2">nike男鞋黑白奥额的后前往恶化奥...</p>
+                                            <p><span>¥49.99</span><span>*5</span></p>
+                                        </div>
+                                    </td>
+                                    <td class="col-xs-2 text-left border-r pdh15" rowspan="2">
+                                        <p>15159597047</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>平台自营</p>
+                                    </td>
+                                    <td class="col-xs-2 border-r pdh15" rowspan="2">
+                                        <p>多多旗舰店</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>待发货</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>建宁商城</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>86.00</p>
+                                        <p>(含运费:9.0)</p>
+                                    </td>
+                                    <td class="col-xs-1 pdh5" rowspan="2">
+                                        <div class="col-xs-12 pdw0 pdh5">
+                                            <a class="text-337ab7" href="#">查看订单</a>
+                                        </div>
+                                        <div class="col-xs-12 pdw0 pdh5">
+                                            <a class="text-color" href="#">查看评价</a>
+                                        </div>
+                                        <div class="col-xs-12 pdw0 pdh5">
+                                            <a class="text-color" href="#">查看举报</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-xs-3 pdh15 pdw5 text-left border-r border-t">
+                                        <div class="yx-torM-li1">
+                                            <img class="pull-left" src="../images/yx-torder-img2.png"/>
+                                            <p class="ellipsis-2">nike男鞋黑白奥额的后前往恶化奥...</p>
+                                            <p><span>¥49.99</span><span>*5</span></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- 分页 -->
+                        <div class="row">
+                            <div class="col-sm-12 mgh20">
+                                <ul class="pageBox">
+                                    <li><a href="#">上一页</a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">6</a></li>
+                                    <li><a href="#">7</a></li>
+                                    <li><a href="#">8</a></li>
+                                    <li><a href="#">9</a></li>
+                                    <li><a href="#">下一页</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="order-li6" class="tab-pane fade" role="tabpanel">
+                        <div>
+                            <div class="bg-eeefef pdh5">
+                                <input style="vertical-align: text-bottom; margin-left:5px;" type="checkbox"/>
+                                <span>销售商家：多多旗舰店</span>
+                                <span>订单号：2016091015874</span>
+                                <span>2016-09-10 16:40</span>
+                                <span>物流信息：圆通快递 8565989021553</span>
+                                <a class="text-337ab7" href="#">物流详情</a>
+                            </div>
+                            <table cellpadding="0" cellspacing="0" class="border-a no-border-t text-center overhide yx-torM-listBox">
+                                <tr>
+                                    <td class="col-xs-3 pdh15 pdw5 text-left border-r">
+                                        <div class="yx-torM-li1">
+                                            <img class="pull-left" src="../images/yx-torder-img2.png"/>
+                                            <p class="ellipsis-2">nike男鞋黑白奥额的后前往恶化奥...</p>
+                                            <p><span>¥49.99</span><span>*5</span></p>
+                                        </div>
+                                    </td>
+                                    <td class="col-xs-2 text-left border-r pdh15" rowspan="2">
+                                        <p>15159597047</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>平台自营</p>
+                                    </td>
+                                    <td class="col-xs-2 border-r pdh15" rowspan="2">
+                                        <p>多多旗舰店</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>待发货</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>建宁商城</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>86.00</p>
+                                        <p>(含运费:9.0)</p>
+                                    </td>
+                                    <td class="col-xs-1 pdh5" rowspan="2">
+                                        <div class="col-xs-12 pdw0 pdh5">
+                                            <a class="text-337ab7" href="#">查看订单</a>
+                                        </div>
+                                        <div class="col-xs-12 pdw0 pdh5">
+                                            <a class="text-color" href="#">查看评价</a>
+                                        </div>
+                                        <div class="col-xs-12 pdw0 pdh5">
+                                            <a class="text-color" href="#">查看举报</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-xs-3 pdh15 pdw5 text-left border-r border-t">
+                                        <div class="yx-torM-li1">
+                                            <img class="pull-left" src="../images/yx-torder-img2.png"/>
+                                            <p class="ellipsis-2">nike男鞋黑白奥额的后前往恶化奥...</p>
+                                            <p><span>¥49.99</span><span>*5</span></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- 分页 -->
+                        <div class="row">
+                            <div class="col-sm-12 mgh20">
+                                <ul class="pageBox">
+                                    <li><a href="#">上一页</a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">6</a></li>
+                                    <li><a href="#">7</a></li>
+                                    <li><a href="#">8</a></li>
+                                    <li><a href="#">9</a></li>
+                                    <li><a href="#">下一页</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="order-li7" class="tab-pane fade" role="tabpanel">
+                        <div>
+                            <div class="bg-eeefef pdh5">
+                                <input style="vertical-align: text-bottom; margin-left:5px;" type="checkbox"/>
+                                <span>销售商家：多多旗舰店</span>
+                                <span>订单号：2016091015874</span>
+                                <span>2016-09-10 16:40</span>
+                                <span>物流信息：圆通快递 8565989021553</span>
+                                <a class="text-337ab7" href="#">物流详情</a>
+                            </div>
+                            <table cellpadding="0" cellspacing="0" class="border-a no-border-t text-center overhide yx-torM-listBox">
+                                <tr>
+                                    <td class="col-xs-3 pdh15 pdw5 text-left border-r">
+                                        <div class="yx-torM-li1">
+                                            <img class="pull-left" src="../images/yx-torder-img2.png"/>
+                                            <p class="ellipsis-2">nike男鞋黑白奥额的后前往恶化奥...</p>
+                                            <p><span>¥49.99</span><span>*5</span></p>
+                                        </div>
+                                    </td>
+                                    <td class="col-xs-2 text-left border-r pdh15" rowspan="2">
+                                        <p>15159597047</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>平台自营</p>
+                                    </td>
+                                    <td class="col-xs-2 border-r pdh15" rowspan="2">
+                                        <p>多多旗舰店</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>待发货</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>建宁商城</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>86.00</p>
+                                        <p>(含运费:9.0)</p>
+                                    </td>
+                                    <td class="col-xs-1 pdh5" rowspan="2">
+                                        <div class="col-xs-12 pdw0 pdh5">
+                                            <a class="text-337ab7" href="#">查看订单</a>
+                                        </div>
+                                        <div class="col-xs-12 pdw0 pdh5">
+                                            <a class="text-color" href="#">查看评价</a>
+                                        </div>
+                                        <div class="col-xs-12 pdw0 pdh5">
+                                            <a class="text-color" href="#">查看举报</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-xs-3 pdh15 pdw5 text-left border-r border-t">
+                                        <div class="yx-torM-li1">
+                                            <img class="pull-left" src="../images/yx-torder-img2.png"/>
+                                            <p class="ellipsis-2">nike男鞋黑白奥额的后前往恶化奥...</p>
+                                            <p><span>¥49.99</span><span>*5</span></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- 分页 -->
+                        <div class="row">
+                            <div class="col-sm-12 mgh20">
+                                <ul class="pageBox">
+                                    <li><a href="#">上一页</a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">6</a></li>
+                                    <li><a href="#">7</a></li>
+                                    <li><a href="#">8</a></li>
+                                    <li><a href="#">9</a></li>
+                                    <li><a href="#">下一页</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="order-li8" class="tab-pane fade" role="tabpanel">
+                        <div>
+                            <div class="bg-eeefef pdh5">
+                                <input style="vertical-align: text-bottom; margin-left:5px;" type="checkbox"/>
+                                <span>销售商家：多多旗舰店</span>
+                                <span>订单号：2016091015874</span>
+                                <span>2016-09-10 16:40</span>
+                                <span>物流信息：圆通快递 8565989021553</span>
+                                <a class="text-337ab7" href="#">物流详情</a>
+                            </div>
+                            <table cellpadding="0" cellspacing="0" class="border-a no-border-t text-center overhide yx-torM-listBox">
+                                <tr>
+                                    <td class="col-xs-3 pdh15 pdw5 text-left border-r">
+                                        <div class="yx-torM-li1">
+                                            <img class="pull-left" src="../images/yx-torder-img2.png"/>
+                                            <p class="ellipsis-2">nike男鞋黑白奥额的后前往恶化奥...</p>
+                                            <p><span>¥49.99</span><span>*5</span></p>
+                                        </div>
+                                    </td>
+                                    <td class="col-xs-2 text-left border-r pdh15" rowspan="2">
+                                        <p>15159597047</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>平台自营</p>
+                                    </td>
+                                    <td class="col-xs-2 border-r pdh15" rowspan="2">
+                                        <p>多多旗舰店</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>待发货</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>建宁商城</p>
+                                    </td>
+                                    <td class="col-xs-1 border-r pdh15" rowspan="2">
+                                        <p>86.00</p>
+                                        <p>(含运费:9.0)</p>
+                                    </td>
+                                    <td class="col-xs-1 pdh5" rowspan="2">
+                                        <div class="col-xs-12 pdw0 pdh5">
+                                            <a class="text-337ab7" href="#">查看订单</a>
+                                        </div>
+                                        <div class="col-xs-12 pdw0 pdh5">
+                                            <a class="text-color" href="#">查看评价</a>
+                                        </div>
+                                        <div class="col-xs-12 pdw0 pdh5">
+                                            <a class="text-color" href="#">查看举报</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-xs-3 pdh15 pdw5 text-left border-r border-t">
+                                        <div class="yx-torM-li1">
+                                            <img class="pull-left" src="../images/yx-torder-img2.png"/>
+                                            <p class="ellipsis-2">nike男鞋黑白奥额的后前往恶化奥...</p>
+                                            <p><span>¥49.99</span><span>*5</span></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- 分页 -->
+                        <div class="row">
+                            <div class="col-sm-12 mgh20">
+                                <ul class="pageBox">
+                                    <li><a href="#">上一页</a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">6</a></li>
+                                    <li><a href="#">7</a></li>
+                                    <li><a href="#">8</a></li>
+                                    <li><a href="#">9</a></li>
+                                    <li><a href="#">下一页</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="right-part">
+        <div class="container-fluid r-div1">
+            <div class="row">
+                <div class="col-sm-12 fs14 text-333333">
+                    <div class="col-sm-12 pdh20 border-b npl npr"><span class="glyphicon glyphicon-question-sign text-cecece">
+                        </span>&nbsp; 帮助和服务
+                        <img class="pull-right cur-po" src="../images/ico11.png"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row mgh20">
+                <div class="col-sm-12 flex space-between">
+                    <font class="fs14 bold">帮助中心</font>
+                    <a href="" class="fs12 text-blue">进入></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="fs14 text-333333">商品在出售中列表找不到？</p>
+                    <p class="fs12">1.商品被手动下架，在仓库中，重新编辑上架即可。</p>
+                    <p class="fs12">2.商品售罄库存为0，在已售罄列表中，提醒您 该添加库存了。待付款订单也会占据库存，其超时关闭后库存才会释放</p>
+                </div>
+            </div>
+            <div class="row mgh20">
+                <div class="col-sm-12">
+                    <p class="fs14 text-333333">如何推广商品？</p>
+                    <p class="fs12">点击[推广商品]，就可以获取商品二维码/商品链接，还能设置商品优惠二维码。</p>
+                    <p class="fs12">将商品分享到朋友圈，或群发时带上商品链接去推广。</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12"><div class="col-sm-12 border-b"></div></div>
+            </div>
+        </div>
+        <div class="container-fluid r-div2">
+            <div class="row">
+                <div class="col-sm-12 fs14 text-333333">
+                    <div class="col-sm-12 pdh20 npl npr cur-po"><span class="glyphicon glyphicon-question-sign text-cecece"></span>&nbsp; 帮助和服务</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 弹窗 -->
+<div class="mask"></div>
+
+<!-- 订单动态窗口 -->
+<div class="fixed dialogBox dia-box1 bg-white fs16" style="width:828px; height: auto; margin:-325px 0 0 -414px">
+    <div class="dia-close abs"></div>
+    <div>
+        <div class="pdw30 pdh30 text-color proflowBox proflow-Box1 overhide proflowBox4">
+            <div class="col-xs-3 text-center fs14 bold pdw0">
+                买家下单
+            </div>
+            <div class="col-xs-3 text-center fs14 bold pdw0">
+                买家付款
+            </div>
+            <div class="col-xs-3 text-center fs14 bold pdw0">
+                卖家发货
+            </div>
+            <div class="col-xs-3 text-center fs14 bold pdw0">
+                订单完成
+            </div>
+            <div class="col-xs-3 proflow-text pro-status1 fs0 overhide pdw0 mgh10">
+                <span class="border-a border-w2 pull-left text-center bg-white fs14 mgw78">1</span>
+                <div class="pro-box bg-cecece">
+                    <p class="bg-color"></p>
+                </div>
+            </div>
+            <div class="col-xs-3 proflow-text pro-status2 fs0 overhide pdw0 mgh10">
+                <span class="border-a border-w2 center-block text-center bg-white fs14">2</span>
+                <div class="pro-box bg-cecece">
+                    <p class="bg-color"></p>
+                </div>
+            </div>
+            <div class="col-xs-3 proflow-text pro-status3 fs0 overhide pdw0 mgh10">
+                <span class="border-a border-w2 pull-right text-center bg-white fs14 mgw76">3</span>
+                <div class="pro-box bg-cecece">
+                    <p class="bg-color"></p>
+                </div>
+            </div>
+            <div class="col-xs-3 proflow-text pro-status4 fs0 overhide pdw0 mgh10">
+                <span class="border-a border-w2 pull-right text-center bg-white fs14 mgw76">4</span>
+                <div class="pro-box bg-cecece">
+                    <p class="bg-color"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12" style="padding-left:90px;">
+            <div class="col-xs-6 pdh5">
+                &nbsp;&nbsp;&nbsp;&nbsp;订单号：
+                <span>H2-2728-1748-160903170624</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                所属商城：
+                <span>建宁商城</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                购买用户：
+                <span>依旧深蓝天</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                订单类型：
+                <span>平台分销</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                订单金额：
+                <span>￥25.00</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                订单状态：
+                <span>待发货</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                销售店铺：
+                <span>绿芒果餐饮</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                下单日期：
+                <span>2016-09-03 17:06:24</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                发货店铺：
+                <span>伊文兔小欧普</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                修改日期：
+                <span>2016-09-04 17:06:35</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                支付方式：
+                <span>微信支付</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                物流信息：
+                <span>暂无</span>
+            </div>
+        </div>
+        <div class="col-xs-12 pd15 mgh15 border-radius bg-eeefef">
+            <div class="col-xs-12 pdh5">
+                姓名：<span class="text-color fs16 bold">孙涌</span>
+            </div>
+            <div class="col-xs-12 pdh5">
+                电话：<span class="text-color fs16 bold">15159597047</span>
+            </div>
+            <div class="col-xs-12 pdh5">
+                地址：<span class="text-color fs16 bold">福建省  厦门市  思明区  望海路63号楼之一二楼G单元 </span>
+            </div>
+            <div class="col-xs-12 pdh5">
+                留言：<span class="text-color fs16 bold">请尽快发货，发货前请仔细检查商品是否有损坏。</span>
+            </div>
+        </div>
+        <div style="clear:both;max-height:115px; overflow-y: auto;">
+            <div class="col-xs-12 bg-eeefef pdw15 pdh3 mgh10 text-center border-radius">
+                <div class="col-xs-3 pd0 text-left">
+                    商品信息
+                </div>
+                <div class="col-xs-2 pd0">
+                    零售价(元)
+                </div>
+                <div class="col-xs-2 pd0">
+                    结算价(元)
+                </div>
+                <div class="col-xs-1 pd0">
+                    数量
+                </div>
+                <div class="col-xs-1 pd0">
+                    小计(元)
+                </div>
+                <div class="col-xs-2 pd0">
+                    运费(元)
+                </div>
+                <div class="col-xs-1 pd0">
+                    状态
+                </div>
+            </div>
+            <div class="col-xs-12 bg-eeefef pdw15 pdh10 mgh2 border-radius text-center">
+                <div class="col-xs-3 pd0">
+                    <img class="pull-left" style="width:40px; height:40px;" src="../images/yx-torder-img2.png"/>
+                    <p class="ellipsis-2">【维C之王】九月热卖建宁猕猴桃24粒，小块头大有味道！</p>
+                </div>
+                <div class="col-xs-2 pd0">
+                    39.9元
+                </div>
+                <div class="col-xs-2 pd0">
+                    39.9元
+                </div>
+                <div class="col-xs-1 pd0">
+                    1
+                </div>
+                <div class="col-xs-1 pd0">
+                    39.9元
+                </div>
+                <div class="col-xs-2 pd0">
+                    0
+                </div>
+                <div class="col-xs-1 pd0">
+                    待发货
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 订单关闭 -->
+<div class="fixed dialogBox dia-box2 bg-white fs16" style="width:828px; height: auto; margin:-264px 0 0 -414px">
+    <div class="dia-close abs"></div>
+    <div>
+
+        <div class="col-xs-12" style="padding-left:90px;">
+            <div class="col-xs-6 pdh5">
+                &nbsp;&nbsp;&nbsp;&nbsp;订单号：
+                <span>H2-2728-1748-160903170624</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                所属商城：
+                <span>建宁商城</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                购买用户：
+                <span>依旧深蓝天</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                订单类型：
+                <span>平台分销</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                订单金额：
+                <span>￥25.00</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                订单状态：
+                <span>待发货</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                销售店铺：
+                <span>绿芒果餐饮</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                下单日期：
+                <span>2016-09-03 17:06:24</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                发货店铺：
+                <span>伊文兔小欧普</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                修改日期：
+                <span>2016-09-04 17:06:35</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                支付方式：
+                <span>微信支付</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                物流信息：
+                <span>暂无</span>
+            </div>
+        </div>
+        <div class="col-xs-12 pd15 mgh15 border-radius bg-eeefef">
+            <div class="col-xs-12 pdh5">
+                姓名：<span class="text-color fs16 bold">孙涌</span>
+            </div>
+            <div class="col-xs-12 pdh5">
+                电话：<span class="text-color fs16 bold">15159597047</span>
+            </div>
+            <div class="col-xs-12 pdh5">
+                地址：<span class="text-color fs16 bold">福建省  厦门市  思明区  望海路63号楼之一二楼G单元 </span>
+            </div>
+            <div class="col-xs-12 pdh5">
+                留言：<span class="text-color fs16 bold">请尽快发货，发货前请仔细检查商品是否有损坏。</span>
+            </div>
+        </div>
+        <div class="col-xs-12 bg-eeefef pdw15 pdh3 text-center border-radius">
+            <div class="col-xs-3 pd0 text-left">
+                商品信息
+            </div>
+            <div class="col-xs-2 pd0">
+                零售价(元)
+            </div>
+            <div class="col-xs-2 pd0">
+                结算价(元)
+            </div>
+            <div class="col-xs-1 pd0">
+                数量
+            </div>
+            <div class="col-xs-1 pd0">
+                小计(元)
+            </div>
+            <div class="col-xs-2 pd0">
+                运费(元)
+            </div>
+            <div class="col-xs-1 pd0">
+                状态
+            </div>
+        </div>
+        <div class="col-xs-12 bg-eeefef pdw15 pdh10 mgh10 border-radius text-center">
+            <div class="col-xs-3 pd0">
+                <img class="pull-left" style="width:40px; height:40px;" src="../images/yx-torder-img2.png"/>
+                <p class="ellipsis-2">【维C之王】九月热卖建宁猕猴桃24粒，小块头大有味道！</p>
+            </div>
+            <div class="col-xs-2 pd0">
+                39.9元
+            </div>
+            <div class="col-xs-2 pd0">
+                39.9元
+            </div>
+            <div class="col-xs-1 pd0">
+                1
+            </div>
+            <div class="col-xs-1 pd0">
+                39.9元
+            </div>
+            <div class="col-xs-2 pd0">
+                0
+            </div>
+            <div class="col-xs-1 pd0">
+                待发货
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 退款窗口 -->
+<div class="fixed dialogBox dia-box3 bg-white fs16" style="width:828px; height: auto; margin:-325px 0 0 -414px">
+    <div class="dia-close abs"></div>
+    <div>
+        <div class="pdw30 pdh30 text-color proflowBox overhide proflowBox1" style="width:600px; margin:0 auto;">
+            <div class="col-xs-4 text-left fs14 bold">
+                买家 申请退款
+            </div>
+            <div class="col-xs-4 text-center fs14 bold">
+                商家 处理退款申请
+            </div>
+            <div class="col-xs-4 text-right fs14 bold">
+                退款完成
+            </div>
+            <div class="col-xs-4 proflow-text pro-status1 fs0 overhide pdw0 mgh10">
+                <span class="border-a border-w2 pull-left text-center bg-white fs14 mgw48">1</span>
+                <div class="pro-box bg-cecece">
+                    <p class="bg-color"></p>
+                </div>
+            </div>
+            <div class="col-xs-4 proflow-text pro-status2 fs0 overhide pdw0 mgh10">
+                <span class="border-a border-w2 center-block text-center bg-white fs14">2</span>
+                <div class="pro-box bg-cecece">
+                    <p class="bg-color"></p>
+                </div>
+            </div>
+            <div class="col-xs-4 proflow-text pro-status3 fs0 overhide pdw0 mgh10">
+                <span class="border-a border-w2 pull-right text-center bg-white fs14 mgw40">3</span>
+                <div class="pro-box bg-cecece">
+                    <p class="bg-color"></p>
+                </div>
+            </div>
+            <div class="col-xs-12 text-666666 text-center">
+                卖家还有<span class="text-color">2天12时12分22秒</span>来处理退款，逾期商城将自动退款给商家
+            </div>
+        </div>
+
+        <div class="col-xs-12" style="padding-left:90px;">
+            <div class="col-xs-6 pdh5">
+                &nbsp;&nbsp;&nbsp;&nbsp;订单号：
+                <span>H2-2728-1748-160903170624</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                所属商城：
+                <span>建宁商城</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                购买用户：
+                <span>依旧深蓝天</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                订单类型：
+                <span>平台分销</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                订单金额：
+                <span>￥25.00</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                订单状态：
+                <span>待发货</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                销售店铺：
+                <span>绿芒果餐饮</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                下单日期：
+                <span>2016-09-03 17:06:24</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                发货店铺：
+                <span>伊文兔小欧普</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                修改日期：
+                <span>2016-09-04 17:06:35</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                支付方式：
+                <span>微信支付</span>
+            </div>
+            <div class="col-xs-6 pdh5">
+                物流信息：
+                <span>暂无</span>
+            </div>
+        </div>
+        <div class="col-xs-12 pd15 mgh15 border-radius bg-eeefef">
+            <div class="col-xs-12 pdh5">
+                姓名：<span class="text-color fs16 bold">孙涌</span>
+            </div>
+            <div class="col-xs-12 pdh5">
+                电话：<span class="text-color fs16 bold">15159597047</span>
+            </div>
+            <div class="col-xs-12 pdh5">
+                地址：<span class="text-color fs16 bold">福建省  厦门市  思明区  望海路63号楼之一二楼G单元 </span>
+            </div>
+            <div class="col-xs-12 pdh5">
+                留言：<span class="text-color fs16 bold">请尽快发货，发货前请仔细检查商品是否有损坏。</span>
+            </div>
+        </div>
+        <div class="col-xs-12 bg-eeefef pdw15 pdh3 text-center border-radius">
+            <div class="col-xs-3 pd0 text-left">
+                商品信息
+            </div>
+            <div class="col-xs-2 pd0">
+                零售价(元)
+            </div>
+            <div class="col-xs-2 pd0">
+                结算价(元)
+            </div>
+            <div class="col-xs-1 pd0">
+                数量
+            </div>
+            <div class="col-xs-1 pd0">
+                小计(元)
+            </div>
+            <div class="col-xs-2 pd0">
+                运费(元)
+            </div>
+            <div class="col-xs-1 pd0">
+                状态
+            </div>
+        </div>
+        <div class="col-xs-12 bg-eeefef pdw15 pdh10 mgh10 border-radius text-center">
+            <div class="col-xs-3 pd0">
+                <img class="pull-left" style="width:40px; height:40px;" src="../images/yx-torder-img2.png"/>
+                <p class="ellipsis-2">【维C之王】九月热卖建宁猕猴桃24粒，小块头大有味道！</p>
+            </div>
+            <div class="col-xs-2 pd0">
+                39.9元
+            </div>
+            <div class="col-xs-2 pd0">
+                39.9元
+            </div>
+            <div class="col-xs-1 pd0">
+                1
+            </div>
+            <div class="col-xs-1 pd0">
+                39.9元
+            </div>
+            <div class="col-xs-2 pd0">
+                0
+            </div>
+            <div class="col-xs-1 pd0">
+                待发货
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 查看报表 -->
+<div class="dialogBox fs16 dia-box4 fixed pd20" style="width:984px; margin:-250px 0 0 -462px;">
+    <div class="col-xs-12 border-a pdw0 bg-white">
+        <div class="col-xs-12 bg-eeefef border-b pdh8">
+            <p class="pull-left">查看报表</p>
+            <div class="pull-right">
+                <a class="text-337ab7 fs14 pdw30" href="#">*只保留30天以内的报表数据</a>
+                <img class="dia-close dia-close1" src="../images/close.png"/>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="pdh8">
+                全部订单
+                <span class="">导出时间：2016-09-02 23：00：00</span>
+                <a href="#" class="text-337ab7 pull-right">下载报表文件</a>
+            </div>
+            <div class="col-xs-12 bg-eeefef border-a" style="padding:10px 0 10px 35px;">
+                <div class="pdh5 overhide">
+                    <p class="col-xs-3 pdw0 ellipsis">
+                        订单号：159690954
+                    </p>
+                    <p class="col-xs-3 pdw0 ellipsis">
+                        商品名称：5斤装精选猕猴桃
+                    </p>
+                    <p class="col-xs-3 pdw0 ellipsis">
+                        售后订单：全部
+                    </p>
+                    <p class="col-xs-3 pdw0 ellipsis">
+                        所属商城：全部
+                    </p>
+                </div>
+                <div class="pdh5 overhide">
+                    <p class="col-xs-3 pdw0 ellipsis">
+                        销售商家：王二小
+                    </p>
+                    <p class="col-xs-3 pdw0 ellipsis">
+                        订单类型：全部
+                    </p>
+                    <p class="col-xs-6 pdw0 ellipsis">
+                        付款方式：全部
+                    </p>
+                </div>
+                <div class="pdh5 overhide">
+                    <p class="col-xs-3 pdw0 ellipsis">
+                        发货商家：全部
+                    </p>
+                    <p class="col-xs-3 pdw0 ellipsis">
+                        订单状态：全部
+                    </p>
+                    <p class="col-xs-4 pdw0 ellipsis">
+                        物流方式：全部
+                    </p>
+                </div>
+                <div class="pdh5 overhide">
+                    <p class="col-xs-3 pdw0 ellipsis">
+                        收货人手机：123165451213
+                    </p>
+                    <p class="col-xs-9 pdw0 ellipsis">
+                        下单时间：2016-10-20 20：00：00至2016-10-30 00：00：00
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="pdh8">
+                全部订单
+                <span class="">导出时间：2016-09-02 23：00：00</span>
+                <a href="#" class="text-337ab7 pull-right">下载报表文件</a>
+            </div>
+            <div class="col-xs-12 bg-eeefef border-a" style="padding:10px 0 10px 35px;">
+                <div class="pdh5 overhide">
+                    <p class="col-xs-3 pdw0 ellipsis">
+                        订单号：159690954
+                    </p>
+                    <p class="col-xs-3 pdw0 ellipsis">
+                        商品名称：5斤装精选猕猴桃
+                    </p>
+                    <p class="col-xs-3 pdw0 ellipsis">
+                        售后订单：全部
+                    </p>
+                    <p class="col-xs-3 pdw0 ellipsis">
+                        所属商城：全部
+                    </p>
+                </div>
+                <div class="pdh5 overhide">
+                    <p class="col-xs-3 pdw0 ellipsis">
+                        销售商家：王二小
+                    </p>
+                    <p class="col-xs-3 pdw0 ellipsis">
+                        订单类型：全部
+                    </p>
+                    <p class="col-xs-6 pdw0 ellipsis">
+                        付款方式：全部
+                    </p>
+                </div>
+                <div class="pdh5 overhide">
+                    <p class="col-xs-3 pdw0 ellipsis">
+                        发货商家：全部
+                    </p>
+                    <p class="col-xs-3 pdw0 ellipsis">
+                        订单状态：全部
+                    </p>
+                    <p class="col-xs-4 pdw0 ellipsis">
+                        物流方式：全部
+                    </p>
+                </div>
+                <div class="pdh5 overhide">
+                    <p class="col-xs-3 pdw0 ellipsis">
+                        收货人手机：123165451213
+                    </p>
+                    <p class="col-xs-9 pdw0 ellipsis">
+                        下单时间：2016-10-20 20：00：00至2016-10-30 00：00：00
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 分页 -->
+        <div class="row">
+            <div class="col-sm-12 mgh20">
+                <ul class="pageBox">
+                    <li><a href="#">上一页</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">下一页</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function(){
+
+        var diaBox=$('.dialogBox'),
+            dia_box2=$('.dia-box2'),
+            diaClose=$('.dia-close'),
+            mask=$('.mask');
+
+        $(window).resize(function(){
+            diaHeight(diaBox);
+        });
+        function diaHeight(objH){
+            if(dia_box2.data('btn')==='yes') {
+                dia_box2.css('height','auto');
+                return;
+            }
+            if($(this).height()<700){
+                objH.css({
+                    height:'100%',
+                    marginTop:-($(window).height()/2)
+                });
+                console.log($(window).height())
+            }else{
+                objH.css({
+                    height:'auto'
+                });
+            }
+        };
+
+        $('.yx-t-btn').on('click',function(){
+            $('.dia-box1').fadeIn();
+            diaHeight($('.dia-box1'));
+            mask.show();
+        });
+
+        $('.yx-t-btn1').on('click',function(){
+            $('.dia-box2').data('btn','yes').fadeIn();
+            diaHeight($('.dia-box2'));
+            mask.show();
+        });
+
+        $('.yx-t-btn2').on('click',function(){
+            $('.dia-box3').fadeIn();
+            diaHeight($('.dia-box3'));
+            mask.show();
+        });
+
+        $('#yx-formBtn').on('click',function(){
+            $('.dia-box4').fadeIn();
+            diaHeight($('.dia-box4'));
+            mask.show().addClass('show1');
+        });
+
+        diaClose.on('click',function(){
+            if(mask.is('.show1')){
+                $('.dia-box4').fadeOut();
+                mask.hide().removeClass('show1');
+            }else{
+                diaBox.fadeOut();
+                dia_box2.data('btn','no');
+                mask.hide();
+            }
+        });
+
+        mask.on('click',function(){
+            if($(this).is('.show1')){
+                $('.dia-box4').fadeOut();
+                $(this).removeClass('show1').hide();
+            }else{
+                diaClose.trigger('click');
+            }
+        });
+
+
+    });
+</script>
+</body>
+</html>

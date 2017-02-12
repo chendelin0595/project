@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>军团</title>
+    <link rel="stylesheet" href="../../../../../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../../../../../javascript/jquery-weui/jquery-weui.css">
+    <link rel="stylesheet" href="../../../../../stylesheet/common-rem.css">
+    <link rel="stylesheet" href="../../../../../stylesheet/color.css">
+    <script src="../../../../../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../../../../../javascript/common-rem.js"></script>
+    <script src="../../../../../javascript/jquery-weui/jquery-weui.min.js"></script>
+    <script src="../../../../../javascript/bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div id="page">
+        <header>
+            <div class="text-center head-top">
+                <a href=""><img src="../../../../../images/ico_back.png" alt=""></a>
+                <span>军团</span>
+                <img src="../../../../../images/ico_trans.png" alt="">
+            </div>
+            <div style="height:1.17333333rem;"></div>
+        </header>
+        <!-- /header -->
+        <div class="container-fluid">
+            <div class="row text-center fs32 bg-color">
+                <div class="col-xs-12 pdh25">
+                    <p>团队介绍</p>
+                </div>
+            </div>
+            <form id="form" action="" method="post" accept-charset="utf-8">
+                <div class="row">
+                    <div class="col-xs-12 np">
+                        <textarea id="summary" name="" class="weui-textarea fs28 bg-white pd40" rows="10" disabled>入团请加园长微信 banchenyuan，特色产地合作，源头货源，现摘现发，专注原生态，无污染，无添加，以口碑为微营销为核心，只做健康环保绿色食品。</textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('#edit').on('click', function(event) {
+            event.preventDefault();
+            $('#summary').removeAttr('disabled').focus();
+            $(this).remove();
+            $('#save').removeClass('hidden');
+        });
+        $('#save').on('click', function(event) {
+            event.preventDefault();
+            $('#form').submit();
+        });
+    </script>
+</body>
+
+</html>

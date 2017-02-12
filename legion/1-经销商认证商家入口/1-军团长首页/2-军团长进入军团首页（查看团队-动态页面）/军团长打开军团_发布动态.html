@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>天下果园水果军团</title>
+    <link rel="stylesheet" href="../../../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../../../javascript/jquery-weui/jquery-weui.css">
+    <link rel="stylesheet" href="../../../stylesheet/common-rem.css">
+    <link rel="stylesheet" href="../../../stylesheet/color.css">
+    <script src="../../../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../../../javascript/common-rem.js"></script>
+    <script src="../../../javascript/jquery-weui/jquery-weui.min.js"></script>
+    <script src="../../../javascript/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css" media="screen">
+    .up-fileImg{
+        position: relative;
+    }
+    .up-fileImg a img{
+        position: absolute;
+        right:0rem;
+        top:0rem;
+        width:0.38666rem;
+    }
+</style>
+<body>
+    <div id="page">
+        <header>
+            <div class="text-center head-top">
+                <a href=""><img src="../../../images/ico_back.png" alt=""></a>
+                <span>天下果园水果军团</span>
+                <img src="../../../images/ico_trans.png" alt="">
+            </div>
+            <div style="height:1.17333333rem;"></div>
+        </header>
+        <!-- /header -->
+        <div class="container-fluid">
+        <form action="" method="post" accept-charset="utf-8">
+            <div class="row">
+                <div class="col-xs-12 pdh16">
+                    <label class="mgw30 mgh7 nmb nml qx-checkbox__label" for="s12">
+                        <input class="qx-checkbox" type="checkbox" name="" id="s12">
+                        <span class="qx-icon-checked"></span>
+                    </label>
+                    <span class="mgh7 nmb pull-left fs24 text-muted">团员可见</span>
+                    <button type="submit" class="pdh10 pdw35 pull-right btn bg-color fs28 lh1">发布</button>
+                </div>
+            </div>
+            <div class="row weui-cells weui-cells_form nmt">
+                <div class="weui-cell">
+                    <div class="weui-cell__hd fs28">标题</div>
+                    <div class="weui-cell__bd fs24"><input type="text" class="weui-input pdw15" name="" value="" placeholder="选填"></div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd fs24">
+                        <textarea name="" class="weui-textarea" rows="6" placeholder="请输入内容"></textarea>
+                    </div>
+                </div>
+                <div class="weui-cell no-border">
+                    <div class="weui-cell__bd">
+                        <div class="weui-uploader">
+                            <div class="weui-uploader__bd">
+                                <ul class="weui-uploader__files" id="uploaderFiles">
+                                    <li class="weui-uploader__file up-fileImg" style="background-image:url(../../../images/p3.png)">
+                                        <input type="hidden"/>
+                                        <a href="#"><img src="../../../images/ico_del.png"/></a>
+                                    </li>
+                                </ul>
+                                <div class="weui-uploader__input-box">
+                                    <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- gallery -->
+            <div class="row weui-gallery" id="gallery">
+                <span class="weui-gallery__img" id="galleryImg"></span>
+                <div class="weui-gallery__opr">
+                    <a href="javascript:" class="weui-gallery__del">
+                        <i class="weui-icon-delete weui-icon_gallery-delete"></i>
+                    </a>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+//        var target;
+//        function gallery(url,target) {
+//            $('#galleryImg').css('background-images', 'url(' + url + ')');
+//            $('#gallery').fadeIn('fast');
+//            this.target = target;
+//        }
+//        $('.weui-gallery__img').on('click', function(event) {
+//            event.preventDefault();
+//            $('#gallery').fadeOut('fast');
+//        });
+//        $('.weui-gallery__del').on('click', function(event) {
+//            event.preventDefault();
+//            $(target).remove();
+//            $('#gallery').fadeOut('fast');
+//        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>团队业绩</title>
+    <link rel="stylesheet" href="../../../../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../../../../javascript/jquery-weui/jquery-weui.css">
+    <link rel="stylesheet" href="../../../../stylesheet/common-rem.css">
+    <link rel="stylesheet" href="../../../../stylesheet/color.css">
+    <script src="../../../../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../../../../javascript/common-rem.js"></script>
+    <script src="../../../../javascript/jquery-weui/jquery-weui.min.js"></script>
+    <script src="../../../../javascript/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../../javascript/iscroll.js"></script>
+</head>
+<style type="text/css" media="screen">
+.top-bg { background: rgb(253, 134, 72); /* Old browsers */ background: -moz-linear-gradient(top, rgba(253, 134, 72, 1) 9%, rgba(252, 87, 111, 1) 65%); /* FF3.6-15 */ background: -webkit-linear-gradient(top, rgba(253, 134, 72, 1) 9%, rgba(252, 87, 111, 1) 65%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(to bottom, rgba(253, 134, 72, 1) 9%, rgba(252, 87, 111, 1) 65%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fd8648', endColorstr='#fc576f', GradientType=0); /* IE6-9 */ width: 10.0rem; height: 6.53333333rem; color: white; }
+.weui-label { width: 1.92rem; }
+.weui-cells { margin-top: 0.26666667rem; }
+.date-select { font-size: 0.56rem; }
+.date-select>.col-xs-6 { height: 5.6rem; overflow: hidden; }
+.date-select .col-xs-12>p { height: 0.8rem; line-height: 0.8rem; -webkit-user-select: none; user-select: none; cursor: pointer; }
+.date-select .select-box { top: 2.4rem; height: 0.8rem; width: 100%; border-top: solid 1px #cdcdcd; border-bottom: solid 1px #cdcdcd; }
+.weui-popup-container.init { display: block; opacity: 0; z-index: -1; }
+</style>
+<body>
+    <div id="page" class="bg-white">
+        <header>
+            <div class="text-center head-top">
+                <a href=""><img src="../../../../images/ico_back.png" alt=""></a>
+                <span>军团</span>
+                <img src="../../../../images/ico_trans.png" alt="">
+            </div>
+            <div style="height:1.17333333rem;"></div>
+        </header>
+        <!-- /header -->
+        <div class="top-bg text-center lh1">
+            <p class="fs36 pdh30">总成交额(元)</p>
+            <p class="fs68 bold pdh43">2085.00</p>
+            <p class="fs24 pdh35">总成交量(单)</p>
+            <p class="fs48 bold pdh107 npt">24</p>
+        </div>
+        <div class="container-fluid">
+            <div class="row bg-white">
+                <div class="col-xs-12 pdh20 border-b">
+                    <span class="fs32 text-666666 pull-left">个人业绩明细</span>
+                    <span class="pull-right"><a href="javascript:;" class="open-popup" data-target="#date"><img src="../../../../images/calendar.png" style="width:0.62666667rem" alt=""></a></span>
+                </div>
+                <div class="col-xs-12 text-center fs32 text-muted pdh250">
+                    您还没有数据
+                </div>
+            </div>
+        </div>
+        <div id="date" class="weui-popup-container init popup-bottom">
+            <div class="weui-popup-overlay"></div>
+            <div class="weui-popup-modal navbar-fixed-bottom">
+                <div class="flex fs30 pdw15 pdh25 bg-f7f7f7" style="justify-content:space-between;">
+                    <a id="date-check" class="text-blue">确定</a>
+                    <font class="text-black">选择日期</font>
+                    <a id="date-cancle" class="text-blue close-popup">取消</a>
+                </div>
+                <div class="date-select col-xs-12 np text-center">
+                    <div class="col-xs-6 np">
+                        <div class="col-xs-12 np abs">
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p data-type="year" data-value="2010">2010</p>
+                            <p data-type="year" data-value="2011">2011</p>
+                            <p data-type="year" data-value="2012">2012</p>
+                            <p data-type="year" data-value="2013">2013</p>
+                            <p data-type="year" data-value="2014">2014</p>
+                            <p data-type="year" data-value="2015">2015</p>
+                            <p data-type="year" data-value="2016">2016</p>
+                            <p data-type="year" data-value="2017">2017</p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 np">
+                        <div class="col-xs-12 np abs">
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p data-type="month" data-value="1">1月</p>
+                            <p data-type="month" data-value="2">2月</p>
+                            <p data-type="month" data-value="3">3月</p>
+                            <p data-type="month" data-value="4">4月</p>
+                            <p data-type="month" data-value="5">5月</p>
+                            <p data-type="month" data-value="6">6月</p>
+                            <p data-type="month" data-value="7">7月</p>
+                            <p data-type="month" data-value="8">8月</p>
+                            <p data-type="month" data-value="9">9月</p>
+                            <p data-type="month" data-value="10">10月</p>
+                            <p data-type="month" data-value="11">11月</p>
+                            <p data-type="month" data-value="12">12月</p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="abs select-box"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    // 日历选择计算
+    var year = 2016, month = 10;
+    $(document).ready(function() {
+        $('.date-select .col-xs-6').each(function(index, el) {
+            var scroll = new IScroll(el, {
+                scrollY: true,
+                mouseWheel: true,
+                snap: 'p'
+            });
+            if (index) {
+                scroll.scrollToElement($(this).find('.col-xs-12 p:nth-child(10)')[0]);
+            }else{
+                scroll.scrollToElement($(this).find('.col-xs-12 p:nth-child(7)')[0]);
+            }
+            scroll.on('scrollEnd', function() {
+                var s = this,p;
+                $.each(s.pages[0], function(index, val) {
+                    if (val.y == s.y) {
+                        p = index;
+                        return false;
+                    };
+                });
+                var el = $(this.scroller).find('p')[p+3];
+                if ($(el).data('type') == 'year') {
+                    year = $(el).data('value');
+                }else{
+                    month = $(el).data('value');
+                }
+            });
+        });
+        $('.weui-popup-container').removeClass('init');
+    });
+    $('#date-check').on('click', function(event) {
+        event.preventDefault();
+        alert(year+'年'+month+'月');
+        $.closePopup()
+    });
+    </script>
+</body>
+
+</html>

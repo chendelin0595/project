@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" href="../../../../../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../../../../../javascript/jquery-weui/jquery-weui.css">
+    <link rel="stylesheet" href="../../../../../stylesheet/common-rem.css">
+    <link rel="stylesheet" href="../../../../../stylesheet/color.css">
+    <link rel="stylesheet" href="../../../../../stylesheet/main.css">
+    <script src="../../../../../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../../../../../javascript/common-rem.js"></script>
+    <script src="../../../../../javascript/jquery-weui/jquery-weui.min.js"></script>
+    <script src="../../../../../javascript/bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div id="page">
+        <header>
+            <div class="text-center head-top">
+                <a href=""><img src="../../../../../images/ico_back.png" alt=""></a>
+                <span>邀请成员</span>
+                <img src="../../../../../images/ico_trans.png" alt="">
+            </div>
+            <div style="height:1.17333333rem;"></div>
+        </header>
+        <!-- /header -->
+        <div class="container-fluid">
+            <div class="row pd27 fs32">直接邀请</div>
+            <div class="row weui-cells nmt fs28">
+                <a class="weui-cell" href="javascript:;">
+                    <div class="weui-cell__hd pdw24 npl">
+                        <img src="../../../../../images/ico_inv1.png" alt="" style="width:0.94666667rem">
+                    </div>
+                    <div class="weui-cell__bd">我的团队</div>
+                    <div class="weui-cell__ft">
+                        <img src="../../../../../images/ico_in.png" alt="">
+                    </div>
+                </a>
+                <a class="weui-cell" href="javascript:;">
+                    <div class="weui-cell__hd pdw24 npl">
+                        <img src="../../../../../images/ico_inv2.png" alt="" style="width:0.94666667rem">
+                    </div>
+                    <div class="weui-cell__bd">手动邀请</div>
+                    <div class="weui-cell__ft">
+                        <img src="../../../../../images/ico_in.png" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="row pd27 fs32">直接邀请</div>
+            <div class="row weui-cells nmt fs28">
+                <a class="weui-cell we_share" href="javascript:;">
+                    <div class="weui-cell__hd pdw24 npl">
+                        <img src="../../../../../images/ico_inv3.png" alt="" style="width:0.94666667rem">
+                    </div>
+                    <div class="weui-cell__bd">微信好友</div>
+                    <div class="weui-cell__ft">
+                        <img src="../../../../../images/ico_in.png" alt="">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- 分享提示层 -->
+        <div class="mask text-right share-box">
+            <img src="../../../../../images/yq.png"/>
+        </div>
+
+        <script>
+            $('.we_share').on('click',function(){
+                $('.share-box').show();
+            });
+            $('.share-box').on('click',function(){
+                $('.share-box').hide();
+            })
+        </script>
+    </div>
+</body>
+
+</html>

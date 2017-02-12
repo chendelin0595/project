@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建军团2</title>
+    <link rel="stylesheet" href="../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../stylesheet/color.css">
+    <link rel="stylesheet" href="../stylesheet/common.css">
+    <link rel="stylesheet" href="../stylesheet/yx-main.css">
+    <script src="../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../javascript/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../javascript/common.js"></script>
+</head>
+<body>
+<!-- 登录头部 -->
+<div class="row login-header bg-white mg0 fixed">
+    <div class="container pdh18 pdw0">
+        <div class="col-md-4 pdw0">
+            <img class="pull-left" src="../images/login_logo.png"/>
+            <div class="head-infoText border-l border-w2 pull-left">
+                <p class="fs16 pdh12">报名登录</p>
+            </div>
+        </div>
+        <div class="col-md-8 text-right yx-useState fs16 pdh8 pdw0">
+            <img src="../images/ico_nav3.png"/>
+            <span class="mgw10">15844747777</span>
+            <a href="#">退出登录</a>
+        </div>
+    </div>
+</div>
+
+<div class="container mgh118 pdw45 pdh20 bg-white">
+    <div class="yx-create-main">
+        <form>
+            <div class="row mgh12">
+                <div class="col-xs-1">
+                    <span>军团名称</span>
+                </div>
+                <div class="col-xs-10">
+                    <input class="pdw5" type="text" style="width:324px;"/>
+                </div>
+            </div>
+            <div class="row mgh12">
+                <div class="col-xs-1">
+                    <label>团队类目</label>
+                </div>
+                <div class="col-xs-10">
+                    <span>水果</span>
+                </div>
+            </div>
+            <div class="row mgh12">
+                <div class="col-xs-1">
+                    <span>军团属性</span>
+                </div>
+                <div class="col-xs-10">
+                    <span>雇佣团</span>
+                </div>
+            </div>
+            <div class="row mgh12">
+                <div class="col-xs-1">
+                    <span>团队动态</span>
+                </div>
+                <div class="col-xs-10">
+                    <input type="radio" name="yx-c-r2" id="yx-c-radio1"/><label for="yx-c-radio1">开启</label>
+                    <input type="radio" name="yx-c-r2" id="yx-c-radio2"/><label for="yx-c-radio2">关闭</label>
+                </div>
+            </div>
+            <div class="row mgh12">
+                <div class="col-xs-1">
+                    <span>入团审核</span>
+                </div>
+                <div class="col-xs-10">
+                    <input type="radio" name="yx-c-r2" id="yx-c-radio3"/><label for="yx-c-radio3">开启</label>
+                    <input type="radio" name="yx-c-r2" id="yx-c-radio4"/><label for="yx-c-radio4">关闭</label>
+                </div>
+            </div>
+            <div class="row mgh12">
+                <div class="col-xs-1">
+                    <span>管理权限</span>
+                </div>
+                <div class="col-xs-10">
+                    <input type="radio" name="yx-c-r3" id="yx-c-radio5"/><label for="yx-c-radio5">开启</label>
+                    <input type="radio" name="yx-c-r3" id="yx-c-radio6"/><label for="yx-c-radio6">关闭</label>
+                </div>
+            </div>
+            <div class="row mgh12">
+                <div class="col-xs-1">
+                    <span>团队业绩</span>
+                </div>
+                <div class="col-xs-10">
+                    <input type="radio" name="yx-c-r4" id="yx-c-radio7"/><label for="yx-c-radio7">开启</label>
+                    <input type="radio" name="yx-c-r4" id="yx-c-radio8"/><label for="yx-c-radio8">关闭</label>
+                </div>
+            </div>
+            <div class="row mgh12">
+                <div class="col-xs-1">
+                    <span>私密团队</span>
+                </div>
+                <div class="col-xs-10">
+                    <input type="radio" name="yx-c-r5" id="yx-c-radio9"/><label for="yx-c-radio9">开启</label>
+                    <input type="radio" name="yx-c-r5" id="yx-c-radio10"/><label for="yx-c-radio10">关闭</label>
+                </div>
+            </div>
+            <div class="row mgh12">
+                <div class="col-xs-1">
+                    <span>团队图片</span>
+                </div>
+                <div class="col-xs-10 yx-file-img" id="file-img">
+                    <label class="pdh20 pdw3 bg-eeefef border-a" for="yx-c-file">+添加图片</label>
+                    <input type="file" id="yx-c-file" style="display: none;" accept="image.*"/>
+                    <span>（主图，只可添加一张）</span>
+                </div>
+            </div>
+            <div class="row mgh12">
+                <div class="col-xs-1">
+                    <span>团队介绍</span>
+                </div>
+                <div class="col-xs-10">
+                    <textarea class="pd5" style="width:100%;height:190px;"></textarea>
+                </div>
+            </div>
+            <div class="row text-center">
+                <input class="no-border mgh20 bg-color hover pdw100 pdh15 border-radius fs20 bold" type="submit"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- 底部 -->
+<div class="yx-footer fixed text-center" style="margin-top: 122px;">
+    <img src="images/yx-f-logo1.png"/>
+    <p class="fs12 mgh16 text-939393">Copyright © 2014-2016   泉州市闽域电子商务有限公司   闽ICP备15018819号-1</p>
+</div>
+
+<script>
+    function $_(obj){
+        return document.getElementById(obj);
+    }
+
+
+    var fileBox=$_('file-img'),
+        oFile=$_('yx-c-file'),
+        oFileLabel=fileBox.getElementsByTagName('label')[0],
+        fileSpan=fileBox.getElementsByTagName('span')[0],
+        createImg;
+
+
+        oFile.onchange=function(){
+            var createA=document.createElement('a');
+           createA.href='javascript:;';
+           createA.id='fileA'
+           createA.innerHTML='删除';
+
+           createImg=document.createElement('img');
+           createImg.src=window.URL.createObjectURL(oFile.files[0]);
+           fileBox.appendChild(createImg);
+           fileBox.appendChild(createA);
+           fileSpan.style.display='none';
+           oFileLabel.style.display='none';
+
+           $_('fileA').addEventListener('click',fileA,false);
+        };
+
+        function fileA(){
+            fileBox.removeChild(createImg);
+            fileBox.removeChild($_('fileA'));
+            fileSpan.style.display='inline-block';
+            oFileLabel.style.display='inline-block';
+
+            oFile.value='';
+        }
+</script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>尤溪活动登录</title>
+    <link rel="stylesheet" href="../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../stylesheet/color.css">
+    <link rel="stylesheet" href="../stylesheet/common.css">
+    <link rel="stylesheet" href="../stylesheet/yx-main.css">
+    <script src="../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../javascript/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../javascript/common.js"></script>
+</head>
+<body class="bg-ffc730">
+    <!-- 登录头部 -->
+    <div class="row login-header bg-white mg0 fixed" style="width:100%;">
+        <div class="container pdh18">
+            <div class="col-xs-4">
+                <img class="pull-left" src="../images/login_logo.png"/>
+                <div class="head-infoText border-l border-w2 pull-left">
+                    <p class="fs16 pdh12">报名登录</p>
+                </div>
+            </div>
+            <div class="col-xs-4 fs18 bold pdh12">
+                中国金柑之乡-尤溪网销大赛报名系统
+            </div>
+            <div class="col-xs-4 text-right yx-useState pdh8 fs16">
+                <img src="../images/ico_nav3.png"/>
+                <!--登录-->
+                <!--<span class="mgw10">15844747777</span>-->
+                <!--<a href="#">退出登录</a>-->
+                <!--未登录-->
+                <span class="mgw10">未登录</span>
+            </div>
+        </div>
+    </div>
+
+    <!--内容-->
+    <div class="pdh80">
+
+        <!-- 登录框内容 -->
+        <div class="row yx-main">
+            <div class="yx-m-title text-center">
+                <img src="images/yx-logo.png"/>
+                <img src="images/yx-logoText.png"/>
+            </div>
+            <div class="yx-m-login bg-ffd83a">
+                <div class="yx-l-title pdh25 text-center">
+                    <h2 class="fs20 text-white bold">尤溪县金柑互联网销售大赛报名查询</h2>
+                </div>
+                <form>
+                    <div class="yx-userInput bg-white top-radius">
+                        <label class="pull-left"></label>
+                        <input class="fs14" type="text" placeholder="手机号码"/>
+                    </div>
+                    <div class="yx-pwdInput bg-white bottom-radius">
+                        <label class="pull-left"></label>
+                        <input class="fs14" type="password" placeholder="密码"/>
+                    </div>
+                    <div class="yx-checkbox mgh12">
+                        <input class="mg0" type="checkbox" id="yx-check" style="display: none"/>
+                        <label class="text-white fs14 nw" for="yx-check">记住账号密码</label>
+                        <a href="忘记密码.html" class="text-white pull-right fs14">忘记密码?</a>
+                    </div>
+                    <div class="yx-loginBtn">
+                        <button class="col-xs-5 no-border fs16 blod text-white border-radius bg-7a83ff">去报名</button>
+                        <button class="col-xs-6 no-border fs16 blod text-white border-radius bg-ffa044 pull-right">立即登录</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- 底部 -->
+        <div class="yx-footer text-center fixed" style="margin-top: 50px; z-index:1;">
+            <img src="images/yx-f-logo2-1.png"/>
+            <p class="fs12 pdh16 text-c99b1e">Copyright © 2014-2016  闽ICP备15018819号-1</p>
+        </div>
+    </div>
+    <!-- 兼容弹窗 -->
+    <div id="mask" class="mask"></div>
+    <div id="adapter" class="bg-white fixed adapterBox fs16">
+        <div>
+            <p>hi，您当前的浏览器版本过低，可能存在安全风险，建议升级浏览器</p>
+            <div style="margin:15px 0;"></div>
+            <div class="adaBtn">
+                <a href="#" class="center-block bg-eeefef border-a border-radius" style="width:198px; height:38px; line-height: 38px; margin:5px 0;">
+                    <img class="pull-left" src="../images/google.png"/>谷歌 Chrome
+                </a>
+            </div>
+            <div class="adaBtn">
+                <a href="#" class="center-block bg-white border-a border-radius" style="width:198px; height:38px; line-height: 38px; margin:5px 0;">
+                    <img class="pull-left" src="../images/uc.png"/>UC浏览器
+                </a>
+            </div>
+            <div class="abs" style="right:30px; bottom:30px;">
+                <img src="../images/yx-f-logo1.png"/>
+            </div>
+        </div>
+    </div>
+    <script>
+        //body背景
+        $('body').css('background-color','#ffc730');
+        //监听窗口
+        function windowFied(){
+            if($(window).height() <850){
+                $('.yx-footer').css({
+                    position:'static',
+                    marginLeft:'0'
+                })
+            }else{
+                $('.yx-footer').css({
+                    position:'fixed',
+                    marginLeft:'-206px'
+                })
+            }
+        }
+        windowFied();
+        $(window).resize(function(){
+            windowFied()
+        });
+    </script>
+</body>
+</html>

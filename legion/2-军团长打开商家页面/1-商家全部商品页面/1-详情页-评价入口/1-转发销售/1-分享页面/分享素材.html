@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>分享素材</title>
+    <link rel="stylesheet" href="../../../../../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../../../../../javascript/jquery-weui/jquery-weui.css">
+    <link rel="stylesheet" href="../../../../../stylesheet/magnific-popup.css">
+    <link rel="stylesheet" href="../../../../../stylesheet/common-rem.css">
+    <link rel="stylesheet" href="../../../../../stylesheet/color.css">
+    <link rel="stylesheet" href="../../../../../stylesheet/main.css">
+    <script src="../../../../../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../../../../../javascript/common-rem.js"></script>
+    <script src="../../../../../javascript/jquery-weui/jquery-weui.min.js"></script>
+    <script src="../../../../../javascript/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../../../javascript/jquery.magnific-popup.min.js"></script>
+</head>
+<body>
+    <div id="page" class="bg-white">
+        <div class="container-fluid">
+            <div class="row height25 bg-eeefef"></div>
+            <div class="row text-939393">
+                <div class="overhide fs28 pdh10">
+                    <div class="row height25"></div>
+                    <div class="col-xs-12 fs36 text-666666">
+                        分享文案：
+                    </div>
+                    <div class="col-xs-12 mgh10 share-list">
+                        <p class="pdh26 pdw20 bg-eeefef text-666666 fs32 top-radius share-p">文案A:适用朋友圈亲友分销（点击文案复制）</p>
+                        <textarea class="border-a bottom-radius share-text">奉化市放假2啊桑卡萨诺过公交卡桑可能杀过撒个刚拿蓝！</textarea>
+                    </div>
+                    <div class="col-xs-12 mgh10 share-list">
+                        <p class="pdh26 pdw20 bg-eeefef text-666666 fs32 top-radius share-p">文案B:适用商业推广（点击文案复制）</p>
+                        <textarea class="border-a bottom-radius share-text">奉化市1放假啊桑卡萨诺过公交卡桑可能杀过撒个刚拿蓝！</textarea>
+                    </div>
+                    <div class="col-xs-12 mgh10 share-list">
+                        <p class="pdh26 pdw20 bg-eeefef text-666666 fs32 top-radius share-p">文案C:适用商业推广（点击文案复制）</p>
+                        <textarea class="border-a bottom-radius share-text">奉化市放假啊桑卡萨诺过公交卡桑可能杀3过撒个刚拿蓝！</textarea>
+                    </div>
+                </div>
+                <div class="row bg-eeefef height18"></div>
+                <div class="col-xs-12 pdh15">
+                    <span class="pull-left fs28" style="padding-top:0.08rem;">加入商品链接</span>
+                    <div class="weui-cell__ft" style="height:0.64rem;">
+                        <input class="weui-switch nm" type="checkbox" data-url="http://m.huobucuo.com/index.php?route=product/product&product_id=572&shop_id=1748&hi=1748&store_id=0"/>
+                    </div>
+                </div>
+                <div class="row bg-eeefef height18"></div>
+
+                <div>
+                    <div class="col-xs-12 fs36 pdh20">
+                        图片分享：
+                    </div>
+                    <div class="col-xs-12 text-center pdw15" id="grid">
+                        <div class="col-xs-4 grid-item pd0">
+                            <a href="../../../../../images/p.png">
+                                <img class="mg10" src="../../../../../images/p.png" style="width:2.88rem; height:2.88rem;"/>
+                            </a>
+                        </div>
+                        <div class="col-xs-4 grid-item pd0">
+                            <a href="../../../../../images/p.png">
+                                <img class="mg10" src="../../../../../images/p.png" style="width:2.88rem; height:2.88rem;"/>
+                            </a>
+                        </div>
+                        <div class="col-xs-4 grid-item pd0">
+                            <a href="../../../../../images/p.png">
+                                <img class="mg10" src="../../../../../images/p.png" style="width:2.88rem; height:2.88rem;"/>
+                            </a>
+                        </div>
+                        <div class="col-xs-4 grid-item pd0">
+                            <a href="../../../../../images/p.png">
+                                <img class="mg10" src="../../../../../images/p.png" style="width:2.88rem; height:2.88rem;"/>
+                            </a>
+                        </div>
+                        <div class="col-xs-4 grid-item pd0">
+                            <a href="../../../../../images/p.png">
+                                <img class="mg10" src="../../../../../images/p.png" style="width:2.88rem; height:2.88rem;"/>
+                            </a>
+                        </div>
+                        <div class="col-xs-4 grid-item pd0">
+                            <a href="../../../../../images/p.png">
+                                <img class="mg10" src="../../../../../images/p.png" style="width:2.88rem; height:2.88rem;"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function(){
+            var shareText=$('.share-text');
+
+            $('.share-p').on('touchstart',function(){
+                var thisP=$(this).next('textarea');
+                if(!thisP.is('.s-text')){
+                    thisP.addClass('s-text')
+                }else{
+                    thisP.removeClass('s-text')
+                }
+            });
+            $('.share-text').focus(function(){
+                this.select();
+            })
+            $('.weui-cell__ft').click(function(){
+                var thisUrl=$(this).find('input').data('url'),
+                    thisValue= shareText.html();
+                if($('.weui-switch').is(':checked')){
+                    shareText.each(function(){
+                        $(this).html($(this).html()+thisUrl)
+                    })
+                }else{
+                    shareText.each(function() {
+                        $(this).html($(this).html().replace(/http:\/\/(.)*/, ' '));
+                    });
+                }
+            });
+        })
+        $('.grid-item').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            gallery: {
+                enabled: true,
+                preload: [0, 2],
+                navigateByImgClick: true,
+                arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>',
+                tPrev: '',
+                tNext: '',
+                tCounter: '<span class="mfp-counter">%curr%/%total%</span>'
+            }
+        });
+    </script>
+</body>
+</html>

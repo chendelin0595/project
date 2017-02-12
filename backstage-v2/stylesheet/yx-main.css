@@ -1,0 +1,308 @@
+/*******尤溪活动*******/
+.login-header{
+    margin-top: 45px;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:111;
+}
+.head-infoText{
+    height: 48px;
+    line-height: 24px;
+    margin-left: 21px;
+    padding-left:20px;
+    border-color: #cccccc;
+}
+/* 登录.html */
+.yx-useState img{
+    width: 35px;
+    height:35px;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+}
+.yx-useState a:hover{
+    color:#e54e66;
+}
+.yx-main{
+    width: 498px;
+    margin:0 auto;
+}
+.yx-m-title{
+    margin:90px 0 42px 0;
+}
+.yx-m-title img:first-child{
+    width: 245px;
+    height:173px;
+}
+.yx-m-title img:last-child{
+    width: 250px;
+    height:108px;
+}
+
+.yx-m-login,.yx-reg-main{
+    width:421px;
+    height:325px;
+    margin:0 auto;
+    -webkit-border-radius:15px;
+    -moz-border-radius:15px;
+    border-radius:15px;
+}
+.yx-userInput{
+    border-bottom:1px solid #ffd83a;
+}
+.yx-m-login form{
+    width:316px;
+    margin:0 auto;
+}
+.yx-userInput label,.yx-pwdInput label{
+    width:45px;
+    height:50px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.yx-userInput label{
+    background-image: url('../尤溪活动/images/yx-l-user.png');
+}
+.yx-pwdInput label{
+    background-image: url('../尤溪活动/images/yx-l-pwd.png');
+}
+.yx-userInput input ,.yx-pwdInput input{
+    border:0;
+    width:270px;
+    height:49px;
+}
+.yx-checkbox input{
+    vertical-align: middle;
+}
+.yx-checkbox input:checked+label::before{
+    background-image: url('../images/yx-ico-sel.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    -webkit-background-size: 100%;
+}
+.yx-checkbox label::before{
+    content: ' ';
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    display: inline-block;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    margin:0 5px -2px 0;
+}
+.yx-loginBtn button{
+    height:50px;
+}
+.yx-footer{
+    bottom:0;
+    left:50%;
+    margin-left:-206px;
+    z-index:-11;
+}
+
+/*注册报名.html*/
+.yx-rm-title img{
+    width:138px;
+    margin:0 auto;
+    display: block;
+}
+.yx-m-login form input,.yx-m-login form select{
+    border:0;
+    height:50px;
+}
+.yx-re-select select{
+    width:100%;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    background-image: url('../尤溪活动/images/yx-selArrow.png');
+    background-repeat:no-repeat;
+    background-position:95% 49%;
+}
+
+/* 选择活动 */
+.yx-actTop{
+    width:392px;
+    margin:0 auto;
+    overflow: hidden;
+}
+.yx-actTop img{
+    width: 112px;
+    height:112px;
+}
+.yx-actT-left,.yx-sel-img1{
+    position: relative;
+}
+.yx-actT-left:after,.yx-sel-img1:after{
+    content: ' ';
+    width:38px;
+    height:38px;
+    display: block;
+    position: absolute;
+    right:-5px;
+    bottom:-5px;
+    background:url('../尤溪活动/images/yx_ico_success.png') no-repeat;
+}
+.yx-act-list{
+    padding-bottom:150px;
+}
+.yx-act-list >div{
+    height:124px;
+}
+.yx-act-list .yx-a-l:hover{
+    background-color: #f6f6f6;
+    -webkit-border-radius:15px;
+    -moz-border-radius:15px;
+    border-radius:15px;
+}
+.yx-act-mImg{
+    width:84px;
+    height:64px;
+    margin:0 auto;
+    background-repeat:no-repeat;
+    background-image: url('../尤溪活动/images/yx_ico_act.png');
+}
+.yx-a-img1{
+    background-position: 0 0;
+}
+.yx-a-img2{
+    background-position: 0 -64px;
+}
+.yx-a-img3{
+    height:71px;
+    background-position: 0 -128px;
+}
+
+/*创建军团1*/
+.yx-sel-main{
+    overflow-x: hidden;
+    overflow-y:auto;
+    height:600px;
+}
+.yx-sel-list img{
+    width:140px;
+    height:124px;
+    margin-bottom:10px;
+    cursor: pointer;
+}
+.yx-sel-img1:after{
+    bottom:12px;
+    right:0;
+}
+
+/*改*/
+.ca-box span{
+    width:58px;
+    height:58px;
+    background-repeat:no-repeat;
+    background-position: center 1px;
+    background-size:cover;
+    -webkit-background-size:cover;
+}
+.ca-box span:hover{
+    background-position-y: -58px;
+}
+.ca-b-1 span{
+    background-image: url('../尤溪活动/images/ca-ico1.png');
+}
+/*创建军团2*/
+.yx-create-main{
+    line-height:34px;
+}
+.yx-join-title li{
+    float: left;
+    text-align: center;
+}
+.yx-join-title li:first-child{
+    margin-left:0 !important;
+}
+.yx-join-title li:hover,.yx-join-title li.active{
+    border-bottom:2px solid #e54e66;
+}
+
+.yx-file-img img{
+    width:100px;
+    height:100px;
+    margin-right:20px;
+}
+.yx-file-img a{
+    color: #e54e66;
+}
+
+/*参加军团*/
+.yx-join-li{
+    width:276px;
+    height:136px;
+}
+.yx-join-li >img{
+    width:90px;
+    height:90px;
+    margin-right:10px;
+}
+.yx-join-li a{
+    width:90px;
+    border-color: #e54e66;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    border-radius:20px;
+    margin:10px 50px 0 0;
+}
+
+/* 团队订单 */
+.yx-torder-search input{
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+.yx-torder-search input:nth-of-type(1){
+    width:400px;
+}
+.yx-torder-search .yx-tmaskBox{
+    width:200px;
+    height:200px;
+    right:0;
+    z-index: 11;
+    display: none;
+}
+.yx-torder-search .yx-tmaskBox img{
+    width:100%;
+}
+/*导入订单*/
+.yx-imorder-info{
+    position: relative;
+}
+.yx-imorder-info > div:nth-of-type(1):after{
+    content:' ';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 28px solid #e44a62;
+    border-top:30px solid transparent;
+    border-bottom:30px solid transparent;
+    position: absolute;
+    right: -28px;
+    top: 0;
+    z-index: 5;
+}
+.yx-imorder-info1 >div:nth-of-type(1):after{
+    border-left: 28px solid #cccccc;
+}
+
+/*上传遮罩*/
+.yx-upload-box{
+    width: 436px;
+    height: 260px;
+    left: 50%;
+    top: 50%;
+    margin: -130px 0 0 -218px;
+    z-index: 9999;
+    padding: 20px 30px;
+}
+/* 进度条 */
+.yx-up-proBox,.yx-up-proBox div{
+    height: 38px;
+}
+/********尤溪活动结束********/

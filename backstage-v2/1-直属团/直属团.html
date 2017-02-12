@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../stylesheet/color.css">
+    <link rel="stylesheet" href="../stylesheet/common.css">
+    <script src="../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../javascript/common.js"></script>
+    <script src="../javascript/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css" media="screen">
+    .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th { vertical-align: middle; }
+    .modal-dialog { width: 798px; }
+    #creat-setting .active { background-color: #f5f5f5; }
+</style>
+<body>
+    <div class="page">
+        <div class="left-part">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 mgh30"><img src="../images/logo.png" alt="" width="100"></div>
+                </div>
+                <div class="row text-center bg-363840">
+                    <div class="col-sm-12 mgh10">
+                        <img src="../images/headimg.png" alt="" width="40" class="img-circle">
+                        <img src="../images/vip.png" alt="" width="10" class="abs" style="right:40px;bottom:5px">
+                    </div>
+                    <div class="col-sm-12 ellipsis">xxx小卖部啊xxx小卖部啊</div>
+                    <a href="" class="col-sm-12 mgh10"><img src="../images/logout.png" alt="" width="22"></a>
+                </div>
+                <div class="row">
+                    <ul class="text-center">
+                        <a href="#common" data-toggle="tab"><li><img src="../images/ico0.png" alt="">概括</li></a>
+                        <a href="#shop" data-toggle="tab"><li><img src="../images/ico1.png" alt="">店铺</li></a>
+                        <a href="#product" data-toggle="tab"><li><img src="../images/ico2.png" alt="">商品</li></a>
+                        <a href="#team" data-toggle="tab"><li><img src="../images/ico3.png" alt="">军团</li></a>
+                        <a href="#order" data-toggle="tab"><li class="active"><img src="../images/ico4.png" alt="">订单</li></a>
+                        <a href="#authen" data-toggle="tab"><li><img src="../images/ico5.png" alt="">认证</li></a>
+                        <a href="#sale" data-toggle="tab"><li><img src="../images/ico6.png" alt="">营销</li></a>
+                        <a href="#data" data-toggle="tab"><li><img src="../images/ico7.png" alt="">数据</li></a>
+                        <a href="#assets" data-toggle="tab"><li><img src="../images/ico8.png" alt="">资产</li></a>
+                        <a href="#setting" data-toggle="tab"><li><img src="../images/ico9.png" alt="">设置</li></a>
+                        <a href="#help" data-toggle="tab"><li><img src="../images/ico10.png" alt="">帮助</li></a>
+                    </ul>
+                </div>
+            </div>
+            <div class="item-tab tab-content">
+                <div role="tabpanel" class="tab-pane fade" id="common">...</div>
+                <div role="tabpanel" class="tab-pane fade" id="shop">
+                    <div class="pdh20 text-color fs14 bold text-center">店铺管理</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">店铺管理</li></a>
+                        <a href=""><li>店铺装修</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="product">
+                    <div class="pdh20 text-color fs14 bold text-center">商品管理</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">商品列表</li></a>
+                        <a href=""><li>分类列表</li></a>
+                        <a href=""><li>添加商品</li></a>
+                        <a href=""><li>导入商品</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="team">
+                    <div class="pdh20 text-color fs14 bold text-center">军团</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">军团概括</li></a>
+                        <a href=""><li>团队详情</li></a>
+                        <a href=""><li>雇佣团</li></a>
+                        <a href=""><li>直属团</li></a>
+                        <a href=""><li>招募设置</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade in active" id="order">
+                    <div class="pdh20 text-color fs14 bold text-center">订单管理</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">订单管理</li></a>
+                        <a href=""><li>订单详情</li></a>
+                        <a href=""><li>订单数据</li></a>
+                        <a href=""><li>发货管理</li></a>
+                        <a href=""><li>批量发货</li></a>
+                        <a href=""><li>订单设置</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="authen">
+                    <div class="pdh20 text-color fs14 bold text-center">认证中心</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">个人认证</li></a>
+                        <a href=""><li>企业认证</li></a>
+                        <a href=""><li>官方认证</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="sale">
+                    <div class="pdh20 text-color fs14 bold text-center">营销中心</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">营销中心</li></a>
+                        <a href=""><li>多人拼团</li></a>
+                        <a href=""><li>限时秒杀</li></a>
+                        <a href=""><li>1元购</li></a>
+                        <a href=""><li>满立减</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="data">
+                    <div class="pdh20 text-color fs14 bold text-center">数据中心</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">活动分析</li></a>
+                        <a href=""><li>交易分析</li></a>
+                        <a href=""><li>商品分析</li></a>
+                        <a href=""><li>数据概括</li></a>
+                        <a href=""><li>页面流量</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="assets">
+                    <div class="pdh20 text-color fs14 bold text-center">资产管理</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">资产管理</li></a>
+                        <a href=""><li>收支明细</li></a>
+                        <a href=""><li>待结算</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="setting">
+                    <div class="pdh20 text-color fs14 bold text-center">设置</div>
+                    <ul class="text-center">
+                        <a href=""><li class="">门店管理</li></a>
+                        <a href=""><li>门店设置</li></a>
+                        <a href=""><li>通用设置</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="help">...</div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 pdh10 flex space-between">
+                        <div class="flex-aic">
+                            <a href="" class="btn bg-eeefef">返回军团概括</a>&nbsp;&nbsp;&nbsp;<font class="fs16">直属团</font>
+                        </div>
+                        <a data-toggle="modal" href='#creat-new' class="btn bg-color pull-right">创建团队</a>
+                    </div>
+                    <div class="col-sm-12"><div class="col-sm-12 border-b"></div></div>
+                </div>
+                <div class="row mgh22">
+                    <div class="col-sm-5">
+                        <input class="form-control pdw40" type="text" name="" value="" placeholder="输入搜索内容">
+                        <img class="abs" src="../images/ico_search.png" alt="" width="18" style="top:7px;left:27px">
+                    </div>
+                    <div class="col-sm-5">
+                        <a href="" class="pdw30 btn bg-color fs14">搜索</a>
+                    </div>
+                </div>
+                <!-- 暂无数据 hidden -->
+                <div class="row hidden flex-aic height250">
+                    <div class="col-sm-12 text-muted text-center">
+                        <img src="../images/no-data.png" alt="" width="41">
+                        <p class="mgh10">暂无数据</p>
+                    </div>
+                </div>
+                <!-- 数据表 -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table class="table table-hover">
+                            <thead class="fs14">
+                                <tr>
+                                    <th>团队名称</th>
+                                    <th>类型</th>
+                                    <th>人数</th>
+                                    <th>团长</th>
+                                    <th>返点模式</th>
+                                    <th>成交额</th>
+                                    <th>成交量</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img class="mgw5 nml" src="../images/p.png" alt="" width="35">糖果铺子</td>
+                                    <td>直属团</td>
+                                    <td>258</td>
+                                    <td>棠棠</td>
+                                    <td>百分比</td>
+                                    <td>3680</td>
+                                    <td>320</td>
+                                    <td class="text-blue">
+                                        <a href="">编辑</a><br><br><a href="">删除</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img class="mgw5 nml" src="../images/p.png" alt="" width="35">糖果铺子</td>
+                                    <td>直属团</td>
+                                    <td>258</td>
+                                    <td>棠棠</td>
+                                    <td>百分比</td>
+                                    <td>3680</td>
+                                    <td>320</td>
+                                    <td class="text-blue">
+                                        <a href="">编辑</a><br><br><a href="">删除</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-part">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 fs14 text-333333">
+                        <div class="col-sm-12 pdh20 border-b npl npr"><span class="glyphicon glyphicon-question-sign text-cecece"></span>&nbsp; 帮助和服务</div>
+                    </div>
+                </div>
+                <div class="row mgh20">
+                    <div class="col-sm-12 flex space-between">
+                        <font class="fs14 bold">帮助中心</font>
+                        <a href="" class="fs12 text-blue">进入></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p class="fs14 text-333333">商品在出售中列表找不到？</p>
+                        <p class="fs12">1.商品被手动下架，在仓库中，重新编辑上架即可。</p>
+                        <p class="fs12">2.商品售罄库存为0，在已售罄列表中，提醒您该添加库存了。待付款订单也会占据库存，其超时关闭后库存才会释放</p>
+                    </div>
+                </div>
+                <div class="row mgh20">
+                    <div class="col-sm-12">
+                        <p class="fs14 text-333333">如何推广商品？</p>
+                        <p class="fs12">点击[推广商品]，就可以获取商品二维码/商品链接，还能设置商品优惠二维码。</p>
+                        <p class="fs12">将商品分享到朋友圈，或群发时带上商品链接去推广。</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12"><div class="col-sm-12 border-b"></div></div>
+                </div>
+            </div>
+        </div>
+        <!-- 新建军团 -->
+        <div class="modal fade" id="creat-new">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header pdh10 bg-f5f5f5">
+                        <div class="pull-right" data-dismiss="modal" aria-hidden="true"><img src="../images/close.png" alt="" width="18"></div>
+                        <h4 class="modal-title fs16 text-333333">创建新团队</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label for="uploadimg" class="pull-left">
+                                        <img src="../images/up.png" alt="" width="119">
+                                        <input id="uploadimg" class="hidden" type="file" name="" value="" placeholder="">
+                                    </label>
+                                    <div class="mgw140 fs16 text-333333 nmr">
+                                        <div class="mgh10">团队名称： <span class="pd5 border-a"><input class="width245 fs12 no-border" type="text" name="" value="" placeholder="请输入团队名称"></span><font class="fs12 text-muted">（6-20个字以内）</font></div>
+                                        <div class="mgh20 nmb">团队类型：
+                                            <span class="pd5 border-a bg-white">
+                                            <select class="no-border width180">
+                                              <option>直属团</option>
+                                              <option>直属团</option>
+                                              <option>直属团</option>
+                                              <option>直属团</option>
+                                            </select></span>
+                                            <font class="fs12 text-muted">（500人）</font>
+                                        </div>
+                                        <div class="mgh20 nmb">
+                                            分类选择：
+                                            <span class="pd5 border-a bg-white">
+                                                <select class="no-border width180">
+                                                    <option>生鲜蔬菜</option>
+                                                    <option>生鲜蔬菜</option>
+                                                    <option>生鲜蔬菜</option>
+                                                    <option>生鲜蔬菜</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                        <div class="mgh20 nmb">
+                                            <span class="pull-left">团队介绍：</span>
+                                            <textarea class="mgw4 pd10 border-a" style="width:450px;height:80px;"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="height10"></div>
+                                <div class="col-sm-12">
+                                    <div class="bg-f5f5f5" role="tabpanel">
+                                        <!-- Nav tabs -->
+                                        <div id="creat-setting" class="bg-e1e1e1 fs14 text-333333 flex">
+                                            <a class="pdw36 pdh15 active" href="#base-info" data-toggle="tab">基本信息</a>
+                                            <a class="pdw36 pdh15" href="#pro-info" data-toggle="tab">高级信息</a>
+                                        </div>
+
+                                        <!-- Tab panes -->
+                                        <div class="tab-content wf pdh20 bg-f5f5f5">
+                                            <div role="tabpanel" class="tab-pane active" id="base-info">
+                                                <div class="mgh10 col-sm-12 fs14 flex-aic">
+                                                    <span class="mgw30 nml text-333333">团员等级</span>
+                                                    <select name="" class="pd5 width180">
+                                                        <option value="">团员等级</option>
+                                                        <option value="">团员等级</option>
+                                                        <option value="">团员等级</option>
+                                                    </select>
+                                                    <font class="mgw10 nmr text-muted fs12">代理进团的默认等级，可在成员列表中调整代理等级</font>
+                                                </div>
+                                                <div class="mgh10 col-sm-12 fs14 flex-aic">
+                                                    <span class="mgw30 nml text-333333">团队状态</span>
+                                                    <input class="weui-switch" type="checkbox">
+                                                    <font class="mgw10 nmr text-muted fs12">开启后团员可以在群动态中发布动态，不开启则只有团长和管理员可以发布动态</font>
+                                                </div>
+                                                <div class="mgh10 col-sm-12 fs14 flex-aic">
+                                                    <span class="mgw30 nml text-333333">入团审核</span>
+                                                    <input class="weui-switch" type="checkbox">
+                                                    <font class="mgw10 nmr text-muted fs12">用户申请加入团队不需要团长/管理员审核</font>
+                                                </div>
+                                                <div class="mgh10 col-sm-12 fs14 flex-aic">
+                                                    <span class="mgw30 nml text-333333">管理权限</span>
+                                                    <input class="weui-switch" type="checkbox">
+                                                    <font class="mgw10 nmr text-muted fs12">团长是否开启管理员权限</font>
+                                                </div>
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane" id="pro-info">
+                                                <div class="mgh10 col-sm-12 fs14 flex-aic">
+                                                    <span class="mgw30 nml text-333333">返点模式</span>
+                                                    <input class="weui-switch" type="checkbox">
+                                                    <font class="mgw10 nmr text-muted fs12">按百分比返点</font>
+                                                    <span class="pd5 mgw10 nmr border-a bg-white"><input class="width42 no-border" type="text" name="" value="10" placeholder=""></span>&nbsp;%
+                                                </div>
+                                                <div class="mgh10 col-sm-12 fs14 flex-aic">
+                                                    <span class="mgw30 nml text-333333">团队业绩</span>
+                                                    <input class="weui-switch" type="checkbox">
+                                                    <font class="mgw10 nmr text-muted fs12">是否允许普通成员查看业绩</font>
+                                                </div>
+                                                <div class="mgh10 col-sm-12 fs14 flex-aic">
+                                                    <span class="mgw30 nml text-333333">团队私密</span>
+                                                    <input class="weui-switch" type="checkbox">
+                                                    <font class="mgw10 nmr text-muted fs12">开启后，用户无法在平台中搜索到该团队</font>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer flex center">
+                        <button type="button" class="btn bg-color pdw27">创建团队</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('#creat-setting [data-toggle=tab]').on('click', function(event) {
+            event.preventDefault();
+            $(this).tab('show').addClass('active').siblings().removeClass('active');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="../../../../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../javascript/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../../../../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../../../../stylesheet/color.css">
+    <link rel="stylesheet" href="../../../../stylesheet/common.css">
+    <script src="../../../../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../../../../javascript/common.js"></script>
+    <script src="../../../../javascript/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../../javascript/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script src="../../../../javascript/bootstrap-datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script>
+</head>
+<style type="text/css" media="screen">
+
+</style>
+<body>
+    <div class="page">
+        <div class="left-part">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 mgh30"><img src="../../../../images/logo.png" alt="" width="100"></div>
+                </div>
+                <div class="row text-center bg-363840">
+                    <div class="col-sm-12 mgh10">
+                        <img src="../../../../images/headimg.png" alt="" width="40" class="img-circle">
+                        <img src="../../../../images/vip.png" alt="" width="10" class="abs" style="right:40px;bottom:5px">
+                    </div>
+                    <div class="col-sm-12 ellipsis">xxx小卖部啊xxx小卖部啊</div>
+                    <a href="" class="col-sm-12 mgh10"><img src="../../../../images/logout.png" alt="" width="22"></a>
+                </div>
+                <div class="row">
+                    <ul class="text-center">
+                        <a href="#common" data-toggle="tab"><li><img src="../../../../images/ico0.png" alt="">概括</li></a>
+                        <a href="#shop" data-toggle="tab"><li><img src="../../../../images/ico1.png" alt="">店铺</li></a>
+                        <a href="#product" data-toggle="tab"><li><img src="../../../../images/ico2.png" alt="">商品</li></a>
+                        <a href="#team" data-toggle="tab"><li><img src="../../../../images/ico3.png" alt="">军团</li></a>
+                        <a href="#order" data-toggle="tab"><li class="active"><img src="../../../../images/ico4.png" alt="">订单</li></a>
+                        <a href="#authen" data-toggle="tab"><li><img src="../../../../images/ico5.png" alt="">认证</li></a>
+                        <a href="#sale" data-toggle="tab"><li><img src="../../../../images/ico6.png" alt="">营销</li></a>
+                        <a href="#data" data-toggle="tab"><li><img src="../../../../images/ico7.png" alt="">数据</li></a>
+                        <a href="#assets" data-toggle="tab"><li><img src="../../../../images/ico8.png" alt="">资产</li></a>
+                        <a href="#setting" data-toggle="tab"><li><img src="../../../../images/ico9.png" alt="">设置</li></a>
+                        <a href="#help" data-toggle="tab"><li><img src="../../../../images/ico10.png" alt="">帮助</li></a>
+                    </ul>
+                </div>
+            </div>
+            <div class="item-tab tab-content">
+                <div role="tabpanel" class="tab-pane fade" id="common">...</div>
+                <div role="tabpanel" class="tab-pane fade" id="shop">
+                    <div class="pdh20 text-color fs14 bold text-center">店铺管理</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">店铺管理</li></a>
+                        <a href=""><li>店铺装修</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="product">
+                    <div class="pdh20 text-color fs14 bold text-center">商品管理</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">商品列表</li></a>
+                        <a href=""><li>分类列表</li></a>
+                        <a href=""><li>添加商品</li></a>
+                        <a href=""><li>导入商品</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="team">
+                    <div class="pdh20 text-color fs14 bold text-center">军团</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">军团概括</li></a>
+                        <a href=""><li>团队详情</li></a>
+                        <a href=""><li>雇佣团</li></a>
+                        <a href=""><li>直属团</li></a>
+                        <a href=""><li>招募设置</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade in active" id="order">
+                    <div class="pdh20 text-color fs14 bold text-center">订单管理</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">订单管理</li></a>
+                        <a href=""><li>订单详情</li></a>
+                        <a href=""><li>订单数据</li></a>
+                        <a href=""><li>发货管理</li></a>
+                        <a href=""><li>批量发货</li></a>
+                        <a href=""><li>订单设置</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="authen">
+                    <div class="pdh20 text-color fs14 bold text-center">认证中心</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">个人认证</li></a>
+                        <a href=""><li>企业认证</li></a>
+                        <a href=""><li>官方认证</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="sale">
+                    <div class="pdh20 text-color fs14 bold text-center">营销中心</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">营销中心</li></a>
+                        <a href=""><li>多人拼团</li></a>
+                        <a href=""><li>限时秒杀</li></a>
+                        <a href=""><li>1元购</li></a>
+                        <a href=""><li>满立减</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="data">
+                    <div class="pdh20 text-color fs14 bold text-center">数据中心</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">活动分析</li></a>
+                        <a href=""><li>交易分析</li></a>
+                        <a href=""><li>商品分析</li></a>
+                        <a href=""><li>数据概括</li></a>
+                        <a href=""><li>页面流量</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="assets">
+                    <div class="pdh20 text-color fs14 bold text-center">资产管理</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">资产管理</li></a>
+                        <a href=""><li>收支明细</li></a>
+                        <a href=""><li>待结算</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="setting">
+                    <div class="pdh20 text-color fs14 bold text-center">设置</div>
+                    <ul class="text-center">
+                        <a href=""><li class="">门店管理</li></a>
+                        <a href=""><li>门店设置</li></a>
+                        <a href=""><li>通用设置</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="help">...</div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 pdh10 flex space-between">
+                        <div class="flex-aic">
+                            <a href="" class="btn bg-eeefef">返回活动列表</a>&nbsp;&nbsp;&nbsp;<font class="fs16">审核拒绝</font>
+                        </div>
+                    </div>
+                    <div class="col-sm-12"><div class="col-sm-12 border-b"></div></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 mgh20">
+                        <div class="pull-left"><span class="glyphicon glyphicon-info-sign text-color"></span></div>
+                        <div class="mgw20">
+                            <p class="">审核拒绝，可查看审核拒绝信息，并进行审核结果修改</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="col-sm-12 pdh5 bg-eeefef fs14 text-333333">拒绝详情</div>
+                    </div>
+                </div>
+                <div class="height58"></div>
+                <div class="row">
+                    <div class="col-sm-12 text-center fs18 flex center">
+                        <img class="mgw30 nml" src="../../../../images/reject.png" alt="" width="28">审核已拒绝
+                    </div>
+                </div>
+                <div class="height48"></div>
+                <div class="row mgh15 fs14 nmb">
+                    <div class="col-sm-2 text-right text-333333">店铺名称：</div>
+                    <div class="col-sm-10">多多旗舰店</div>
+                </div>
+                <div class="row mgh15 fs14 nmb">
+                    <div class="col-sm-2 text-right text-333333">商品名称：</div>
+                    <div class="col-sm-10">泰克于家秘制小黄鱼805g*10包</div>
+                </div>
+                <div class="row mgh15 fs14 nmb">
+                    <div class="col-sm-2 text-right text-333333">商品价格：</div>
+                    <div class="col-sm-10">¥ 33.00</div>
+                </div>
+                <div class="row mgh15 fs14 nmb">
+                    <div class="col-sm-2 text-right text-333333">佣金比例：</div>
+                    <div class="col-sm-10">¥ 3.00 <font class="fs12 text-muted">分销商佣金</font></div>
+                </div>
+                <div class="row mgh15 fs14 nmb">
+                    <div class="col-sm-2 text-right text-333333">活动价格：</div>
+                    <div class="col-sm-10">¥ 26.00</div>
+                </div>
+                <div class="row mgh15 fs14 nmb">
+                    <div class="col-sm-2 text-right text-333333">限购数量：</div>
+                    <div class="col-sm-10">2件/人</div>
+                </div>
+                <div class="row mgh15 fs14 nmb">
+                    <div class="col-sm-2 text-right text-333333">活动库存：</div>
+                    <div class="col-sm-10">100件</div>
+                </div>
+                <div class="row mgh15 fs14 nmb">
+                    <div class="col-sm-2 text-right text-333333">拼团人数：</div>
+                    <div class="col-sm-10">5人</div>
+                </div>
+                <div class="row mgh15 fs14 nmb">
+                    <div class="col-sm-2 text-right text-333333">成团时间：</div>
+                    <div class="col-sm-10">12小时</div>
+                </div>
+                <div class="row mgh15 fs14 nmb">
+                    <div class="col-sm-2 text-right text-333333">商品卖点：</div>
+                    <div class="col-sm-10">
+                        <p>鱿鱼营养价值</p>
+                        <p>1、鱿鱼富含钙、磷、铁元素，利于骨骼发育和造血，能有效治疗贫血；</p>
+                        <p>2、鱿鱼除富含蛋白质和人体所需的氨基酸外，鱿鱼还含有大量的牛磺酸，可抑制血液中的胆固醇含量，缓解疲劳，恢复视力，改善肝脏功能；</p>
+                    </div>
+                </div>
+                <div class="row mgh15 fs14 nmb">
+                    <div class="col-sm-2 text-right text-333333">拼团主图：</div>
+                    <div class="col-sm-10">
+                        <img class="border-a mgw15 nml" src="../../../../images/p-100x100.png" alt="" width="100" style="vertical-align:bottom">
+                        <a href="" class="text-blue">查看大图</a>
+                    </div>
+                </div>
+                <div class="row mgh15 fs14 nmb">
+                    <div class="col-sm-2 text-right text-333333">通过时间：</div>
+                    <div class="col-sm-10">2016-09-22  21:34:45</div>
+                </div>
+                <div class="row mgh15 fs14 nmb">
+                    <div class="col-sm-2 text-right text-333333">审核备注：</div>
+                    <div class="col-sm-10">卖点、特征描述不清楚，请修改！</div>
+                </div>
+                <div class="row mgh15 fs14 nmb">
+                    <div class="col-sm-2 text-right text-333333">审核理由：</div>
+                    <div class="col-sm-10"><textarea class="pd5 width480" name="" rows="6" placeholder="请填写审核建议并操作"></textarea></div>
+                </div>
+                <div class="row mgh15 fs14 nmb">
+                    <div class="col-sm-2 text-right text-333333"></div>
+                    <div class="col-sm-10">
+                        <a href="" class="btn pdw45 mgw20 nml bg-color">审核通过</a>
+                    </div>
+                </div>
+                <div class="height100"></div>
+            </div>
+        </div>
+        <div class="right-part">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 fs14 text-333333">
+                        <div class="col-sm-12 pdh20 border-b npl npr"><span class="glyphicon glyphicon-question-sign text-cecece"></span>&nbsp; 帮助和服务</div>
+                    </div>
+                </div>
+                <div class="row mgh20">
+                    <div class="col-sm-12 flex space-between">
+                        <font class="fs14 bold">帮助中心</font>
+                        <a href="" class="fs12 text-blue">进入></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p class="fs14 text-333333">商品在出售中列表找不到？</p>
+                        <p class="fs12">1.商品被手动下架，在仓库中，重新编辑上架即可。</p>
+                        <p class="fs12">2.商品售罄库存为0，在已售罄列表中，提醒您该添加库存了。待付款订单也会占据库存，其超时关闭后库存才会释放</p>
+                    </div>
+                </div>
+                <div class="row mgh20">
+                    <div class="col-sm-12">
+                        <p class="fs14 text-333333">如何推广商品？</p>
+                        <p class="fs12">点击[推广商品]，就可以获取商品二维码/商品链接，还能设置商品优惠二维码。</p>
+                        <p class="fs12">将商品分享到朋友圈，或群发时带上商品链接去推广。</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12"><div class="col-sm-12 border-b"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('.date-picker').datetimepicker({
+            format: 'yyyy-mm-dd',
+            minView: 2,
+            language: 'zh-CN',
+            autoclose: true,
+            todayBtn: 'linked'
+        });
+        $('.category a').on('click', function() {
+            $('.category a').removeClass('active');
+            $(this).addClass('active');
+        });
+    </script>
+</body>
+
+</html>

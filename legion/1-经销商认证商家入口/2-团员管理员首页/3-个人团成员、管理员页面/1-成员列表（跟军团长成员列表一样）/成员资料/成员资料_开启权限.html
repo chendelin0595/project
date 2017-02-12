@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>成员资料</title>
+    <link rel="stylesheet" href="../../../../../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../../../../../javascript/jquery-weui/jquery-weui.css">
+    <link rel="stylesheet" href="../../../../../stylesheet/common-rem.css">
+    <link rel="stylesheet" href="../../../../../stylesheet/color.css">
+    <script src="../../../../../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../../../../../javascript/common-rem.js"></script>
+    <script src="../../../../../javascript/jquery-weui/jquery-weui.min.js"></script>
+    <script src="../../../../../javascript/bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<style type="text/css" media="screen">
+
+</style>
+
+<body>
+    <div id="page">
+        <header>
+            <div class="text-center head-top">
+                <a href=""><img src="../../../../../images/ico_back.png" alt=""></a>
+                <span>成员资料</span>
+                <img src="../../../../../images/ico_trans.png" alt="">
+            </div>
+            <div style="height:1.17333333rem;"></div>
+        </header>
+        <!-- /header -->
+        <div class="weui-cells weui-cells_form fs28">
+            <div class="weui-cell weui-cell_switch">
+                <div class="weui-cell__bd">管理权限</div>
+                <div class="weui-cell__ft">
+                    <input class="weui-switch nm" type="checkbox">
+                </div>
+            </div>
+            <div id="policy" class="weui-cell" style="display:none">
+                <div class="weui-cell__bd"></div>
+                <div class="weui-cell__hd text-muted">团长总收益 &nbsp;<input class="pdw10 weui-input border-a img-rounded text-right" type="text" name="" value="" placeholder="" style="width:2.24rem;height:0.77333333rem">&nbsp;%</div>
+            </div>
+        </div>
+        <div class="pdw27 mgh58">
+            <a href="" class="pdh27 btn btn-block fs36 lh1 bg-color img-rounded">保存</a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('.weui-switch').on('click', function() {
+            if($(this).is(':checked')){
+                $('#policy').slideDown();
+            }else{
+                $('#policy').slideUp();
+            }
+        });
+    </script>
+</body>
+
+</html>

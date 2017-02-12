@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>售后订单-服务商处理中</title>
+    <link rel="stylesheet" href="../../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../javascript/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../../stylesheet/color.css">
+    <link rel="stylesheet" href="../../stylesheet/common.css">
+    <link rel="stylesheet" href="../../stylesheet/main.css">
+    <script src="../../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../../javascript/common.js"></script>
+    <script src="../../javascript/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../javascript/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body>
+    <div class="page">
+        <div class="left-part">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 mgh30"><img src="../../images/logo.png" alt="" width="100"></div>
+                </div>
+                <div class="row text-center bg-363840">
+                    <div class="col-sm-12 mgh10">
+                        <img src="../../images/headimg.png" alt="" width="40" class="img-circle">
+                        <img src="../../images/vip.png" alt="" width="10" class="abs" style="right:40px;bottom:5px">
+                    </div>
+                    <div class="col-sm-12 ellipsis">xxx小卖部啊xxx小卖部啊</div>
+                    <a href="" class="col-sm-12 mgh10"><img src="../images/logout.png" alt="" width="22"></a>
+                </div>
+                <div class="row">
+                    <ul class="text-center">
+                        <a href="#common" data-toggle="tab"><li><img src="../../images/ico0.png" alt="">概括</li></a>
+                        <a href="#shop" data-toggle="tab"><li><img src="../../images/ico1.png" alt="">店铺</li></a>
+                        <a href="#product" data-toggle="tab"><li><img src="../../images/ico2.png" alt="">商品</li></a>
+                        <a href="#team" data-toggle="tab"><li><img src="../../images/ico3.png" alt="">军团</li></a>
+                        <a href="#order" data-toggle="tab"><li class="active"><img src="../../images/ico4.png" alt="">订单</li></a>
+                        <a href="#authen" data-toggle="tab"><li><img src="../../images/ico5.png" alt="">认证</li></a>
+                        <a href="#sale" data-toggle="tab"><li><img src="../../images/ico6.png" alt="">营销</li></a>
+                        <a href="#data" data-toggle="tab"><li><img src="../../images/ico7.png" alt="">数据</li></a>
+                        <a href="#assets" data-toggle="tab"><li><img src="../../images/ico8.png" alt="">资产</li></a>
+                        <a href="#setting" data-toggle="tab"><li><img src="../../images/ico9.png" alt="">设置</li></a>
+                        <a href="#help" data-toggle="tab"><li><img src="../../images/ico10.png" alt="">帮助</li></a>
+                    </ul>
+                </div>
+            </div>
+            <div class="item-tab tab-content">
+                <div role="tabpanel" class="tab-pane fade" id="common">...</div>
+                <div role="tabpanel" class="tab-pane fade" id="shop">
+                    <div class="pdh20 text-color fs14 bold text-center">店铺管理</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">店铺管理</li></a>
+                        <a href=""><li>店铺装修</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="product">
+                    <div class="pdh20 text-color fs14 bold text-center">商品管理</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">商品列表</li></a>
+                        <a href=""><li>分类列表</li></a>
+                        <a href=""><li>添加商品</li></a>
+                        <a href=""><li>导入商品</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="team">
+                    <div class="pdh20 text-color fs14 bold text-center">军团</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">军团概括</li></a>
+                        <a href=""><li>团队详情</li></a>
+                        <a href=""><li>雇佣团</li></a>
+                        <a href=""><li>直属团</li></a>
+                        <a href=""><li>招募设置</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade in active" id="order">
+                    <div class="pdh20 text-color fs14 bold text-center">所有订单</div>
+                    <ul class="text-center">
+                        <a href=""><li>所有订单</li></a>
+                        <a href=""><li class="active">售后订单</li></a>
+                        <a href=""><li>发货管理</li></a>
+                        <a href=""><li>批量发货</li></a>
+                        <a href=""><li>评价管理</li></a>
+                        <a href=""><li>订单设置</li></a>
+                        <a href=""><li>订单数据</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="authen">
+                    <div class="pdh20 text-color fs14 bold text-center">认证中心</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">个人认证</li></a>
+                        <a href=""><li>企业认证</li></a>
+                        <a href=""><li>官方认证</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="sale">
+                    <div class="pdh20 text-color fs14 bold text-center">营销中心</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">营销中心</li></a>
+                        <a href=""><li>多人拼团</li></a>
+                        <a href=""><li>限时秒杀</li></a>
+                        <a href=""><li>1元购</li></a>
+                        <a href=""><li>满立减</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="data">
+                    <div class="pdh20 text-color fs14 bold text-center">数据中心</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">活动分析</li></a>
+                        <a href=""><li>交易分析</li></a>
+                        <a href=""><li>商品分析</li></a>
+                        <a href=""><li>数据概括</li></a>
+                        <a href=""><li>页面流量</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="assets">
+                    <div class="pdh20 text-color fs14 bold text-center">资产管理</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">资产管理</li></a>
+                        <a href=""><li>收支明细</li></a>
+                        <a href=""><li>待结算</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="setting">
+                    <div class="pdh20 text-color fs14 bold text-center">设置</div>
+                    <ul class="text-center">
+                        <a href=""><li class="">门店管理</li></a>
+                        <a href=""><li>门店设置</li></a>
+                        <a href=""><li>通用设置</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="help">...</div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 pdh10 fs14 text-color">买家发起申诉</div>
+                    <div class="col-sm-12"><div class="col-sm-12 border-b"></div></div>
+                </div>
+                <div class="mgh10 pdh10 bg-eeefef text-333333">
+                    <div class="pull-left bg-color mgw5" style="width: 4px; height: 20px; margin-top:-2px;"></div>
+                    订单号：415451212845452
+                </div>
+                <div class="pdw30 pdh30 text-color proflowBox border-a overhide proflowBox1">
+                    <div class="col-xs-4 text-left fs14 bold">
+                        买家 申请退款
+                    </div>
+                    <div class="col-xs-4 text-center fs14 bold">
+                        服务商处理中
+                    </div>
+                    <div class="col-xs-4 text-right fs14 bold">
+                        退款或拒绝
+                    </div>
+                    <div class="col-xs-4 proflow-text pro-status1 fs0 overhide pdw0 mgh10">
+                        <span class="border-a border-w2 pull-left text-center bg-white fs14 mgw48">1</span>
+                        <div class="pro-box bg-cecece">
+                            <p class="bg-color"></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 proflow-text pro-status2 fs0 overhide pdw0 mgh10">
+                        <span class="border-a border-w2 center-block text-center bg-white fs14">2</span>
+                        <div class="pro-box bg-cecece">
+                            <p class="bg-color"></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 proflow-text pro-status3 fs0 overhide pdw0 mgh10">
+                        <span class="border-a border-w2 pull-right text-center bg-white fs14 mgw40">3</span>
+                        <div class="pro-box bg-cecece">
+                            <p class="bg-color"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mgh18 overhide">
+                    <div class="col-xs-3 border-a pdw0 pull-left">
+                        <p class="pdh12 text-333333 text-center">退货退款申请</p>
+                        <div class="col-xs-12 bg-eeefef text-333333 pdh10 re border-b border-white" style="padding-left: 0; position: relative;">
+                            <img class="pull-left mgw10" src="../../images/yx-torder-img2.png"/>
+                            <p class=" pull-left ellipsis-3" style="width:60%;">台商正宗客家香辣烤懒人鱼考一箱重量约1065g</p>
+                            <span class="abs" style="right: 5px; top:22px;">X1</span>
+                        </div>
+                        <div class="col-xs-12 bg-eeefef text-333333 pdh10 re" style="padding-left: 0; position: relative;">
+                            <img class="pull-left mgw10" src="../../images/yx-torder-img2.png"/>
+                            <p class=" pull-left ellipsis-3" style="width:60%;">台商正宗客家香辣烤懒人鱼考一箱重量约1065g</p>
+                            <span class="abs" style="right: 5px; top:22px;">X1</span>
+                        </div>
+
+                        <div class="col-xs-12">
+                            <div class="mgh12">
+                                <p>发货商家：<span>水果王</span></p>
+                                <p>订单编号：<span>142656565212435</span></p>
+                                <p>订单类型：<span>平台自营</span></p>
+                                <p>销售商家：<span>水果王旗舰店</span></p>
+                                <p>商品总额：<span>¥29.9</span></p>
+                                <p>快递费用：<span>¥9.00</span></p>
+                                <p>付款时间：<span>2016-10-21 13:30:51</span></p>
+                                <p>支付方式：<span>微信支付</span></p>
+                                <p>所属商城：<span>厦门商城</span></p>
+                            </div>
+                            <div><p class="border-b" style="height:0;"></p></div>
+                            <div class="mgh12">
+                                <p>退款金额：<span>¥29.9</span></p>
+                                <p>期望结果：<span>退款</span></p>
+                                <p>退款件数：<span>2件</span></p>
+                                <p>退款说明：<span>货物破损严重</span></p>
+                                <p>退货物流：<span>圆通速递</span></p>
+                                <p>物流单号：<span>yt845493241200</span></p>
+                                <p>手机号码：<span>15365869097</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-9 border-a pull-right fs14" style="width:70%;">
+                        <div class="row pd9 bg-color fs14">
+                            <p>支持买家</p>
+                            <p>处理依据：商品损坏严重。</p>
+                            <p>处理说明：经商城客服查证，卖家所发出货物确实受损。</p>
+                        </div>
+                        <div class="mgh18 fs14">
+                            <p class="text-center">10月19日 10:49:21</p>
+                            <div class="mgh15 overhide ">
+                                <img class="col-xs-2 pd0 mgh5" style="width:52px; height:52px; border-radius:50%;" src="../../images/order-img1.png"/>
+                                <div class="col-xs-10" style="width:90%">
+                                    <span class="text-333333 center-block pdh5">卖家-水果王一号</span>
+                                    <div class="bg-f5f5f5 pd10 border-radius pro-userList re">
+                                        <p>卖家拒绝了本次售后服务申请。 拒绝原因：商品未发现问题，买家举证无效。</p>
+                                        <p>拒绝说明：无</p>
+                                        <img class="mg3" src="../../images/order-img3.png" alt="">
+                                        <img class="mg3" src="../../images/order-img3.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mgh18 fs14">
+                            <p class="text-center">10月19日 10:49:21</p>
+                            <div class="mgh15 overhide ">
+                                <img class="col-xs-2 pd0 mgh5" style="width:52px; height:52px; border-radius:50%;" src="../../images/order-img2.png"/>
+                                <div class="col-xs-10" style="width:90%">
+                                    <span class="text-333333 center-block pdh5">买家-依旧深蓝天</span>
+                                    <div class="bg-f5f5f5 pd10 border-radius pro-userList re">
+                                        <p>提交凭证：商品受损严重。而且已经退货，卖家一直拒绝退款。麻烦客服处理。</p>
+                                        <p>物流信息：圆通速递 yt1544515215415</p>
+                                        <img class="mg3" src="../../images/order-img3.png" alt="">
+                                        <img class="mg3" src="../../images/order-img3.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mgh15 overhide ">
+                                <img class="col-xs-2 pd0 mgh5" style="width:52px; height:52px; border-radius:50%;" src="../../images/order-img2.png"/>
+                                <div class="col-xs-10" style="width:90%">
+                                    <span class="text-333333 center-block pdh5">卖家-水果王一号</span>
+                                    <div class="bg-f5f5f5 pd10 border-radius pro-userList re">
+                                        <p>卖家拒绝了本次售后服务申请。 拒绝原因：商品未发现问题，买家举证无效。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fs16 mgh30 text-center">
+                    <a href="javascript:;" class="mgw5 pdw12 pdh8 bg-color border-radius pro-agree">同意并退款</a>
+                    <a href="javascript:;" class="mgw5 pdw12 pdh8 bg-eeefef border-a border-radius pro-refuse">拒绝退款</a>
+
+                    <!-- 等待处理结果 -->
+                    <!--<a href="javascript:;"class="mgw5 pdw12 pdh8 bg-color border-radius pro-agree">修改处理结果</a>-->
+                </div>
+            </div>
+        </div>
+        <div class="right-part">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 fs14 text-333333">
+                        <div class="col-sm-12 pdh20 border-b npl npr"><span class="glyphicon glyphicon-question-sign text-cecece"></span>&nbsp; 帮助和服务</div>
+                    </div>
+                </div>
+                <div class="row mgh20">
+                    <div class="col-sm-12 flex space-between">
+                        <font class="fs14 bold">帮助中心</font>
+                        <a href="" class="fs12 text-blue">进入></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p class="fs14 text-333333">商品在出售中列表找不到？</p>
+                        <p class="fs12">1.商品被手动下架，在仓库中，重新编辑上架即可。</p>
+                        <p class="fs12">2.商品售罄库存为0，在已售罄列表中，提醒您 该添加库存了。待付款订单也会占据库存，其超时关闭后库存才会释放</p>
+                    </div>
+                </div>
+                <div class="row mgh20">
+                    <div class="col-sm-12">
+                        <p class="fs14 text-333333">如何推广商品？</p>
+                        <p class="fs12">点击[推广商品]，就可以获取商品二维码/商品链接，还能设置商品优惠二维码。</p>
+                        <p class="fs12">将商品分享到朋友圈，或群发时带上商品链接去推广。</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12"><div class="col-sm-12 border-b"></div></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="mask"></div>
+        <!-- 同意退款弹窗 -->
+        <div id="dialogs-a" class="pro-dialogs bg-white fixed pd20" style="display:none;">
+            <div class="pro-close"><img src="../../images/close.png"/></div>
+            <span class="fs14">同意退款</span>
+            <div class="pro-dia-con mgh20">
+                <div class="mgh10">
+                    <span class="fs14">同意理由：</span>
+                    <select class="pdw10 pdh5 bg-eeefef no-border">
+                        <option value="1">商家发出商品错误</option>
+                    </select>
+                </div>
+                <div class="mgh10">
+                    <span class="fs14 pull-left pdh8">处理依据：</span>
+                    <textarea class="mgw3 border-radius pd10" placeholder="感谢您的评价，我们会把您的评论当做我们的动力，做到脚踏实地。"></textarea>
+                </div>
+                <div class="text-center mgh30">
+                    <input class="pdw35 pdh8 bg-color no-border border-radius dia-ok" type="button" value="确定"/>
+                    <input class="pdw35 pdh8 border-a bg-eeefef border-radius dia-cancel1" type="button" value="取消"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- 拒绝弹窗 -->
+        <div id="dialogs-r" class="pro-dialogs bg-white fixed pd20" style="display: none;">
+            <div class="pro-close"><img src="../../images/close.png"/></div>
+            <span class="fs14">拒绝退款</span>
+            <div class="pro-dia-con mgh20">
+                <div class="mgh10">
+                    <span class="fs14">拒绝理由：</span>
+                    <select class="pdw10 pdh5 bg-eeefef no-border">
+                        <option value="1">退款金额与付款金额不对</option>
+                    </select>
+                </div>
+                <div class="mgh10">
+                    <span class="fs14 pull-left pdh8">处理依据：</span>
+                    <textarea class="mgw3 border-radius pd10" placeholder="感谢您的评价，我们会把您的评论当做我们的动力，做到脚踏实地。"></textarea>
+                </div>
+                <div class="text-center mgh30">
+                    <input class="pdw35 pdh8 bg-color no-border border-radius dia-ok" type="button" value="确定"/>
+                    <input class="pdw35 pdh8 border-a bg-eeefef border-radius dia-cancel2" type="button" value="取消"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function(){
+            var proAgree=$('.pro-agree'),
+                dialogA=$('#dialogs-a'),
+                proRefuse=$('.pro-refuse'),
+                dialogR=$('#dialogs-r'),
+                diaCan1=$('.dia-cancel1'),
+                diacan2=$('.dia-cancel2'),
+                mask=$('.mask');
+
+
+            proAgree.on('click',function(){
+                dialogA.slideDown();
+                mask.show();
+            });
+            proRefuse.on('click',function(){
+                dialogR.slideDown();
+                mask.show();
+            });
+
+            diaCan1.on('click',function(){
+                dialogA.slideUp();
+                mask.hide();
+            });
+            diacan2.on('click',function(){
+                $('#dialogs-r').slideUp();
+                mask.hide();
+            });
+
+            $('.pro-close').on('click',function(){
+                if($(this).parent().attr('id')=='dialogs-a'){
+                    diaCan1.trigger('click');
+                }else{
+                    diacan2.trigger('click');
+                }
+            });
+            $('.dia-ok').on('click',function(){
+                if($(this).parent().parent().parent().attr('id')=='dialogs-a'){
+                    diaCan1.trigger('click');
+                }else{
+                    diacan2.trigger('click');
+                }
+            });
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" href="../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../javascript/jquery-weui/jquery-weui.css">
+    <link rel="stylesheet" href="../stylesheet/common-rem.css">
+    <link rel="stylesheet" href="../stylesheet/color.css">
+    <link rel="stylesheet" href="../stylesheet/main.css">
+    <script src="../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../javascript/common-rem.js"></script>
+    <script src="../javascript/jquery-weui/jquery-weui.min.js"></script>
+    <script src="../javascript/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css" media="screen">
+.focus > a:before {content: ' '; position:absolute; background:#e44a62; color: white ; top:0; right:0.5rem;height:0.53rem;width:0.53rem; background:url('../images/ca_g_del.png') no-repeat 0 0;background-size:cover;-webkit-background-size:cover;}
+</style>
+<body>
+    <div id="page" class="bg-white">
+        <header>
+            <div class="text-center head-top">
+                <a href=""><img src="../images/ico_back.png" alt=""></a>
+                <span>军团</span>
+                <img src="../images/ico_trans.png" alt="">
+            </div>
+            <div style="height:1.17333333rem;"></div>
+        </header><!-- /header -->
+        <div class="row height30 bg-eeefef"></div>
+        <div class="container-fluid nmb">
+            <div class="row pdh16">
+                <div class="wf pdw28 fs24 mgh10">
+                    <p class="pull-left mgh3">我关注的行业</p>
+                    <span id="done" class="bg-color pdw20 pull-right pdh5 img-rounded hidden">完成</span>
+                    <span id="edit" class="text-color pdw20 pull-right pdh5 img-rounded border-a inherit">编辑</span>
+                </div>
+                <div id="focus" class="fs24 text-center ca-sel"></div>
+                <div class="row height15 bg-eeefef"></div>
+            </div>
+            <div class="row category pdh16 ca-sel text-center">
+                <a class="col-xs-3 pd10 mgh5 border-radius re" href="#">
+                    <span class="center-block" style="background-image: url('../images/ca_g_01.png');"></span>
+                    <p class="fs28 pdh8">生鲜蔬菜</p>
+                </a>
+                <a class="col-xs-3 pd10 mgh5 border-radius re" href="#">
+                    <span class="center-block" style="background-image: url('../images/ca_g_02.png');"></span>
+                    <p class="fs28 pdh8">休闲零食</p>
+                </a>
+                <a class="col-xs-3 pd10 mgh5 border-radius re" href="#">
+                    <span class="center-block" style="background-image: url('../images/ca_g_03.png');"></span>
+                    <p class="fs28 pdh8">粮油干货</p>
+                </a>
+                <a class="col-xs-3 pd10 mgh5 border-radius re" href="#">
+                    <span class="center-block" style="background-image: url('../images/ca_g_04.png');"></span>
+                    <p class="fs28 pdh8">水果</p>
+                </a>
+                <a class="col-xs-3 pd10 mgh5 border-radius re" href="#">
+                    <span class="center-block" style="background-image: url('../images/ca_g_05.png');"></span>
+                    <p class="fs28 pdh8">饮料酒水</p>
+                </a>
+                <a class="col-xs-3 pd10 mgh5 border-radius re" href="#">
+                    <span class="center-block" style="background-image: url('../images/ca_g_06.png');"></span>
+                    <p class="fs28 pdh8">海鲜水产</p>
+                </a>
+                <a class="col-xs-3 pd10 mgh5 border-radius re" href="#">
+                    <span class="center-block" style="background-image: url('../images/ca_g_07.png');"></span>
+                    <p class="fs28 pdh8">传统滋补</p>
+                </a>
+                <a class="col-xs-3 pd10 mgh5 border-radius re" href="#">
+                    <span class="center-block" style="background-image: url('../images/ca_g_08.png');"></span>
+                    <p class="fs28 pdh8">其他</p>
+                </a>
+            </div>
+            <!-- confirm-bottom -->
+            <div class="height258"></div>
+            <div class="row bg-white pdh20 navbar-fixed-bottom">
+                <div class="col-xs-12 pdw36">
+                    <a href="" class="col-xs-12 pdh27 text-center fs32 bg-color img-rounded">保存修改</a>
+                </div>
+                <div class="col-xs-12 pdw36 mgh10 nmb">
+                    <a href="" class="col-xs-12 pdh27 text-center fs32 bg-gray img-rounded">取消</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('#edit,#done').on('click', function(event) {
+            event.preventDefault();
+            $('#edit,#done').toggleClass('hidden');
+            if (!$('#done').hasClass('hidden')) {
+                $('#focus').addClass('focus');
+            }else{
+                $('#focus').removeClass('focus');
+            }
+        });
+        $('#focus').on('click', 'a', function(event) {
+            event.preventDefault();
+            if ($('#focus').hasClass('focus')) {
+                $('.category').append($(this).clone(false, false));
+                $(this).remove();
+            }
+        });
+        $('.category').on('click', 'a', function(event) {
+            event.preventDefault();
+            if ($('#focus').hasClass('focus')) {
+                $('#focus').append($(this).clone(false, false));
+                $(this).remove();
+            }
+        });
+    </script>
+</body>
+
+</html>

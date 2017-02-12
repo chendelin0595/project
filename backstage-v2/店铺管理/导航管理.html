@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>导航管理</title>
+    <link rel="stylesheet" href="../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../javascript/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../javascript/layer/skin/layer.css">
+    <link rel="stylesheet" href="../stylesheet/common.css">
+    <link rel="stylesheet" href="../stylesheet/color.css">
+    <link rel="stylesheet" href="../stylesheet/main.css">
+    <script src="../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../javascript/layer/layer.js"></script>
+    <script src="../javascript/common.js"></script>
+    <script src="../javascript/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../javascript/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+</head>
+</head>
+<style>
+    .phone-ul{
+        width:80px;
+        top:-60px;
+        left:50%;
+        margin-left:-40px;
+        display: none;
+    }
+    .phone-ul:before{
+        content:' ';
+        width:0;
+        height:0;
+        border-left:10px solid transparent;
+        border-right:10px solid transparent;
+        border-top:8px solid #fff;
+        position: absolute;
+        left:50%;
+        bottom:-5px;
+        margin-left:-10px;
+
+    }
+    .phone-ul li{
+        height:30px;
+        line-height:30px;
+        border-bottom:1px dashed #efeeee;
+    }
+</style>
+<body>
+<div class="page">
+    <div class="left-part">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 mgh30"><img src="../images/logo.png" alt="" width="100"></div>
+            </div>
+            <div class="row">
+                <ul class="text-center l-uiList">
+                    <a href="#common" data-toggle="tab"><li><img src="../images/ico0.png" alt="">概况</li></a>
+                    <a href="#shop" data-toggle="tab"><li><img src="../images/ico1.png" alt="">店铺</li></a>
+                    <a href="#product" data-toggle="tab"><li><img src="../images/ico2.png" alt="">商品</li></a>
+                    <a href="#team" data-toggle="tab"><li><img src="../images/ico3.png" alt="">商家</li></a>
+                    <a href="#order" data-toggle="tab"><li class="active"><img src="../images/ico4.png" alt="">订单</li></a>
+                    <a href="#authen" data-toggle="tab"><li><img src="../images/ico5.png" alt="">审核</li></a>
+                    <a href="#sale" data-toggle="tab"><li><img src="../images/ico6.png" alt="">营销</li></a>
+                    <a href="#data" data-toggle="tab"><li><img src="../images/ico7.png" alt="">数据</li></a>
+                    <a href="#assets" data-toggle="tab"><li><img src="../images/ico8.png" alt="">资产</li></a>
+                    <a href="#setting" data-toggle="tab"><li><img src="../images/ico9.png" alt="">设置</li></a>
+                </ul>
+                <div class="row dropup fixed pdh10 pdw5 cur-po">
+                    <div id="l-l-btn">
+                        <img src="../images/ico_nav3_2.png" class="pull-left"/>
+                        <p class="ellipsis" style="width:78px;">xxx小卖部啊</p>
+                        <span class="caret pull-right abs"></span>
+                    </div>
+                    <ul id="l-loginBox" class="abs pdw6 bg-white text-center img-rounded" data-btn="no">
+                        <li><a href="#" class="text-939393">修改密码</a></li>
+                        <li><a href="#" class="text-939393">退出登录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="item-tab tab-content">
+            <div role="tabpanel" class="tab-pane fade" id="shop">
+                <div class="pdh20 text-color fs16 bold text-center">店铺中心</div>
+                <ul class="text-center">
+                    <a href=""><li class="active">店铺概况</li></a>
+                    <a href=""><li>微页面</li></a>
+                    <a href=""><li>页面分类</li></a>
+                    <a href=""><li>店铺主页</li></a>
+                    <a href=""><li>店铺导航</li></a>
+                    <a href=""><li>公共广告</li></a>
+                    <a href=""><li>自定义模块</li></a>
+                    <a href=""><li>我的文件</li></a>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane fade in active" id="order">
+                <div class="pdh20 text-color fs16 bold text-center">订单中心</div>
+                <ul class="text-center">
+                    <a href=""><li class="active">全部订单</li></a>
+                    <a href=""><li>平台自营</li></a>
+                    <a href=""><li>平台分销</li></a>
+                    <a href=""><li>售后订单</li></a>
+                    <a href=""><li>评价管理</li></a>
+                    <a href=""><li>举报订单</li></a>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="sale">
+                <div class="pdh20 text-color fs16 bold text-center">营销中心</div>
+                <ul class="text-center">
+                    <a href=""><li class="active">拼团</li></a>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="data">
+                <div class="pdh20 text-color fs16 bold text-center">数据中心</div>
+                <ul class="text-center">
+                    <a href=""><li class="active">数据概况</li></a>
+                    <a href=""><li>交易数据</li></a>
+                    <a href=""><li>产品数据</li></a>
+                    <a href=""><li>收支数据</li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="content bg-eeefef">
+        <div class="container-fluid">
+            <!-- phone -->
+            <div style="width:950px; margin:0 auto;">
+                <div class="left-phoneBox bg-959595 pull-left mgw12 pdw13 pdh25">
+                    <div class="l-p-content bg-eeefef re overhide">
+                        <div class="weui-flex abs b-0 l-0 l-phone pdh18 bg-white" style="width:100%;">
+                            <div class="weui-flex__item text-center">
+                                <a href="#" class="center-block border-r">
+                                    <img src="../images/shop_ico_home.png"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-setPanel pull-right bg-white">
+                    <div class="col-md-12">
+                        <h1 class="fs16 pdh20 text-333333">导航设置</h1>
+                        <div class="pull-left col-md-12 pdw0">
+                            <p class="pull-left" style="width:338px;">店铺的各个页面可以通过导航串联起来。通过精心设置的导航，方便买家在栏目间快速切换，引导买家前往您期望的页面。</p>
+                            <div class="switch-btn pull-right">
+                                <input type="checkbox"/>
+                            </div>
+                        </div>
+                        <div class="col-md-12 height20"></div>
+                    </div>
+                    <div class="row height10 bg-eeefef"></div>
+                    <div class="col-md-12 pdh15 pdw20 text-333333">
+                        <p>将导航应用在以下页面：</p>
+                        <div class="height10"></div>
+                        <div>
+                            <input type="checkbox" id="c-0" class="ver-textbottom"/>
+                            <label class="nw pdw5" for="c-0">店铺首页</label>
+                            <input type="checkbox" id="c-1" class="ver-textbottom"/>
+                            <label class="nw pdw5" for="c-1">会员主页</label>
+                            <input type="checkbox" id="c-2" class="ver-textbottom"/>
+                            <label class="nw pdw5" for="c-2">微页面及分类</label>
+                            <input type="checkbox" id="c-3" class="ver-textbottom"/>
+                            <label class="nw pdw5" for="c-3">商品分组</label>
+                            <input type="checkbox" id="c-4" class="ver-textbottom"/>
+                            <label class="nw pdw5" for="c-4">商品搜索</label>
+                        </div>
+                    </div>
+                    <div class="row height10 bg-eeefef"></div>
+                    <div class="col-md-12" id="l-navBox">
+                        <div class="fs14 pdh18 border-b">
+                            <span class="text-333333" style="padding-right:10px;">显示模版</span>
+                            <input class="ver-textbottom mgw5" type="radio" id="r-1" name="r-1" checked/>
+                            <label class="nw" for="r-1">微信菜单</label>
+                            <input class="ver-textbottom mgw5" type="radio" id="r-2" name="r-1"/>
+                            <label class="nw" for="r-2">APP菜单</label>
+                        </div>
+
+                        <!--<div class="text-333333 l-nav1">
+                            <div style="height:10px;"></div>
+                            <p>一级导航</p>
+                            <div class="bg-eeefef l-n-div1">
+                                <p class="border-r fs12 bold pull-left">全部商品</p>
+                                <span>链接</span>
+                                <a href="#" class="text-939393">添加二级导航后链接已失效</a>
+                                <a href="#" class="pull-right text-5faaff">修改</a>
+                            </div>
+                            <div class="border-b overhide">
+                                <div class="pull-right l-n-div2">
+                                    <div class="l-n2-title">
+                                        二级导航
+                                    </div>
+                                    <div id="l-n-div2">
+                                        <div class="bg-eeefef l-n2-li">
+                                            <p class="border-r fs12 bold pull-left" style="width:148px;">全部商品</p>
+                                            <span>链接</span>
+                                            <a href="#" class="text-5faaff">选择链接页面</a>
+                                            <a href="#" class="pull-right text-5faaff">修改</a>
+                                        </div>
+                                    </div>
+                                    <div class="border-a dashed cur-po mgh5 r-addNav2">
+                                        <img src="../images/shop_ico_add1.png"/>
+                                        <span>添加二级导航</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+
+                    </div>
+                    <div class="col-md-12 overhide pull-right r-addNav1">
+                        <div class="border-a dashed cur-po pdw12 pdh15 mgh5">
+                            <img src="../images/shop_ico_add1.png"/>
+                            <span class="pdw5">添加一级导航</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="right-part">
+        <div class="container-fluid r-div1">
+            <div class="row">
+                <div class="col-sm-12 fs14 text-333333">
+                    <div class="col-sm-12 pdh20 border-b npl npr"><span class="glyphicon glyphicon-question-sign text-cecece">
+                        </span>&nbsp; 帮助和服务
+                        <img class="pull-right cur-po" src="../images/ico11.png"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row mgh20">
+                <div class="col-sm-12 flex space-between">
+                    <font class="fs14 bold">帮助中心</font>
+                    <a href="" class="fs12 text-blue">进入></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="fs14 text-333333">商品在出售中列表找不到？</p>
+                    <p class="fs12">1.商品被手动下架，在仓库中，重新编辑上架即可。</p>
+                    <p class="fs12">2.商品售罄库存为0，在已售罄列表中，提醒您 该添加库存了。待付款订单也会占据库存，其超时关闭后库存才会释放</p>
+                </div>
+            </div>
+            <div class="row mgh20">
+                <div class="col-sm-12">
+                    <p class="fs14 text-333333">如何推广商品？</p>
+                    <p class="fs12">点击[推广商品]，就可以获取商品二维码/商品链接，还能设置商品优惠二维码。</p>
+                    <p class="fs12">将商品分享到朋友圈，或群发时带上商品链接去推广。</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12"><div class="col-sm-12 border-b"></div></div>
+            </div>
+        </div>
+        <div class="container-fluid r-div2">
+            <div class="row">
+                <div class="col-sm-12 fs14 text-333333">
+                    <div class="col-sm-12 pdh20 npl npr cur-po"><span class="glyphicon glyphicon-question-sign text-cecece"></span>&nbsp; 帮助和服务</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function(){
+        var l_navBox=$('#l-navBox'),
+                addNav1=$('.r-addNav1'),
+                addNav2=$('.r-addNav2'),
+                lPhone=$('.l-phone'),
+                ulHtml='<li data-href="http://www.baidu.com">微页面及分类</li> <li data-href="#">商品及分类</li><li data-href="#">店铺主页</li> <li data-href="#">会员主页</li><li data-href="#">自定义外链</li>',
+                num= 0;
+
+        //添加一级菜单
+        addNav1.on('click',navFn1);
+
+        function navFn1(){
+            if(lPhone.find('>div').length==4){
+                layer.msg('最多只能添加3个');
+                return;
+            }
+
+            layer.prompt({value:'请输入标题'},function(val,index){
+                var arr_nav1='<div class="text-333333 l-nav1" data-num='+ num +'><div style="height:10px;"></div><p>一级导航</p><div class="bg-eeefef l-n-div1 re"><p class="border-r fs12 bold pull-left">'+ val +'</p><span>链接</span> <a href="javascript:;" class="text-5faaff navli1-a nav-liA">选择链接页面</a><ul class="set-diaList s-d-1 abs bg-white" style="left:226px;top:32px;">'+ ulHtml +'</ul><a href="javascript:;" class="pull-right text-color del-nav1" style="margin-left:10px;">删除</a><a href="javascript:;" class="pull-right text-5faaff re-nav1">修改</a></div><div class="border-b" style="clear:both;"> <div class="pull-right l-n-div2"> <div class="l-n2-title">二级导航 </div><div id="l-n-div2"></div> <div class="border-a dashed cur-po r-addNav2"> <img src="../images/shop_ico_add1.png"/><span>添加二级导航</span></div></div></div></div>',
+                        phone_nav1='<div class="weui-flex__item text-center re"><a href="javascript:;" class="center-block border-r" data-num='+ num +' data-btn="no">'+ val +'</a><ul class="phone-ul abs l-0 t-0 bg-white border-radius"></ul></div>';
+                l_navBox.append(arr_nav1);
+                lPhone.append(phone_nav1);
+                layer.close(index);
+                layer.msg('添加成功',{time:500});
+
+            });
+            num++;
+        }
+
+        //修改一级菜单
+        $('body').on('click','.re-nav1',function(){
+            var parData=$(this).parents('.l-nav1').data('num'),
+                    ThisP=$(this).parent().find('p');
+
+            layer.prompt({value:ThisP.html()},function(val,index){
+                ThisP.html(val);
+                $('a[data-num='+ parData +']').html(val);
+                layer.close(index);
+                layer.msg('修改成功',{time:500});
+
+            });
+        });
+
+        //修改二级菜单
+        $('body').on('click','.re-nav2',function(){
+            var parData=$(this).parents('.l-nav1').data('num'),
+                    ThisP=$(this).parent().find('p'),
+                    parList=$(this).parents('#l-n-div2').find('>div'),
+                    liIndex=parList.index($(this).parent());
+
+
+            layer.prompt({value:ThisP.html()},function(val,index){
+                ThisP.html(val);
+                $('a[data-num='+ parData +']').next('ul').find('li').eq(liIndex).html(val);
+                layer.close(index);
+                layer.msg('修改成功',{time:500});
+
+            });
+        });
+
+        //删除一级菜单
+
+        $('body').on('click','.del-nav1',function(){
+            var parent=$(this).parents('.l-nav1');
+
+            layer.msg('你确定删除吗？', {
+                time: 0
+                ,btn: ['是', '否']
+                ,yes: function(index){
+                    $('a[data-num='+ parent.data('num') +']').parent().remove();
+                    parent.remove();
+                    layer.close(index);
+                    layer.msg('删除成功')
+                }
+            });
+        });
+
+        //删除二级菜单
+        $('body').on('click','.del-nav2',function(){
+            var parent=$(this).parents('.l-nav1'),
+                    parList=$(this).parent(),
+                    thisIndex=parList.index(),
+                    aAbox=$('a[data-num='+ parent.data('num') +']'),
+                    ali=aAbox.next().find('li');
+
+
+
+            layer.msg('你确定删除吗？', {
+                time: 0
+                ,btn: ['是', '否']
+                ,yes: function(index){
+                    if(ali.length<=1){
+                        aAbox.data('btn','no');
+                        aAbox.next().removeClass('p-ul').hide();
+                        parent.find('.navli1-a').removeClass('text-939393').addClass('text-5faaff nav-liA').html('选择链接页面');
+                    }
+                    ali.eq(thisIndex).remove();
+                    aAbox.next().css('top',ali.length*-30+'px');
+                    parList.remove();
+                    layer.close(index);
+                    layer.msg('删除成功')
+                }
+            });
+        });
+
+        //添加二级菜单
+        $('body').on('click','.r-addNav2',function(){
+            var oParent=$(this).parents('.l-nav1').data('num'),
+                    prevDiv=$(this).prev('#l-n-div2'),aLilen,That=$(this);
+
+
+            if(prevDiv.find('.l-n2-li').length>4){
+                layer.msg('最多只能添加5个');
+                return;
+            }
+            layer.prompt({value:'请输入子标题'},function(val,index){
+                var arr_nav2='<div class="bg-eeefef l-n2-li re"><p class="border-r fs12 bold pull-left" style="width:148px;">'+ val +'</p><span>链接</span><a href="javascript:;" class="text-5faaff navli2-a">选择链接页面</a><ul class="set-diaList s-d-2 abs bg-white" style="left:226px;top:32px;">'+ ulHtml +'</ul><a href="javascript:;" class="pull-right text-color del-nav2" style="margin-left:10px;">删除</a><a href="javascript:;" class="pull-right text-5faaff re-nav2">修改</a></div>',
+                        ali='<li class="ellipsis"><a href="javascript:;">'+ val +'</a></li>',
+                        aul=$('a[data-num='+ oParent +']').data('btn','yes').prop('href','javascript:;').next('.phone-ul');
+
+
+                prevDiv.append(arr_nav2);
+                aul.append(ali).css('top',aul.find('li').length*-30+-30+'px');
+                layer.close(index);
+                if(That.prev().find('.l-n2-li').length>0){
+                    That.parents('.l-nav1').find('.navli1-a').prop('href','javascript:;').removeClass('text-5faaff nav-liA').addClass('text-939393').html('添加二级导航后链接已失效');
+                }
+            });
+        });
+
+        $('body').on('click','.navli1-a',function(){
+            if(!$(this).hasClass('nav-liA')) return;
+            $(this).next().show();
+        });
+        //修改一级菜单链接
+        $('body').on('click','.s-d-1 li',function(){
+            var ThisHTML=$(this).html(),
+                    Thishref=$(this).data('href'),
+                    parA=$(this).parent().prev(),
+                    parentNum=$(this).parents('.l-nav1').data('num');
+
+
+            parA.html(ThisHTML);
+            $('a[data-num='+ parentNum +']').prop('href',Thishref);
+            $(this).parent().hide();
+            layer.msg('修改链接成功',{time:500});
+        });
+
+        //修改二级菜单链接
+        $('body').on('click','.navli2-a',function(){
+            $(this).next().show();
+        });
+
+        $('body').on('click','.s-d-2 li',function(){
+            var ThisHTML=$(this).html(),
+                    Thishref=$(this).data('href'),
+                    parA=$(this).parent().prev(),
+                    parentNum=$(this).parents('.l-nav1').data('num'),
+                    index=$(this).parents('.l-n-div2').index($(this).parents('.l-n2-li'));
+
+            parA.html(ThisHTML);
+            $('a[data-num='+ parentNum +']').next().find('li').eq(index).children().prop('href',Thishref);
+            $(this).parent().hide();
+        });
+
+        //phone TAB打开关闭
+        $('.left-phoneBox').on('click','.center-block',function(){
+            var Thisul=$(this).next('.phone-ul'),
+                    phoneUl=$('.phone-ul');
+            if($(this).data('btn')==='no') return;
+            if(!Thisul.hasClass('p-ul')){
+                phoneUl.hide().removeClass('p-ul');
+                Thisul.show().addClass('p-ul');
+            }else{
+                Thisul.hide().removeClass('p-ul');
+            }
+        });
+    });
+</script>
+</body>
+</html>

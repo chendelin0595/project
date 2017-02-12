@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="../../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../javascript/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../../stylesheet/color.css">
+    <link rel="stylesheet" href="../../stylesheet/common.css">
+    <script src="../../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../../javascript/common.js"></script>
+    <script src="../../javascript/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../javascript/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script src="../../javascript/bootstrap-datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script>
+</head>
+<style type="text/css" media="screen">
+    .item { display: flex; justify-content: center; align-items: center; width: 205px; height: 85px; float: left; margin-right: 20px; margin-bottom: 20px; border-radius: 8px; line-height: 1.8; }
+    .form-control {height:30px; border-radius:0px;}
+    .img-rounded{border-radius: 6px; height:30px; background-color: #e44a62;line-height:30px}
+    .btn{ border-radius: 0px; height: 30px;}
+    .group input[type=text] { height: 30px; padding-left: 10px; padding-right: 10px; }
+    .group .inp {font-size: 14px; }
+    .group { margin-top: 20px; }
+    .inp label { font-weight: normal; font-size: 14px; margin: 5px 30px 5px 0px; }
+    .inp [type=checkbox],.inp [type=radio] { margin-right: 8px; }
+    .ilb, .date-picker { display: inline-block; }
+    .date-picker { position: relative; }
+    .date-picker .glyphicon-calendar { position: absolute; top: 6px; right: 6px; }
+    select{height:30px; line-height:30px;}
+    .category a{width:80px;}
+</style>
+<body>
+    <div class="page">
+        <div class="left-part">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 mgh30"><img src="../../images/logo.png" alt="" width="100"></div>
+                </div>
+                <div class="row text-center bg-363840">
+                    <div class="col-sm-12 mgh10">
+                        <img src="../../images/headimg.png" alt="" width="40" class="img-circle">
+                        <img src="../../images/vip.png" alt="" width="10" class="abs" style="right:40px;bottom:5px">
+                    </div>
+                    <div class="col-sm-12 ellipsis">xxx小卖部啊xxx小卖部啊</div>
+                    <a href="" class="col-sm-12 mgh10"><img src="../../images/logout.png" alt="" width="22"></a>
+                </div>
+                <div class="row">
+                    <ul class="text-center">
+                        <a href="#common" data-toggle="tab"><li><img src="../../images/ico0.png" alt="">概括</li></a>
+                        <a href="#shop" data-toggle="tab"><li><img src="../../images/ico1.png" alt="">店铺</li></a>
+                        <a href="#product" data-toggle="tab"><li><img src="../../images/ico2.png" alt="">商品</li></a>
+                        <a href="#team" data-toggle="tab"><li><img src="../../images/ico3.png" alt="">军团</li></a>
+                        <a href="#order" data-toggle="tab"><li class="active"><img src="../../images/ico4.png" alt="">订单</li></a>
+                        <a href="#authen" data-toggle="tab"><li><img src="../../images/ico5.png" alt="">认证</li></a>
+                        <a href="#sale" data-toggle="tab"><li><img src="../../images/ico6.png" alt="">营销</li></a>
+                        <a href="#data" data-toggle="tab"><li><img src="../../images/ico7.png" alt="">数据</li></a>
+                        <a href="#assets" data-toggle="tab"><li><img src="../../images/ico8.png" alt="">资产</li></a>
+                        <a href="#setting" data-toggle="tab"><li><img src="../../images/ico9.png" alt="">设置</li></a>
+                        <a href="#help" data-toggle="tab"><li><img src="../../images/ico10.png" alt="">帮助</li></a>
+                    </ul>
+                </div>
+            </div>
+            <div class="item-tab tab-content">
+                <div role="tabpanel" class="tab-pane fade" id="common">...</div>
+                <div role="tabpanel" class="tab-pane fade" id="shop">
+                    <div class="pdh20 text-color fs14 bold text-center">店铺管理</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">店铺管理</li></a>
+                        <a href=""><li>店铺装修</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="product">
+                    <div class="pdh20 text-color fs14 bold text-center">商品管理</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">商品列表</li></a>
+                        <a href=""><li>分类列表</li></a>
+                        <a href=""><li>添加商品</li></a>
+                        <a href=""><li>导入商品</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="team">
+                    <div class="pdh20 text-color fs14 bold text-center">军团</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">军团概括</li></a>
+                        <a href=""><li>团队详情</li></a>
+                        <a href=""><li>雇佣团</li></a>
+                        <a href=""><li>直属团</li></a>
+                        <a href=""><li>招募设置</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade in active" id="order">
+                    <div class="pdh20 text-color fs14 bold text-center">订单管理</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">订单管理</li></a>
+                        <a href=""><li>订单详情</li></a>
+                        <a href=""><li>订单数据</li></a>
+                        <a href=""><li>发货管理</li></a>
+                        <a href=""><li>批量发货</li></a>
+                        <a href=""><li>订单设置</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="authen">
+                    <div class="pdh20 text-color fs14 bold text-center">认证中心</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">个人认证</li></a>
+                        <a href=""><li>企业认证</li></a>
+                        <a href=""><li>官方认证</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="sale">
+                    <div class="pdh20 text-color fs14 bold text-center">营销中心</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">营销中心</li></a>
+                        <a href=""><li>多人拼团</li></a>
+                        <a href=""><li>限时秒杀</li></a>
+                        <a href=""><li>1元购</li></a>
+                        <a href=""><li>满立减</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="data">
+                    <div class="pdh20 text-color fs14 bold text-center">数据中心</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">活动分析</li></a>
+                        <a href=""><li>交易分析</li></a>
+                        <a href=""><li>商品分析</li></a>
+                        <a href=""><li>数据概括</li></a>
+                        <a href=""><li>页面流量</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="assets">
+                    <div class="pdh20 text-color fs14 bold text-center">资产管理</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">资产管理</li></a>
+                        <a href=""><li>收支明细</li></a>
+                        <a href=""><li>待结算</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="setting">
+                    <div class="pdh20 text-color fs14 bold text-center">设置</div>
+                    <ul class="text-center">
+                        <a href=""><li class="">门店管理</li></a>
+                        <a href=""><li>门店设置</li></a>
+                        <a href=""><li>通用设置</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="help">...</div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container-fluid lh1">
+                <div class="row">
+                    <div class="col-sm-12 pdh10 fs16"><div class="pdh10 pull-left">活动类表</div> <a href="" class="pull-right bg-color img-rounded pdw15 fs14">发布活动</a></div>
+                    <div class="col-sm-12"><div class="col-sm-12 border-b"></div></div>
+                </div>
+                <form>
+                    <div class="row">
+                        <div class="form-group col-sm-4 pdh20 mgh10 nmt npb width285">
+                            <label class="col-sm-4 control-label npb width70 npl npr pdh10 fs14">活动名称：</label>
+                            <div class="col-sm-8 np width185">
+                                <input type="text" name="" value="" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-4 pdh20 mgh10 nmt npb width285">
+                            <label class="col-sm-4 control-label npb width70 npl npr pdh10 fs14">活动类型：</label>
+                            <div class="col-sm-8 np width185">
+                                <select name="" class="bg-eeefef width185">
+                                    <option value="">多人拼团</option>
+                                    <option value="">多人拼团</option>
+                                    <option value="">多人拼团</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group nmt npt pull-left pdw15 pdh10 group">
+                            <label class="pull-left control-label width70 npl npr pdh10 fs14">创建时间：</label>
+                            <div class="pull-left width350 np inp">
+                                <div class="input-append date date-picker re" data-time="no">
+                                    <input size="16" type="text" class="width150" value="" readonly>
+                                    <span class="add-on abs" style="right:2px;top:2px;"><i class="glyphicon glyphicon-calendar"></i></span>
+                                </div>
+                                <span class="width10 mgw10 border-b ilb re" style="top:-3px"></span>
+                                <div class="input-append date date-picker re" data-time="no">
+                                    <input size="16" type="text" class="width150" value="" readonly>
+                                    <span class="add-on abs" style="right:2px;top:2px;"><i class="glyphicon glyphicon-calendar"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group nmt npt pull-left pdh10 group">
+                            <label class="pull-left control-label width70 npl npr pdh10 fs14">报名时间：</label>
+                            <div class="pull-left width350 np inp">
+                                <div class="input-append date date-picker re" data-time="no">
+                                    <input size="16" type="text" class="width150" value="" readonly>
+                                    <span class="add-on abs" style="right:2px;top:2px;"><i class="glyphicon glyphicon-calendar"></i></span>
+                                </div>
+                                 <span class="width10 mgw10 border-b ilb re" style="top:-3px"></span>
+                                <div class="input-append date date-picker re" data-time="no">
+                                    <input size="16" type="text" class="width150" value="" readonly>
+                                    <span class="add-on abs" style="right:2px;top:2px;"><i class="glyphicon glyphicon-calendar"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="pull-left mgw70"><a href="" class="img-rounded pull-left bg-color width95 text-center fs14">查询</a></div>
+                        </div>
+                    </div>
+                    <div class="row" role="tablist">
+                        <div class="col-sm-12">
+                            <ul class="yx-torder-ul bg-f5f5f5 mgw15 overhide">
+                                <li class="pdw20 pdh6 active">
+                                    <a href="#all-actives" data-toggle="tab">所有活动</a>
+                                </li>
+                                <li class="pdw20 pdh6">
+                                    <a href="#enroll" data-toggle="tab">报名未开始</a>
+                                </li>
+                                <li class="pdw20 pdh6">
+                                    <a href="#enrolling" data-toggle="tab">报名中</a>
+                                </li>
+                                <li class="pdw20 pdh6">
+                                    <a href="#activity" data-toggle="tab">活动中</a>
+                                </li>
+                                <li class="pdw20 pdh6">
+                                    <a href="#completed" data-toggle="tab">已完成</a>
+                                </li>
+                                <li class="pdw20 pdh6">
+                                    <a href="#canc" data-toggle="tab">已取消</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Tab panes -->
+                        <div class="col-sm-12 tab-content">
+                            <div role="tabpanel" class="tab-pane fade in active" id="all-actives">
+                                <div class="col-sm-12 pdh100 npt">
+                                    <table class="table npt">
+                                        <thead>
+                                            <tr class="bg-eeefef">
+                                                <th>活动类型、名称</th>
+                                                <th class="text-center">产品类型</th>
+                                                <th class="text-center">报名时间</th>
+                                                <th class="text-center">活动时间</th>
+                                                <th>状态</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="fs12">
+                                            <tr class="border-b">
+                                                <td class="pdh25 fs14">
+                                                    <div class="pdh20 npt"><b>喜迎中秋，博饼活动火热开启..</b></div>
+                                                    <div>多人拼团</div>
+                                                </td>
+                                                <td class="text-center pdh25 width120 ">
+                                                    <div class="pdh15 npt">生鲜果蔬>苹果</div>
+                                                    <div class="btn-group">
+                                                      <button type="button" class="btn bg-white width78 text-muted">更多(6)</button>
+                                                      <button type="button" class="btn bg-eeefef dropdown-toggle" data-toggle="dropdown">
+                                                        <span><img src="../../images/parden_03.png" alt=""></span>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                      </button>
+                                                      <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="#">生鲜果蔬>苹果</a></li>
+                                                        <li><a href="#">生鲜果蔬>苹果n</a></li>
+                                                        <li><a href="#">生鲜果蔬>苹果</a></li>
+                                                      </ul>
+                                                    </div>
+                                                </td>
+                                                <td class="pdh25 text-ce    nter">
+                                                    <div class="pdh15 npt">开始时间：<span class="pdw10">2016-09-08  00:00:00</span></div>
+                                                    <div>结束时间：<span class="pdw10">2016-10-08  00:00:00</span></div>
+                                                </td>
+                                                <td class="pdh25 text-center">
+                                                    <div class="pdh15 npt">开始时间：<span class="pdw10">2016-09-08  00:00:00</span></div>
+                                                    <div>结束时间：<span class="pdw10">2016-10-08  00:00:00</span></div>
+                                                </td>
+                                                <td class="pdh25">
+                                                    <div class="fs12 text-44b078"><b>未开始</b></div>
+                                                </td>
+                                                <td class="pdh25 text-4f79dc">
+                                                    <div class="pdh20 npt"><a href="">查看</a></div>
+                                                    <div><a href="">编辑</a></div>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b">
+                                                <td class="pdh25 fs14">
+                                                    <div class="pdh20 npt"><b>喜迎中秋，博饼活动火热开启..</b></div>
+                                                    <div>多人拼团</div>
+                                                </td>
+                                                <td class="text-center pdh25 width120 ">
+                                                    <div class="pdh15 npt">生鲜果蔬>苹果</div>
+                                                    <div class="btn-group">
+                                                      <button type="button" class="btn bg-white text-muted width78">更多(611)</button>
+                                                      <button type="button" class="btn bg-eeefef dropdown-toggle" data-toggle="dropdown">
+                                                        <span><img src="../../images/parden_03.png" alt=""></span>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                      </button>
+                                                      <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="#">生鲜果蔬>苹果</a></li>
+                                                        <li><a href="#">生鲜果蔬>苹果n</a></li>
+                                                        <li><a href="#">生鲜果蔬>苹果</a></li>
+                                                      </ul>
+                                                    </div>
+                                                </td>
+                                                <td class="pdh25 text-center">
+                                                    <div class="pdh15 npt">开始时间：<span class="pdw10">2016-09-08  00:00:00</span></div>
+                                                    <div>结束时间：<span class="pdw10">2016-10-08  00:00:00</span></div>
+                                                </td>
+                                                <td class="pdh25 text-center">
+                                                    <div class="pdh15 npt">开始时间：<span class="pdw10">2016-09-08  00:00:00</span></div>
+                                                    <div>结束时间：<span class="pdw10">2016-10-08  00:00:00</span></div>
+                                                </td>
+                                                <td class="pdh25">
+                                                    <div class="fs12 text-e44a62"><b>进行中</b></div>
+                                                </td>
+                                                <td class="pdh25 text-4f79dc">
+                                                    <div class="pdh20 npt"><a href="">查看</a></div>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b">
+                                                <td class="pdh25 fs14">
+                                                    <div class="pdh20 npt"><b>喜迎中秋，博饼活动火热开启..</b></div>
+                                                    <div>多人拼团</div>
+                                                </td>
+                                                <td class="text-center pdh25 width120 ">
+                                                    <div class="pdh15 npt">生鲜果蔬>苹果</div>
+                                                    <div class="btn-group">
+                                                      <button type="button" class="btn bg-white text-muted">更多(6)</button>
+                                                      <button type="button" class="btn bg-eeefef dropdown-toggle" data-toggle="dropdown">
+                                                        <span><img src="../../images/parden_03.png" alt=""></span>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                      </button>
+                                                      <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="#">生鲜果蔬>苹果</a></li>
+                                                        <li><a href="#">生鲜果蔬>苹果n</a></li>
+                                                        <li><a href="#">生鲜果蔬>苹果</a></li>
+                                                      </ul>
+                                                    </div>
+                                                </td>
+                                                <td class="pdh25 text-center">
+                                                    <div class="pdh15 npt">开始时间：<span class="pdw10">2016-09-08  00:00:00</span></div>
+                                                    <div>结束时间：<span class="pdw10">2016-10-08  00:00:00</span></div>
+                                                </td>
+                                                <td class="pdh25 text-center">
+                                                    <div class="pdh15 npt">开始时间：<span class="pdw10">2016-09-08  00:00:00</span></div>
+                                                    <div>结束时间：<span class="pdw10">2016-10-08  00:00:00</span></div>
+                                                </td>
+                                                <td class="pdh25">
+                                                    <div class="fs12 text-e44a62"><b>已完成</b></div>
+                                                </td>
+                                                <td class="pdh25 text-4f79dc">
+                                                    <div class="pdh20 npt"><a href="">查看</a></div>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b">
+                                                <td class="pdh25 fs14">
+                                                    <div class="pdh20 npt"><b>喜迎中秋，博饼活动火热开启..</b></div>
+                                                    <div>多人拼团</div>
+                                                </td>
+                                                <td class="text-center pdh25 width120 ">
+                                                    <div class="pdh15 npt">生鲜果蔬>苹果</div>
+                                                    <div class="btn-group">
+                                                      <button type="button" class="btn bg-white text-muted">更多(6)</button>
+                                                      <button type="button" class="btn bg-eeefef dropdown-toggle" data-toggle="dropdown">
+                                                        <span><img src="../../images/parden_03.png" alt=""></span>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                      </button>
+                                                      <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="#">生鲜果蔬>苹果</a></li>
+                                                        <li><a href="#">生鲜果蔬>苹果n</a></li>
+                                                        <li><a href="#">生鲜果蔬>苹果</a></li>
+                                                      </ul>
+                                                    </div>
+                                                </td>
+                                                <td class="pdh25 text-center">
+                                                    <div class="pdh15 npt">开始时间：<span class="pdw10">2016-09-08  00:00:00</span></div>
+                                                    <div>结束时间：<span class="pdw10">2016-10-08  00:00:00</span></div>
+                                                </td>
+                                                <td class="pdh25 text-center">
+                                                    <div class="pdh15 npt">开始时间：<span class="pdw10">2016-09-08  00:00:00</span></div>
+                                                    <div>结束时间：<span class="pdw10">2016-10-08  00:00:00</span></div>
+                                                </td>
+                                                <td class="pdh25">
+                                                    <div class="fs12 text-muted"><b>已取消</b></div>
+                                                </td>
+                                                <td class="pdh25 text-4f79dc">
+                                                    <div class="pdh20 npt"><a href="">查看</a></div>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b">
+                                                <td class="pdh25 fs14">
+                                                    <div class="pdh20 npt"><b>喜迎中秋，博饼活动火热开启..</b></div>
+                                                    <div>多人拼团</div>
+                                                </td>
+                                                <td class="text-center pdh25 width120 ">
+                                                    <div class="pdh15 npt">生鲜果蔬>苹果</div>
+                                                    <div class="btn-group">
+                                                      <button type="button" class="btn bg-white text-muted">更多(6)</button>
+                                                      <button type="button" class="btn bg-eeefef dropdown-toggle" data-toggle="dropdown">
+                                                        <span><img src="../../images/parden_03.png" alt=""></span>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                      </button>
+                                                      <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="#">生鲜果蔬>苹果</a></li>
+                                                        <li><a href="#">生鲜果蔬>苹果n</a></li>
+                                                        <li><a href="#">生鲜果蔬>苹果</a></li>
+                                                      </ul>
+                                                    </div>
+                                                </td>
+                                                <td class="pdh25 text-center">
+                                                    <div class="pdh15 npt">开始时间：<span class="pdw10">2016-09-08  00:00:00</span></div>
+                                                    <div>结束时间：<span class="pdw10">2016-10-08  00:00:00</span></div>
+                                                </td>
+                                                <td class="pdh25 text-center">
+                                                    <div class="pdh15 npt">开始时间：<span class="pdw10">2016-09-08  00:00:00</span></div>
+                                                    <div>结束时间：<span class="pdw10">2016-10-08  00:00:00</span></div>
+                                                </td>
+                                                <td class="pdh25">
+                                                    <div class="fs12 text-44b078"><b>未开始</b></div>
+                                                </td>
+                                                <td class="pdh25 text-4f79dc">
+                                                    <div class="pdh20 npt"><a href="">查看</a></div>
+                                                    <div><a href="">编辑</a></div>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-b">
+                                                <td class="pdh25 fs14">
+                                                    <div class="pdh20 npt"><b>喜迎中秋，博饼活动火热开启..</b></div>
+                                                    <div>多人拼团</div>
+                                                </td>
+                                                <td class="text-center pdh25 width120 ">
+                                                    <div class="pdh15 npt">生鲜果蔬>苹果</div>
+                                                    <div class="btn-group">
+                                                      <button type="button" class="btn bg-white text-muted">更多(6)</button>
+                                                      <button type="button" class="btn bg-eeefef dropdown-toggle" data-toggle="dropdown">
+                                                        <span><img src="../../images/parden_03.png" alt=""></span>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                      </button>
+                                                      <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="#">生鲜果蔬>苹果</a></li>
+                                                        <li><a href="#">生鲜果蔬>苹果n</a></li>
+                                                        <li><a href="#">生鲜果蔬>苹果</a></li>
+                                                      </ul>
+                                                    </div>
+                                                </td>
+                                                <td class="pdh25 text-center">
+                                                    <div class="pdh15 npt">开始时间：<span class="pdw10">2016-09-08  00:00:00</span></div>
+                                                    <div>结束时间：<span class="pdw10">2016-10-08  00:00:00</span></div>
+                                                </td>
+                                                <td class="pdh25 text-center">
+                                                    <div class="pdh15 npt">开始时间：<span class="pdw10">2016-09-08  00:00:00</span></div>
+                                                    <div>结束时间：<span class="pdw10">2016-10-08  00:00:00</span></div>
+                                                </td>
+                                                <td class="pdh25">
+                                                    <div class="fs12 text-e44a62"><b>进行中</b></div>
+                                                </td>
+                                                <td class="pdh25 text-4f79dc">
+                                                    <div class="pdh20 npt"><a href="">查看</a></div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- 分页 -->
+                                <div class="row">
+                                    <div class="col-sm-12 mgh20">
+                                        <ul class="pageBox">
+                                            <li><a href="#">上一页</a></li>
+                                            <li class="active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li><a href="#">6</a></li>
+                                            <li><a href="#">7</a></li>
+                                            <li><a href="#">8</a></li>
+                                            <li><a href="#">9</a></li>
+                                            <li><a href="#">下一页</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="enroll">
+                                <div class="col-sm-12 pdh100 npt">
+                                    <table class="table npt">
+                                        <thead>
+                                            <tr class="bg-eeefef">
+                                                <th>活动类型、名称</th>
+                                                <th class="text-center">产品类型</th>
+                                                <th class="text-center">报名时间</th>
+                                                <th class="text-center">活动时间</th>
+                                                <th>状态</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="fs12">
+                                            <tr class="border-b">
+                                                <td class="pdh25 fs14">
+                                                    <div class="pdh20 npt"><b>喜迎中秋，博饼活动火热开启..</b></div>
+                                                    <div>多人拼团</div>
+                                                </td>
+                                                <td class="text-center pdh25 width120 ">
+                                                    <div class="pdh15 npt">生鲜果蔬>苹果</div>
+                                                    <div class="btn-group">
+                                                      <button type="button" class="btn bg-white text-muted">更多(6)</button>
+                                                      <button type="button" class="btn bg-eeefef dropdown-toggle" data-toggle="dropdown">
+                                                        <span><img src="../../images/parden_03.png" alt=""></span>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                      </button>
+                                                      <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="#">生鲜果蔬>苹果</a></li>
+                                                        <li><a href="#">生鲜果蔬>苹果n</a></li>
+                                                        <li><a href="#">生鲜果蔬>苹果</a></li>
+                                                      </ul>
+                                                    </div>
+                                                </td>
+                                                <td class="pdh25 text-center">
+                                                    <div class="pdh15 npt">开始时间：<span class="pdw10">2016-09-08  00:00:00</span></div>
+                                                    <div>结束时间：<span class="pdw10">2016-10-08  00:00:00</span></div>
+                                                </td>
+                                                <td class="pdh25 text-center">
+                                                    <div class="pdh15 npt">开始时间：<span class="pdw10">2016-09-08  00:00:00</span></div>
+                                                    <div>结束时间：<span class="pdw10">2016-10-08  00:00:00</span></div>
+                                                </td>
+                                                <td class="pdh25">
+                                                    <div class="fs12 text-44b078"><b>未开始</b></div>
+                                                </td>
+                                                <td class="pdh25 text-4f79dc">
+                                                    <div class="pdh20 npt"><a href="">查看</a></div>
+                                                    <div><a href="">编辑</a></div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- 分页 -->
+                                <div class="row">
+                                    <div class="col-sm-12 mgh20">
+                                        <ul class="pageBox">
+                                            <li><a href="#">上一页</a></li>
+                                            <li class="active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li><a href="#">6</a></li>
+                                            <li><a href="#">7</a></li>
+                                            <li><a href="#">8</a></li>
+                                            <li><a href="#">9</a></li>
+                                            <li><a href="#">下一页</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="enrolling">
+                                <div class="col-sm-12 pdh100 npt">
+                                    <table class="table npt">
+                                        <thead>
+                                            <tr class="bg-eeefef">
+                                                <th>活动类型、名称</th>
+                                                <th class="text-center">产品类型</th>
+                                                <th class="text-center">报名时间</th>
+                                                <th class="text-center">活动时间</th>
+                                                <th>状态</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="fs12">
+                                            <tr class="border-b">
+                                                <td class="pdh25 fs14">
+                                                    <div class="pdh20 npt"><b>喜迎中秋，博饼活动火热开启..</b></div>
+                                                    <div>多人拼团</div>
+                                                </td>
+                                                <td class="text-center pdh25 width120 ">
+                                                    <div class="pdh15 npt">生鲜果蔬>苹果</div>
+                                                    <div class="btn-group">
+                                                      <button type="button" class="btn bg-white text-muted">更多(6)</button>
+                                                      <button type="button" class="btn bg-eeefef dropdown-toggle" data-toggle="dropdown">
+                                                        <span><img src="../../images/parden_03.png" alt=""></span>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                      </button>
+                                                      <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="#">生鲜果蔬>苹果</a></li>
+                                                        <li><a href="#">生鲜果蔬>苹果n</a></li>
+                                                        <li><a href="#">生鲜果蔬>苹果</a></li>
+                                                      </ul>
+                                                    </div>
+                                                </td>
+                                                <td class="pdh25 text-center">
+                                                    <div class="pdh15 npt">开始时间：<span class="pdw10">2016-09-08  00:00:00</span></div>
+                                                    <div>结束时间：<span class="pdw10">2016-10-08  00:00:00</span></div>
+                                                </td>
+                                                <td class="pdh25 text-center">
+                                                    <div class="pdh15 npt">开始时间：<span class="pdw10">2016-09-08  00:00:00</span></div>
+                                                    <div>结束时间：<span class="pdw10">2016-10-08  00:00:00</span></div>
+                                                </td>
+                                                <td class="pdh25">
+                                                    <div class="fs12 text-e44a62"><b>进行中</b></div>
+                                                </td>
+                                                <td class="pdh25 text-4f79dc">
+                                                    <div class="pdh20 npt"><a href="">查看</a></div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- 分页 -->
+                                <div class="row">
+                                    <div class="col-sm-12 mgh20">
+                                        <ul class="pageBox">
+                                            <li><a href="#">上一页</a></li>
+                                            <li class="active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li><a href="#">6</a></li>
+                                            <li><a href="#">7</a></li>
+                                            <li><a href="#">8</a></li>
+                                            <li><a href="#">9</a></li>
+                                            <li><a href="#">下一页</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="activity">
+                                <div class="col-sm-12 pdh100 npt">
+                                    <table class="table npt">
+                                        <thead>
+                                            <tr class="bg-eeefef">
+                                                <th>活动类型、名称</th>
+                                                <th class="text-center">产品类型</th>
+                                                <th class="text-center">报名时间</th>
+                                                <th class="text-center">活动时间</th>
+                                                <th>状态</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="fs12">
+                                            <tr class="border-b">
+                                                <td class="pdh25 fs14">
+                                                    <div class="pdh20 npt"><b>喜迎中秋，博饼活动火热开启..</b></div>
+                                                    <div>多人拼团</div>
+                                                </td>
+                                                <td class="text-center pdh25 width120 ">
+                                                    <div class="pdh15 npt">生鲜果蔬>苹果</div>
+                                                    <div class="btn-group">
+                                                      <button type="button" class="btn bg-white text-muted">更多(6)</button>
+                                                      <button type="button" class="btn bg-eeefef dropdown-toggle" data-toggle="dropdown">
+                                                        <span><img src="../../images/parden_03.png" alt=""></span>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                      </button>
+                                                      <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="#">生鲜果蔬>苹果</a></li>
+                                                        <li><a href="#">生鲜果蔬>苹果n</a></li>
+                                                        <li><a href="#">生鲜果蔬>苹果</a></li>
+                                                      </ul>
+                                                    </div>
+                                                </td>
+                                                <td class="pdh25 text-center">
+                                                    <div class="pdh15 npt">开始时间：<span class="pdw10">2016-09-08  00:00:00</span></div>
+                                                    <div>结束时间：<span class="pdw10">2016-10-08  00:00:00</span></div>
+                                                </td>
+                                                <td class="pdh25 text-center">
+                                                    <div class="pdh15 npt">开始时间：<span class="pdw10">2016-09-08  00:00:00</span></div>
+                                                    <div>结束时间：<span class="pdw10">2016-10-08  00:00:00</span></div>
+                                                </td>
+                                                <td class="pdh25">
+                                                    <div class="fs12 text-e44a62"><b>进行中</b></div>
+                                                </td>
+                                                <td class="pdh25 text-4f79dc">
+                                                    <div class="pdh20 npt"><a href="">查看</a></div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- 分页 -->
+                                <div class="row">
+                                    <div class="col-sm-12 mgh20">
+                                        <ul class="pageBox">
+                                            <li><a href="#">上一页</a></li>
+                                            <li class="active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li><a href="#">6</a></li>
+                                            <li><a href="#">7</a></li>
+                                            <li><a href="#">8</a></li>
+                                            <li><a href="#">9</a></li>
+                                            <li><a href="#">下一页</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="completed">
+                                <div class="col-sm-12 pdh100 npt">
+                                    <table class="table npt">
+                                        <thead>
+                                            <tr class="bg-eeefef">
+                                                <th>活动类型、名称</th>
+                                                <th class="text-center">产品类型</th>
+                                                <th class="text-center">报名时间</th>
+                                                <th class="text-center">活动时间</th>
+                                                <th>状态</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="fs12">
+                                            <tr class="border-b">
+                                                <td class="pdh25 fs14">
+                                                    <div class="pdh20 npt"><b>喜迎中秋，博饼活动火热开启..</b></div>
+                                                    <div>多人拼团</div>
+                                                </td>
+                                                <td class="text-center pdh25 width120 ">
+                                                    <div class="pdh15 npt">生鲜果蔬>苹果</div>
+                                                    <div class="btn-group">
+                                                      <button type="button" class="btn bg-white text-muted">更多(6)</button>
+                                                      <button type="button" class="btn bg-eeefef dropdown-toggle" data-toggle="dropdown">
+                                                        <span><img src="../../images/parden_03.png" alt=""></span>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                      </button>
+                                                      <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="#">生鲜果蔬>苹果</a></li>
+                                                        <li><a href="#">生鲜果蔬>苹果n</a></li>
+                                                        <li><a href="#">生鲜果蔬>苹果</a></li>
+                                                      </ul>
+                                                    </div>
+                                                </td>
+                                                <td class="pdh25 text-center">
+                                                    <div class="pdh15 npt">开始时间：<span class="pdw10">2016-09-08  00:00:00</span></div>
+                                                    <div>结束时间：<span class="pdw10">2016-10-08  00:00:00</span></div>
+                                                </td>
+                                                <td class="pdh25 text-center">
+                                                    <div class="pdh15 npt">开始时间：<span class="pdw10">2016-09-08  00:00:00</span></div>
+                                                    <div>结束时间：<span class="pdw10">2016-10-08  00:00:00</span></div>
+                                                </td>
+                                                <td class="pdh25">
+                                                    <div class="fs12 text-e44a62"><b>已完成</b></div>
+                                                </td>
+                                                <td class="pdh25 text-4f79dc">
+                                                    <div class="pdh20 npt"><a href="">查看</a></div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- 分页 -->
+                                <div class="row">
+                                    <div class="col-sm-12 mgh20">
+                                        <ul class="pageBox">
+                                            <li><a href="#">上一页</a></li>
+                                            <li class="active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li><a href="#">6</a></li>
+                                            <li><a href="#">7</a></li>
+                                            <li><a href="#">8</a></li>
+                                            <li><a href="#">9</a></li>
+                                            <li><a href="#">下一页</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="canc">
+                                <div class="col-sm-12 pdh100 npt">
+                                    <table class="table npt">
+                                        <thead>
+                                            <tr class="bg-eeefef">
+                                                <th>活动类型、名称</th>
+                                                <th class="text-center">产品类型</th>
+                                                <th class="text-center">报名时间</th>
+                                                <th class="text-center">活动时间</th>
+                                                <th>状态</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="fs12">
+                                            <tr class="border-b">
+                                                <td class="pdh25 fs14">
+                                                    <div class="pdh20 npt"><b>喜迎中秋，博饼活动火热开启..</b></div>
+                                                    <div>多人拼团</div>
+                                                </td>
+                                                <td class="text-center pdh25 width120 ">
+                                                    <div class="pdh15 npt">生鲜果蔬>苹果</div>
+                                                    <div class="btn-group">
+                                                      <button type="button" class="btn bg-white text-muted">更多(6)</button>
+                                                      <button type="button" class="btn bg-eeefef dropdown-toggle" data-toggle="dropdown">
+                                                        <span><img src="../../images/parden_03.png" alt=""></span>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                      </button>
+                                                      <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="#">生鲜果蔬>苹果</a></li>
+                                                        <li><a href="#">生鲜果蔬>苹果n</a></li>
+                                                        <li><a href="#">生鲜果蔬>苹果</a></li>
+                                                      </ul>
+                                                    </div>
+                                                </td>
+                                                <td class="pdh25 text-center">
+                                                    <div class="pdh15 npt">开始时间：<span class="pdw10">2016-09-08  00:00:00</span></div>
+                                                    <div>结束时间：<span class="pdw10">2016-10-08  00:00:00</span></div>
+                                                </td>
+                                                <td class="pdh25 text-center">
+                                                    <div class="pdh15 npt">开始时间：<span class="pdw10">2016-09-08  00:00:00</span></div>
+                                                    <div>结束时间：<span class="pdw10">2016-10-08  00:00:00</span></div>
+                                                </td>
+                                                <td class="pdh25">
+                                                    <div class="fs12 text-muted"><b>已取消</b></div>
+                                                </td>
+                                                <td class="pdh25 text-4f79dc">
+                                                    <div class="pdh20 npt"><a href="">查看</a></div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- 分页 -->
+                                <div class="row">
+                                    <div class="col-sm-12 mgh20">
+                                        <ul class="pageBox">
+                                            <li><a href="#">上一页</a></li>
+                                            <li class="active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li><a href="#">6</a></li>
+                                            <li><a href="#">7</a></li>
+                                            <li><a href="#">8</a></li>
+                                            <li><a href="#">9</a></li>
+                                            <li><a href="#">下一页</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="right-part">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 fs14 text-333333">
+                        <div class="col-sm-12 pdh20 border-b npl npr"><span class="glyphicon glyphicon-question-sign text-cecece"></span>&nbsp; 帮助和服务</div>
+                    </div>
+                </div>
+                <div class="row mgh20">
+                    <div class="col-sm-12 flex space-between">
+                        <font class="fs14 bold">帮助中心</font>
+                        <a href="" class="fs12 text-blue">进入></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p class="fs14 text-333333">商品在出售中列表找不到？</p>
+                        <p class="fs12">1.商品被手动下架，在仓库中，重新编辑上架即可。</p>
+                        <p class="fs12">2.商品售罄库存为0，在已售罄列表中，提醒您该添加库存了。待付款订单也会占据库存，其超时关闭后库存才会释放</p>
+                    </div>
+                </div>
+                <div class="row mgh20">
+                    <div class="col-sm-12">
+                        <p class="fs14 text-333333">如何推广商品？</p>
+                        <p class="fs12">点击[推广商品]，就可以获取商品二维码/商品链接，还能设置商品优惠二维码。</p>
+                        <p class="fs12">将商品分享到朋友圈，或群发时带上商品链接去推广。</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12"><div class="col-sm-12 border-b"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        $('.date-picker').datetimepicker({
+            format: 'yyyy-mm-dd hh:ii',
+            language: 'zh-CN',
+            autoclose: true,
+            todayBtn: true
+        });
+    </script>
+</body>
+
+</html>

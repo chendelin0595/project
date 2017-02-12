@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="../../../../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../javascript/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../../../../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../../../../stylesheet/color.css">
+    <link rel="stylesheet" href="../../../../stylesheet/common.css">
+    <script src="../../../../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../../../../javascript/common.js"></script>
+    <script src="../../../../javascript/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../../javascript/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script src="../../../../javascript/bootstrap-datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script>
+</head>
+<body>
+    <div class="page">
+        <div class="left-part">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 mgh30"><img src="../../../../images/logo.png" alt="" width="100"></div>
+                </div>
+                <div class="row text-center bg-363840">
+                    <div class="col-sm-12 mgh10">
+                        <img src="../../../../images/headimg.png" alt="" width="40" class="img-circle">
+                        <img src="../../../../images/vip.png" alt="" width="10" class="abs" style="right:40px;bottom:5px">
+                    </div>
+                    <div class="col-sm-12 ellipsis">xxx小卖部啊xxx小卖部啊</div>
+                    <a href="" class="col-sm-12 mgh10"><img src="../../../../images/logout.png" alt="" width="22"></a>
+                </div>
+                <div class="row">
+                    <ul class="text-center">
+                        <a href="#common" data-toggle="tab"><li><img src="../../../../images/ico0.png" alt="">概括</li></a>
+                        <a href="#shop" data-toggle="tab"><li><img src="../../../../images/ico1.png" alt="">店铺</li></a>
+                        <a href="#product" data-toggle="tab"><li><img src="../../../../images/ico2.png" alt="">商品</li></a>
+                        <a href="#team" data-toggle="tab"><li><img src="../../../../images/ico3.png" alt="">军团</li></a>
+                        <a href="#order" data-toggle="tab"><li class="active"><img src="../../../../images/ico4.png" alt="">订单</li></a>
+                        <a href="#authen" data-toggle="tab"><li><img src="../../../../images/ico5.png" alt="">认证</li></a>
+                        <a href="#sale" data-toggle="tab"><li><img src="../../../../images/ico6.png" alt="">营销</li></a>
+                        <a href="#data" data-toggle="tab"><li><img src="../../../../images/ico7.png" alt="">数据</li></a>
+                        <a href="#assets" data-toggle="tab"><li><img src="../../../../images/ico8.png" alt="">资产</li></a>
+                        <a href="#setting" data-toggle="tab"><li><img src="../../../../images/ico9.png" alt="">设置</li></a>
+                        <a href="#help" data-toggle="tab"><li><img src="../../../../images/ico10.png" alt="">帮助</li></a>
+                    </ul>
+                </div>
+            </div>
+            <div class="item-tab tab-content">
+                <div role="tabpanel" class="tab-pane fade" id="common">...</div>
+                <div role="tabpanel" class="tab-pane fade" id="shop">
+                    <div class="pdh20 text-color fs14 bold text-center">店铺管理</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">店铺管理</li></a>
+                        <a href=""><li>店铺装修</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="product">
+                    <div class="pdh20 text-color fs14 bold text-center">商品管理</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">商品列表</li></a>
+                        <a href=""><li>分类列表</li></a>
+                        <a href=""><li>添加商品</li></a>
+                        <a href=""><li>导入商品</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="team">
+                    <div class="pdh20 text-color fs14 bold text-center">军团</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">军团概括</li></a>
+                        <a href=""><li>团队详情</li></a>
+                        <a href=""><li>雇佣团</li></a>
+                        <a href=""><li>直属团</li></a>
+                        <a href=""><li>招募设置</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade in active" id="order">
+                    <div class="pdh20 text-color fs14 bold text-center">订单管理</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">订单管理</li></a>
+                        <a href=""><li>订单详情</li></a>
+                        <a href=""><li>订单数据</li></a>
+                        <a href=""><li>发货管理</li></a>
+                        <a href=""><li>批量发货</li></a>
+                        <a href=""><li>订单设置</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="authen">
+                    <div class="pdh20 text-color fs14 bold text-center">认证中心</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">个人认证</li></a>
+                        <a href=""><li>企业认证</li></a>
+                        <a href=""><li>官方认证</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="sale">
+                    <div class="pdh20 text-color fs14 bold text-center">营销中心</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">营销中心</li></a>
+                        <a href=""><li>多人拼团</li></a>
+                        <a href=""><li>限时秒杀</li></a>
+                        <a href=""><li>1元购</li></a>
+                        <a href=""><li>满立减</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="data">
+                    <div class="pdh20 text-color fs14 bold text-center">数据中心</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">活动分析</li></a>
+                        <a href=""><li>交易分析</li></a>
+                        <a href=""><li>商品分析</li></a>
+                        <a href=""><li>数据概括</li></a>
+                        <a href=""><li>页面流量</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="assets">
+                    <div class="pdh20 text-color fs14 bold text-center">资产管理</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">资产管理</li></a>
+                        <a href=""><li>收支明细</li></a>
+                        <a href=""><li>待结算</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="setting">
+                    <div class="pdh20 text-color fs14 bold text-center">设置</div>
+                    <ul class="text-center">
+                        <a href=""><li class="">门店管理</li></a>
+                        <a href=""><li>门店设置</li></a>
+                        <a href=""><li>通用设置</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="help">...</div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 pdh10 flex space-between">
+                        <div class="flex-aic">
+                            <a href="" class="btn bg-eeefef">返回活动列表</a>&nbsp;&nbsp;&nbsp;<font class="fs16">查看详情</font>
+                        </div>
+                    </div>
+                    <div class="col-sm-12"><div class="col-sm-12 border-b"></div></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 mgh20">
+                        <div class="pull-left"><span class="glyphicon glyphicon-info-sign text-color"></span></div>
+                        <div class="mgw20">
+                            <p>审核通过商品排序以时间倒序排列</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="col-sm-12 category">
+                            <a href="">活动详情</a>
+                            <a href="" class="active">审核通过</a>
+                            <a href="">审核拒绝</a>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel">
+                    <div class="tab-content fs14">
+                        <div role="tabpanel" class="tab-pane fade in active" id="success">
+                            <div class="row mgh10">
+                                <div class="col-sm-12 fs12 text-333333">
+                                    <div class="col-sm-12 pdh10 bg-eeefef weui-flex text-center npr">
+                                        <div class="width411 text-left">商品</div>
+                                        <div class="weui-flex__item">库存</div>
+                                        <div class="weui-flex__item">拼团人数</div>
+                                        <div class="weui-flex__item">成团时间</div>
+                                        <div class="weui-flex__item">佣金</div>
+                                        <div class="weui-flex__item">操作</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hd-list-item">
+                                <div class="col-sm-12 pdh12 bg-eeefef">活动ID&nbsp;&nbsp;<font class="text-muted">1820</font><span class="mgw58">报名时间&nbsp;&nbsp;2016-09-04&nbsp;&nbsp;11:42:32</span></div>
+                                <div class="col-sm-12 weui-flex npr border-l border-b border-r">
+                                    <div class="width411 flex pdh16 border-r">
+                                        <div class="flex center"><img class="" src="../../../../images/p-100x100.png" alt="" width="100"></div>
+                                        <div class="flex pdw25">
+                                            <p>【匠人典范】纯手工制作原味、玫瑰味牛轧糖  3kg</p>
+                                            <p>团购价：<strong>￥41.00</strong> &nbsp;&nbsp; 产品价：¥：52.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="weui-flex__item text-center border-r">产品库存<br>10000件</div>
+                                    <div class="weui-flex__item text-center border-r">拼团人数5人<br>每个ID限购3件</div>
+                                    <div class="weui-flex__item text-center border-r">成团时间<br>12小时</div>
+                                    <div class="weui-flex__item text-center border-r">佣金<br>10%</div>
+                                    <div class="weui-flex__item text-center text-blue"><a href="">查看</a><br><br><a href="">审核</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav class="wf mgh50">
+                    <ul class="footer-page">
+                        <li><a href="">上一页</a></li>
+                        <li><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li class="active"><a href="">5</a></li>
+                        <li><a href="">6</a></li>
+                        <li><a href="">7</a></li>
+                        <li><a href="">8</a></li>
+                        <li><a href="">9</a></li>
+                        <li><a href="">下一页</a></li>
+                    </ul>
+                </nav>
+                <div class="height222"></div>
+            </div>
+        </div>
+        <div class="right-part">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 fs14 text-333333">
+                        <div class="col-sm-12 pdh20 border-b npl npr"><span class="glyphicon glyphicon-question-sign text-cecece"></span>&nbsp; 帮助和服务</div>
+                    </div>
+                </div>
+                <div class="row mgh20">
+                    <div class="col-sm-12 flex space-between">
+                        <font class="fs14 bold">帮助中心</font>
+                        <a href="" class="fs12 text-blue">进入></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p class="fs14 text-333333">商品在出售中列表找不到？</p>
+                        <p class="fs12">1.商品被手动下架，在仓库中，重新编辑上架即可。</p>
+                        <p class="fs12">2.商品售罄库存为0，在已售罄列表中，提醒您该添加库存了。待付款订单也会占据库存，其超时关闭后库存才会释放</p>
+                    </div>
+                </div>
+                <div class="row mgh20">
+                    <div class="col-sm-12">
+                        <p class="fs14 text-333333">如何推广商品？</p>
+                        <p class="fs12">点击[推广商品]，就可以获取商品二维码/商品链接，还能设置商品优惠二维码。</p>
+                        <p class="fs12">将商品分享到朋友圈，或群发时带上商品链接去推广。</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12"><div class="col-sm-12 border-b"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

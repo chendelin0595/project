@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>中国金柑之乡-尤溪网销大赛</title>
+    <link rel="stylesheet" href="../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../javascript/jquery-weui/jquery-weui.css">
+    <link rel="stylesheet" href="../stylesheet/common-rem.css">
+    <link rel="stylesheet" href="../stylesheet/color.css">
+    <link rel="stylesheet" href="../stylesheet/yx-main.css">
+    <script src="../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../javascript/common-rem.js"></script>
+    <script src="../javascript/jquery-weui/jquery-weui.min.js"></script>
+    <script src="../javascript/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div id="page">
+    <div class="container-fluid">
+        <div class="mgh100 yx-logo text-center" style="width:100%;">
+            <img style="width:4.44rem; height:3rem;" src="images/yx-logo.png"/>
+            <img style="width:3.96rem; height:1.70rem;" src="images/yx-logoText.png"/>
+        </div>
+        <div class="yx-loginBox yx-login1 pdw50 bg-ffd83a border-radius overhide">
+            <div class="mgh20">
+                <p class="pd30 fs32 text-white text-center">尤溪县金柑互联网销售大赛报名查询</p>
+            </div>
+            <div class="mgh20 login-user re">
+                <label><img src="images/yx-l-user.png"/></label>
+                <input type="text" placeholder="手机号码"/>
+            </div>
+            <div class="mgh20 login-pwd re">
+                <label><img src="images/yx-l-pwd.png"/></label>
+                <input type="text" placeholder="密码"/>
+            </div>
+            <div class="mgh5">
+                <input type="checkbox" class="checkInput" id="userPwd" style="display: none;"/>
+                <label class="fs24 text-white nw checkIco" for="userPwd">
+                    记住账号密码
+                </label>
+            </div>
+            <div class="weui-flex mgh30">
+                <input type="button" class="weui-flex__item btn fs28 bold bg-7342e1 text-white" value="去报名"/>
+                <input type="button" class="weui-flex2 bg-color1 btn fs28 bold" style="margin-left:5%;" value="立即登录"/>
+            </div>
+        </div>
+        <div class="text-right mgh10">
+            <a class="fs28 text-white" style="text-decoration:underline;" href="忘记密码.html">忘记密码?</a>
+        </div>
+
+        <div class="text-center yx-footer" style="margin-top:0.5rem;">
+            <img class="mgh20" style="width:6rem;" src="images/yx-f-logo2.png"/>
+            <p class="text-c99b1e fs16">Copyright © 2014-2016 闽ICP备15018819号-1</p>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+
+        //body背景
+        $('body').css('background-color','#ffc730');
+
+        //监听窗口高度 判断底部的位置
+        if($('.container-fluid').height()<$(window).height()){
+            $('.yx-footer').addClass('fixed');
+        }
+
+        //监听input点击底部上挤
+        $('input').focus(function(){
+            $('.yx-footer').hide();
+        });
+
+        $('input').blur(function(){
+            $('.yx-footer').show();
+        });
+    });
+</script>
+</body>
+</html>

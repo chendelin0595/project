@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>成为合伙人3</title>
+    <link rel="stylesheet" href="../../Public/style/common/bootstrap.min.css">
+    <link rel="stylesheet" href="../../Public/style/common/weui.min.css">
+    <link rel="stylesheet" href="../../Public/style/common/jquery-weui.css">
+    <link rel="stylesheet" href="../../Public/style/common/common.css">
+    <link rel="stylesheet" href="../../Public/style/main.css">
+    <script src="../../Public/javascript/common/jquery-3.1.1.min.js"></script>
+    <script src="../../Public/javascript/common/bootstrap.min.js"></script>
+    <script src="../../Public/javascript/common/jquery-weui.min.js"></script>
+    <script src="../../Public/javascript/common/common.js"></script>
+</head>
+<body>
+    <div class="page">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 text-center part-bg1" style="background: url('../../Public/images/part_bg_1.png') no-repeat center center; background-size:cover; height:10.375rem;">
+                    <div class="height90"></div>
+                    <img src="../../Public/images/part_img5.png" style="width:4.166rem;"/>
+                    <p class="pdh40 fs32 text-color">提交成功</p>
+                </div>
+                <div class="col-xs-12 text-center text-white part-bg2" style="background: url('../../Public/images/part_bg_2.png') no-repeat center center; background-size:cover; height:14.75rem;">
+                    <div class="height150"></div>
+                    <img src="../../Public/images/part_img6.png" class="border-radius" style="width:6.27rem;"/>
+                    <p class="pdh40 fs24">正式成为合伙人<br/>
+                        长按二维码关注微信
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            var bg1=$('.part-bg1'),
+                bg2=$('.part-bg2');
+
+            bg2.css('height',$(window).height()-bg1.height());
+        })
+    </script>
+</body>
+</html>

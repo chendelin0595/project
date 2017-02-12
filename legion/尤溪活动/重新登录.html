@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>登录失败</title>
+    <link rel="stylesheet" href="../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../javascript/jquery-weui/jquery-weui.css">
+    <link rel="stylesheet" href="../stylesheet/common-rem.css">
+    <link rel="stylesheet" href="../stylesheet/color.css">
+    <link rel="stylesheet" href="../stylesheet/yx-main.css">
+    <script src="../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../javascript/common-rem.js"></script>
+    <script src="../javascript/jquery-weui/jquery-weui.min.js"></script>
+    <script src="../javascript/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div id="page">
+    <div class="row text-center pdh160 fs28">
+        <div>
+            <img style="width:2.55rem;" src="images/yx_ico_face1.png"/>
+        </div>
+        <p class="pdh60"> 很抱歉您已经登录其他账号，请退出重试</p>
+        <a href="#" class="btn bg-color text-white border-radius pdw70 pdh25 mgh20">退出登录</a>
+    </div>
+    <div class="text-center yx-footer">
+        <img class="mgh20" style="width:1.42rem;" src="images/yx-f-logo1.png"/>
+    </div>
+</div>
+<script>
+    $(function () {
+        function getResize(){
+            //监听窗口高度 判断底部的位置
+            if($('#page').height()-$(window).height() <15){
+                $('.yx-footer').addClass('fixed');
+            }else{
+                $('.yx-footer').removeClass('fixed');
+            }
+        };
+        getResize();
+        $(window).resize(function(){
+            getResize();
+        })
+    });
+</script>
+</body>
+</html>

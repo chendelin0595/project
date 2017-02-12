@@ -1,0 +1,65 @@
+/*
+* @Author: Wu
+* @Date:   2016-09-07 10:04:16
+* @Last Modified by:   Wu
+* @Last Modified time: 2016-10-19 16:19:55
+* @note 被使用的颜色名不要去修改颜色值，新增一个。命名规则：[bg|text]-[colorName|HEX]
+*/
+
+/* tune color */
+.text-color { color: #e44a62 !important; }
+.bg-color { background-color: #e44a62; color: #fff; }
+.bg-color.hover:hover{background-color:#cd3149 !important; color:#fff !important;}
+
+/* bg-color */
+.bg-white { background-color: #fff; }
+.bg-gray { background-color: #999999; color: #fff; }
+.bg-yellow { background-color: #ffaa00; color: #fff; }
+.bg-f4f7f8 { background-color: #f4f7f8; }
+.bg-434343 { background-color: #434343; }
+.bg-666666 { background-color: #666666; }
+.bg-959595{background-color:#959595;}
+.bg-f7f7f7 { background-color: #f7f7f7; }
+.bg-mask { background-color: rgba(0, 0, 0, 0.5); }
+.bg-f5f5f5 { background-color: #f5f5f5; }
+.bg-fafafa { background-color: #fafafa; }
+.bg-eeeaeb { background-color: #eeeaeb; }
+.bg-e1e1e1 { background-color: #e1e1e1; }
+.bg-cccccc { background-color: #cccccc; }
+.bg-cecece { background-color: #cecece; }
+.bg-eeefef { background-color: #eeefef; }
+.bg-black { background-color: #28292d; }
+.bg-363840 { background-color: #363840; }
+.bg-ffc730{background-color:#ffc730;}
+.bg-ffd83a{background-color:#ffd83a;}
+.bg-7a83ff{background-color:#7a83ff;}
+.bg-ffa044{background-color:#ffa044;}
+.bg-00b7ee{background-color:#00b7ee;}
+.bg-f8f8f8{background-color:#f8f8f8;}
+.bg-f68585{background-color:#f68585;}
+
+/* text-color */
+.text-muted { color: #999999 !important; }
+.text-white { color: #fff !important; }
+.text-black { color: #000 !important; }
+.text-blue { color: #157efb !important; }
+.text-orange { color: #ff8b53 !important; }
+.text-333333 { color: #333333 !important; }
+.text-666666 { color: #666666 !important; }
+.text-ff6600 { color: #ff6600 !important; }
+.text-b2b2b2 { color: #b2b2b2 !important; }
+.text-dddddd { color: #dddddd !important; }
+.text-cecece { color: #cecece !important; }
+.text-939393 { color: #939393 !important; }
+.text-1db15a { color: #1db15a !important; }
+.text-337ab7 { color: #337ab7 !important; }
+.text-5faaff { color: #5faaff !important; }
+.text-4f79dc { color: #4f79dc !important; }
+.text-28cae2 { color: #28cae2 !important; }
+.text-28e2c1 { color: #28e2c1 !important; }
+.text-ffa044 {color:#ffa044 !important;}
+.text-e79433{color:#e79433 !important;}
+.text-c99b1e{color:#c99b1e !important;}
+
+    /*border-color*/
+.border-23b1f3{border-color:#23b1f3 !important;}

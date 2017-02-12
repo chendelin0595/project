@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="../../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../javascript/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../../stylesheet/color.css">
+    <link rel="stylesheet" href="../../stylesheet/common.css">
+    <script src="../../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../../javascript/common.js"></script>
+    <script src="../../javascript/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../javascript/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script src="../../javascript/bootstrap-datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script>
+</head>
+<style type="text/css" media="screen">
+label[require]:before { content: '*'; color: #e44a62; left: 5px; position: absolute; }
+.group .na { float: left; }
+.group input[type=text] { height: 30px; padding-left: 10px; padding-right: 10px; }
+.group .inp { margin-left: 110px; font-size: 14px; }
+.group { margin-top: 20px; }
+.inp label { font-weight: normal; font-size: 14px; margin: 5px 30px 5px 0px; }
+.inp [type=checkbox],.inp [type=radio] { margin-right: 8px; }
+.ilb, .date-picker { display: inline-block; }
+.date-picker { position: relative; }
+.date-picker .glyphicon-calendar { position: absolute; top: 6px; right: 6px; }
+</style>
+<body>
+    <div class="page">
+        <div class="left-part">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 mgh30"><img src="../../images/logo.png" alt="" width="100"></div>
+                </div>
+                <div class="row text-center bg-363840">
+                    <div class="col-sm-12 mgh10">
+                        <img src="../../images/headimg.png" alt="" width="40" class="img-circle">
+                        <img src="../../images/vip.png" alt="" width="10" class="abs" style="right:40px;bottom:5px">
+                    </div>
+                    <div class="col-sm-12 ellipsis">xxx小卖部啊xxx小卖部啊</div>
+                    <a href="" class="col-sm-12 mgh10"><img src="../../images/logout.png" alt="" width="22"></a>
+                </div>
+                <div class="row">
+                    <ul class="text-center">
+                        <a href="#common" data-toggle="tab"><li><img src="../../images/ico0.png" alt="">概括</li></a>
+                        <a href="#shop" data-toggle="tab"><li><img src="../../images/ico1.png" alt="">店铺</li></a>
+                        <a href="#product" data-toggle="tab"><li><img src="../../images/ico2.png" alt="">商品</li></a>
+                        <a href="#team" data-toggle="tab"><li><img src="../../images/ico3.png" alt="">军团</li></a>
+                        <a href="#order" data-toggle="tab"><li class="active"><img src="../../images/ico4.png" alt="">订单</li></a>
+                        <a href="#authen" data-toggle="tab"><li><img src="../../images/ico5.png" alt="">认证</li></a>
+                        <a href="#sale" data-toggle="tab"><li><img src="../../images/ico6.png" alt="">营销</li></a>
+                        <a href="#data" data-toggle="tab"><li><img src="../../images/ico7.png" alt="">数据</li></a>
+                        <a href="#assets" data-toggle="tab"><li><img src="../../images/ico8.png" alt="">资产</li></a>
+                        <a href="#setting" data-toggle="tab"><li><img src="../../images/ico9.png" alt="">设置</li></a>
+                        <a href="#help" data-toggle="tab"><li><img src="../../images/ico10.png" alt="">帮助</li></a>
+                    </ul>
+                </div>
+            </div>
+            <div class="item-tab tab-content">
+                <div role="tabpanel" class="tab-pane fade" id="common">...</div>
+                <div role="tabpanel" class="tab-pane fade" id="shop">
+                    <div class="pdh20 text-color fs14 bold text-center">店铺管理</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">店铺管理</li></a>
+                        <a href=""><li>店铺装修</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="product">
+                    <div class="pdh20 text-color fs14 bold text-center">商品管理</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">商品列表</li></a>
+                        <a href=""><li>分类列表</li></a>
+                        <a href=""><li>添加商品</li></a>
+                        <a href=""><li>导入商品</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="team">
+                    <div class="pdh20 text-color fs14 bold text-center">军团</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">军团概括</li></a>
+                        <a href=""><li>团队详情</li></a>
+                        <a href=""><li>雇佣团</li></a>
+                        <a href=""><li>直属团</li></a>
+                        <a href=""><li>招募设置</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade in active" id="order">
+                    <div class="pdh20 text-color fs14 bold text-center">订单管理</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">订单管理</li></a>
+                        <a href=""><li>订单详情</li></a>
+                        <a href=""><li>订单数据</li></a>
+                        <a href=""><li>发货管理</li></a>
+                        <a href=""><li>批量发货</li></a>
+                        <a href=""><li>订单设置</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="authen">
+                    <div class="pdh20 text-color fs14 bold text-center">认证中心</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">个人认证</li></a>
+                        <a href=""><li>企业认证</li></a>
+                        <a href=""><li>官方认证</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="sale">
+                    <div class="pdh20 text-color fs14 bold text-center">营销中心</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">营销中心</li></a>
+                        <a href=""><li>多人拼团</li></a>
+                        <a href=""><li>限时秒杀</li></a>
+                        <a href=""><li>1元购</li></a>
+                        <a href=""><li>满立减</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="data">
+                    <div class="pdh20 text-color fs14 bold text-center">数据中心</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">活动分析</li></a>
+                        <a href=""><li>交易分析</li></a>
+                        <a href=""><li>商品分析</li></a>
+                        <a href=""><li>数据概括</li></a>
+                        <a href=""><li>页面流量</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="assets">
+                    <div class="pdh20 text-color fs14 bold text-center">资产管理</div>
+                    <ul class="text-center">
+                        <a href=""><li class="active">资产管理</li></a>
+                        <a href=""><li>收支明细</li></a>
+                        <a href=""><li>待结算</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="setting">
+                    <div class="pdh20 text-color fs14 bold text-center">设置</div>
+                    <ul class="text-center">
+                        <a href=""><li class="">门店管理</li></a>
+                        <a href=""><li>门店设置</li></a>
+                        <a href=""><li>通用设置</li></a>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="help">...</div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 pdh10 flex space-between">
+                        <div class="flex-aic">
+                            <a href="" class="btn bg-eeefef">返回活动列表</a>&nbsp;&nbsp;&nbsp;<font class="fs16">发布活动</font>
+                        </div>
+                    </div>
+                    <div class="col-sm-12"><div class="col-sm-12 border-b"></div></div>
+                </div>
+                <div class="height16"></div>
+                <form action="" method="POST" class="row" role="form">
+                    <div class="col-sm-12 npr pdw88 fs16">
+                        <div class="col-sm-12 group">
+                            <label class="na" require>活动名称：</label>
+                            <div class="inp">
+                                <input class="width480" type="text" name="" value="" placeholder="活动名称">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 group">
+                            <label class="na" require>活动时间：</label>
+                            <div class="inp">
+                                <div class="input-append date date-picker re">
+                                    <input class="width187 fs12" type="text" name="" value="" placeholder="起始时间">
+                                    <span class="add-on abs t-0" style="right:5px;"><i class="glyphicon glyphicon-calendar"></i></span>
+                                </div>
+                                <span class="width20 mgw10 border-b ilb re" style="top:-5px"></span>
+                                <div class="input-append date date-picker re">
+                                    <input class="width187 fs12" type="text" name="" value="" placeholder="起始时间">
+                                    <span class="add-on abs t-0" style="right:5px;"><i class="glyphicon glyphicon-calendar"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 group">
+                            <label class="na" require>报名时间：</label>
+                            <div class="inp">
+                                <div class="input-append date date-picker re">
+                                    <input class="width187 fs12" type="text" name="" value="" placeholder="起始时间">
+                                    <span class="add-on abs t-0" style="right:5px;"><i class="glyphicon glyphicon-calendar"></i></span>
+                                </div>
+                                <span class="width20 mgw10 border-b ilb re" style="top:-5px"></span>
+                                <div class="input-append date date-picker re">
+                                    <input class="width187 fs12" type="text" name="" value="" placeholder="起始时间">
+                                    <span class="add-on abs t-0" style="right:5px;"><i class="glyphicon glyphicon-calendar"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 group">
+                            <label class="na">产品类型：</label>
+                            <div class="inp">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td><label for="s1"><input id="s1" type="checkbox" name="" value="">生鲜果蔬</label></td>
+                                            <td><label for="s2"><input id="s2" type="checkbox" name="" value="">大众美食</label></td>
+                                            <td><label for="s3"><input id="s3" type="checkbox" name="" value="">儿童鞋帽</label></td>
+                                            <td><label for="s4"><input id="s4" type="checkbox" name="" value="">女装服饰</label></td>
+                                            <td><label for="s5"><input id="s5" type="checkbox" name="" value="">男装服饰</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="s6"><input id="s6" type="checkbox" name="" value="">户外出行</label></td>
+                                            <td><label for="s7"><input id="s7" type="checkbox" name="" value="">家电数码</label></td>
+                                            <td><label for="s8"><input id="s8" type="checkbox" name="" value="">家居百货</label></td>
+                                            <td><label for="s9"><input id="s9" type="checkbox" name="" value="">装修建材</label></td>
+                                            <td><label for="s10"><input id="s10" type="checkbox" name="" value="">母婴用品</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="s11"><input id="s11" type="checkbox" name="" value="">生活服务</label></td>
+                                            <td><label for="s12"><input id="s12" type="checkbox" name="" value="">跨境电商</label></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 group">
+                            <font class="fs16 bold">活动类型：</font>
+                            <select name="" class="bg-eeefef mgw25 fs12 pdh10 pdw8 width187">
+                                <option value="">多人拼团</option>
+                                <option value="">多人拼团</option>
+                                <option value="">多人拼团</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-12 group">
+                            <label class="na">产品类型：</label>
+                            <div class="inp">
+                                <table class="wf">
+                                    <tbody>
+                                        <tr>
+                                            <td><label for="m1"><input id="m1" type="checkbox" name="" value="">商品必须支持包邮</label></td>
+                                            <td><label for="m2"><input id="m2" type="checkbox" name="" value="">须4分以上商家才可参与</label></td>
+                                            <td><label for="m3"><input id="m3" type="checkbox" name="" value="">商品须是30天内平台销售最低价地8折</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="m4"><input id="m4" type="checkbox" name="" value="">限购数量</label></td>
+                                            <td><label for="m5"><input id="m5" type="checkbox" name="" value="">拼团人数</label></td>
+                                            <td><label for="m6"><input id="m6" type="checkbox" name="" value="">库存数量</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="m7"><input id="m7" type="checkbox" name="" value="">返利分佣</label></td>
+                                            <td><label for="m8"><input id="m8" type="checkbox" name="" value="">成团时间</label></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 group">
+                            <label class="na">活动规则详细设置：</label>
+                        </div>
+                        <div class="col-sm-12 group">
+                            <label class="na"></label>
+                            <div class="inp">
+                                <p>限购数量<input class="width128 mgw10" type="text" name="" value="" placeholder="请设置限购数量"><label for="l1"><input id="l1" type="radio" name="lock">锁定</label><label for="l0"><input id="l0" type="radio" name="lock">不锁定</label></p>
+                                <p class="mgh10 fs12 text-muted">锁定数量为固定值，商家不可更改，不锁定商家可自定义小于等于限购数量</p>
+                            </div>
+                            <div class="inp mgh30 nmb">
+                                <p>拼团人数<input class="width128 mgw10" type="text" name="" value="" placeholder="请设置拼团人数"><label for="l11"><input id="l11" type="radio" name="lock1">锁定</label><label for="l00"><input id="l00" type="radio" name="lock1">不锁定</label></p>
+                                <p class="mgh10 fs12 text-muted">锁定数量为固定值，商家不可更改，不锁定商家可自定义小于等于拼团人数</p>
+                            </div>
+                            <div class="inp mgh30 nmb">
+                                <p>库存数量<input class="width128 mgw10" type="text" name="" value="" placeholder="请设置库存数量"></p>
+                                <p class="mgh10 fs12 text-muted">商家库存数量须大于等于设置值</p>
+                            </div>
+                            <div class="inp mgh30 nmb">
+                                <p>返利分佣<input class="width128 mgw10" type="text" name="" value="" placeholder="请设置返利分佣"></p>
+                                <p class="mgh10 fs12 text-muted">商家设置佣金比例须大于等于设置值</p>
+                            </div>
+                            <div class="inp mgh30 nmb">
+                                <p>成团时间<input class="width128 mgw10" type="text" name="" value="" placeholder="">&nbsp;h</p>
+                                <p class="mgh10 fs12 text-muted">成团时间设置完，商家不可更改，设置以小时为单位</p>
+                            </div>
+                            <div class="inp mgh30 nmb">
+                                <button type="submit" class="btn pdw50 bg-color">保存活动</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="height222"></div>
+            </div>
+        </div>
+        <div class="right-part">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 fs14 text-333333">
+                        <div class="col-sm-12 pdh20 border-b npl npr"><span class="glyphicon glyphicon-question-sign text-cecece"></span>&nbsp; 帮助和服务</div>
+                    </div>
+                </div>
+                <div class="row mgh20">
+                    <div class="col-sm-12 flex space-between">
+                        <font class="fs14 bold">帮助中心</font>
+                        <a href="" class="fs12 text-blue">进入></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p class="fs14 text-333333">商品在出售中列表找不到？</p>
+                        <p class="fs12">1.商品被手动下架，在仓库中，重新编辑上架即可。</p>
+                        <p class="fs12">2.商品售罄库存为0，在已售罄列表中，提醒您该添加库存了。待付款订单也会占据库存，其超时关闭后库存才会释放</p>
+                    </div>
+                </div>
+                <div class="row mgh20">
+                    <div class="col-sm-12">
+                        <p class="fs14 text-333333">如何推广商品？</p>
+                        <p class="fs12">点击[推广商品]，就可以获取商品二维码/商品链接，还能设置商品优惠二维码。</p>
+                        <p class="fs12">将商品分享到朋友圈，或群发时带上商品链接去推广。</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12"><div class="col-sm-12 border-b"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

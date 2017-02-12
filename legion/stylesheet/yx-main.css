@@ -1,0 +1,116 @@
+/*******军团活动样式*******/
+
+/*登录报名注册*/
+.yx-logo{
+    width:3.14rem;
+    height:2.16rem;
+    margin:0 auto;
+}
+.yx-logo img{
+    width:3.14rem;
+    height:2.16rem;
+}
+.yx-loginBox input,.yx-loginBox select{
+    padding:0.33rem 0.42rem;
+    border:0;
+    background-color:white;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    width:100%;
+}
+.yx-loginBox select {
+    padding: 0.33rem 0.45rem 0.33rem 0.22rem;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    background-image: url('../尤溪活动/images/yx-selArrow.png');
+    background-repeat:no-repeat;
+    background-position:95% 49%;
+}
+
+.yx-login1 input[type=checkbox]{
+    width:auto;
+    padding: 0;
+    vertical-align: text-bottom;
+}
+.login-user label,.login-pwd label{
+    width:0.4rem;
+    position: absolute;
+    top:0.3rem;
+    left:0.35rem;
+}
+.login-user label img,.login-pwd label img{
+    width:0.4rem;
+}
+.login-user input,.login-pwd input{
+    padding-left:1.2rem;
+}
+.checkInput:checked+label::before{
+    background-image: url('../images/yx-ico-sel.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:100%;
+    -webkit-background-size:100%;
+}
+.checkIco::before{
+    content:' ';
+    width:0.33rem;
+    height:0.33rem;
+    background-color:#fff;
+    display: inline-block;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+    margin-bottom:-0.05rem;
+}
+
+/*选择类型*/
+.yx-topInfo{
+    top:0;
+    width:100%;
+    max-width:750px;
+    height:1rem;
+    line-height:1rem;
+    z-index:111;
+}
+.yx-topInfo a img{
+    width:0.75rem;
+    height:0.75rem;
+}
+.yx-actType .act-img{
+    width:1.12rem;
+    height:0.96rem;
+    margin-right:0.35rem;
+    background-image: url('../尤溪活动/images/yx_ico_act.png');
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    background-size:cover;
+}
+
+.yx-actType .act-img.a-img1{
+    background-position: 0 0.13rem;
+}
+.yx-actType .act-img.a-img2{
+    height:0.86rem;
+    background-position: 0 -0.85rem;
+    margin-top:0.13rem;
+}
+.yx-actType .act-img.a-img3{
+    background-position: 0 -1.7rem;
+}
+
+/*底部*/
+.yx-footer{
+    width:100%;
+    left:0;
+    bottom:0.1rem;
+}
+
+/* 媒体查询 */
+@media screen and (min-width: 700px)  {
+
+    /*登录框图标偏移*/
+    .login-user label, .login-pwd label{
+        top:0.2rem;
+    }
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" href="../../../../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../../../../javascript/jquery-weui/jquery-weui.css">
+    <link rel="stylesheet" href="../../../../stylesheet/common-rem.css">
+    <link rel="stylesheet" href="../../../../stylesheet/color.css">
+    <link rel="stylesheet" href="../../../../stylesheet/main.css">
+    <link rel="stylesheet" href="../../../../javascript/bootstrap-slider-9.2.0/bootstrap-slider.css">
+    <script src="../../../../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../../../../javascript/common-rem.js"></script>
+    <script src="../../../../javascript/jquery-weui/jquery-weui.min.js"></script>
+    <script src="../../../../javascript/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../../javascript/bootstrap-slider-9.2.0/bootstrap-slider.min.js"></script>
+</head>
+<style type="text/css" media="screen">
+.mask { z-index: 100; }
+</style>
+<body>
+    <div id="page">
+        <header>
+            <div class="text-center head-top">
+                <a href=""><img src="../../../../images/ico_back.png" alt=""></a>
+                <span>分享</span>
+                <img src="../../../../images/ico_trans.png" alt="">
+            </div>
+            <div style="height:1.17333333rem;"></div>
+        </header><!-- /header -->
+        <div class="container-fluid">
+            <div class="row weui-cells">
+                <div class="weui-cell">
+                    <div class="weui-cell__hd mgw20 nml"><img src="../../../../images/p3.png" alt="" style="width:1.65333333rem"></div>
+                    <div class="weui-cell__bd" style="width:6.96rem">
+                        <p class="mgh10 fs28 text-333333 ellipsis">欣欣食品 芝麻/海苔/香葱/原味凤凰欣欣食品 芝麻/海苔/香葱/原味凤凰</p>
+                        <div class="height35"></div>
+                        <p class="text-muted fs20">代理价：<font id="agent-price" class="text-color fs28">¥ 9.90</font></p>
+                    </div>
+                    <div id="close-item" class="weui-cell__ft"><a href=""><img src="../../../../images/ico_close4.png" alt="" style="width:0.4rem"></a></div>
+                </div>
+            </div>
+            <div class="row fs28 bg-white mgh20 nmb">
+                <div class="col-xs-12 pdh30">销售价：¥ <span id="sale-price">15</span> <span class="pull-right">我要赚：<font class="text-color">¥ <span id="earn-money">5.1</span></font></span></div>
+            </div>
+            <div class="row bg-white">
+                <div class="height45"></div>
+                <div class="col-xs-12">
+                    <input id="range"  type="hide" name="" data-provide="slider" value="15" data-slider-min="9.9" data-slider-max="19.9" data-slider-value="15" data-slider-step="0.1" >
+                </div>
+                <div class="height25"></div>
+                <div class="col-xs-12 fs28 text-color">
+                    ¥ 9.9 <span class="pull-right">¥ 19.9</span>
+                </div>
+                <div class="height75"></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 bg-white fs24">
+                    <textarea name="" rows="6" class="weui-textarea pd27 border-a" placeholder="多说一点夸夸这个商品吧"></textarea>
+                    <div class="height100"></div>
+                </div>
+            </div>
+            <div class="height80"></div>
+            <div class="row navbar-fixed-bottom">
+                <a href="1-分享页面/选择分享方式.html" id="share" class="col-xs-12 pdh22 fs36 lh1 bg-color text-center">立刻转发</a>
+            </div>
+        </div>
+        <!-- 分享方式 -->
+        <!--<div class="mask">-->
+            <!--<div class="container-fluid navbar-fixed-bottom">-->
+                <!--<div class="row text-center text-white">-->
+                    <!--<a class="col-xs-6 np" onclick="$('#modal').modal('show'),$('#close-mask').trigger('click')">-->
+                        <!--<img src="../../../../images/ico_share_6.png" alt="" style="width:1.48rem">-->
+                        <!--<p>点击链接复制</p>-->
+                    <!--</a>-->
+                    <!--<a class="col-xs-6 np">-->
+                        <!--<img src="../../../../images/ico_share_7.png" alt="" style="width:1.48rem">-->
+                        <!--<p>二维码</p>-->
+                    <!--</a>-->
+                <!--</div>-->
+                <!--<div class="row mgh100 nmb">-->
+                    <!--<a id="close-mask" class="col-xs-12 text-center"><img src="../../../../images/ico_close4.png" alt="" style="width:0.53333333rem"></a>-->
+                <!--</div>-->
+                <!--<div class="height50"></div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="modal fade" id="modal">-->
+            <!--<div class="modal-dialog">-->
+                <!--<div class="modal-content">-->
+                    <!--<div class="modal-header no-border npb">-->
+                        <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove-circle"></span></button>-->
+                        <!--<h4 class="modal-title fs22">点击链接复制</h4>-->
+                    <!--</div>-->
+                    <!--<div class="modal-body">-->
+                        <!--<div class="pdw27">-->
+                            <!--<div class="pdh10 border-t border-b">-->
+                                <!--<input class="weui-input fs28" type="text" name="" value="http://m.huobucuo.com" placeholder="" onclick="this.setSelectionRange(0, 9999);">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="modal-footer no-border">-->
+                        <!--<button type="button" class="btn bg-color" data-dismiss="modal">关闭</button>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+
+        <!--&lt;!&ndash; 分享提示层 &ndash;&gt;-->
+        <!--<div class="mask text-right share-box" style="display: none; z-index: 99999;">-->
+            <!--<img  src="../../../../images/yq_1.png"/>-->
+            <!--<div class="text-center mgh500">-->
+                <!--<a id="share-btn" class="pdh15 pdw30 bg-color fs26 border-radius" href="javascript:;">我知道了,马上去分享</a>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+    <!--<script type="text/javascript">-->
+        <!--$('#range').slider({-->
+            <!--precision: 2,-->
+            <!--tooltip : 'hide'-->
+        <!--}).on('change', function(){-->
+            <!--var range = $('#range');-->
+            <!--$('#sale-price').text(range.val());-->
+            <!--$('#earn-money').text((range.val() - range.data('slider-min')).toFixed(2));-->
+        <!--});-->
+        <!--$('#earn-money').text(($('#range').val() - $('#range').data('slider-min')).toFixed(2));-->
+
+        <!--$('#share').on('click', function(event) {-->
+            <!--event.preventDefault();-->
+            <!--$('.mask').fadeIn('fast');-->
+            <!--$(this).slideUp('fast');-->
+        <!--});-->
+        <!--$('#close-mask').on('click', function(event) {-->
+            <!--event.preventDefault();-->
+            <!--$('.mask').fadeOut('fast');-->
+             <!--$('#share').slideDown('fast');-->
+        <!--});-->
+    <!--</script>-->
+
+    <!--<script>-->
+        <!--//弹出框-->
+        <!--$('#share').on('click',function(){-->
+            <!--$('.share-box').fadeIn();-->
+        <!--});-->
+        <!--$('#share-btn').on('click',function(){-->
+            <!--$('.share-box').fadeOut();-->
+        <!--})-->
+    <!--</script>-->
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>注册</title>
+    <link rel="stylesheet" href="../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../javascript/jquery-weui/jquery-weui.css">
+    <link rel="stylesheet" href="../stylesheet/common-rem.css">
+    <link rel="stylesheet" href="../stylesheet/color.css">
+    <link rel="stylesheet" href="../stylesheet/yx-main.css">
+    <script src="../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../javascript/common-rem.js"></script>
+    <script src="../javascript/jquery-weui/jquery-weui.min.js"></script>
+    <script src="../javascript/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body class="bg-ffc730">
+    <div id="page">
+        <div class="container-fluid">
+            <div class="mgh70 yx-logo">
+                <img src="images/yx-logo.png"/>
+            </div>
+            <div class="yx-loginBox pdw50 bg-ffd83a border-radius overhide">
+                <div class="mgh20">
+                    <p class="pd30 fs32 text-white text-center">尤溪县金柑互联网销售大赛报名</p>
+                </div>
+                <div class="mgh20">
+                    <input type="text" placeholder="真实姓名"/>
+                </div>
+                <div class="text-939393 fs24 weui-flex mgh20 yx-l-selBox">
+                    <select class="weui-flex">
+                        <option value="">选择省份</option>
+                    </select>
+                    <select class="weui-flex mgw10">
+                        <option value="">选择城市</option>
+                    </select>
+                    <select class="weui-flex">
+                        <option value="">选择区</option>
+                    </select>
+                </div>
+                <div class="mgh20">
+                    <input type="text" placeholder="手机号码"/>
+                </div>
+                <div class="weui-flex">
+                    <input class="weui-flex__item weui-flex2" style="margin-right:0.32rem;" type="text" placeholder="验证码"/>
+                    <input class="weui-flex__item bg-color1" id="btnCode" type="button" value="获取验证码">
+                </div>
+                <div class="mgh30">
+                    <input class="bg-color1" type="submit" value="立即注册"/>
+                </div>
+
+                <div class="text-right mgh20 overhide">
+                    <a class="fs28 text-white" href="#">已有帐号？马上登录</a>
+                </div>
+            </div>
+
+            <div class="text-center yx-footer" style="margin-top:0.5rem;">
+                <img class="mgh20" style="width:6rem;" src="images/yx-f-logo2.png"/>
+                <p class="text-c99b1e fs16">Copyright © 2014-2016 闽ICP备15018819号-1</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            //监听窗口高度 判断底部的位置
+            if($('.container-fluid').height()<$(window).height()){
+                $('.yx-footer').addClass('fixed');
+            }
+
+            var oBtnCode=$('#btnCode'),
+                    time=1000,btn=true,n=60,timer;
+
+            var setTime=function(){
+                n--;
+                oBtnCode.val( n+'s后重新获取');
+                if(n==0){
+                    btn=true;
+                    n=60;
+                    clearInterval(timer);
+                    oBtnCode.addClass('bg-color1').removeClass('bg-gray').val('重新获取');
+                }
+            }
+
+            oBtnCode.on('click',function(){
+                if(btn){
+                    btn=false;
+                    oBtnCode.val( n+'s后重新获取');
+                    timer=setInterval(setTime,time);
+                    $(this).addClass('bg-gray').removeClass('bg-color1');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

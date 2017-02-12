@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>广告图片</title>
+    <link rel="stylesheet" href="../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../javascript/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../javascript/layer/skin/layer.css">
+    <link rel="stylesheet" href="../stylesheet/common.css">
+    <link rel="stylesheet" href="../stylesheet/color.css">
+    <link rel="stylesheet" href="../stylesheet/main.css">
+    <script src="../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../javascript/layer/layer.js"></script>
+    <script src="../javascript/common.js"></script>
+    <script src="../javascript/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../javascript/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+</head>
+</head>
+<body>
+<div class="page">
+    <div class="left-part">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 mgh30"><img src="../images/logo.png" alt="" width="100"></div>
+            </div>
+            <div class="row">
+                <ul class="text-center l-uiList">
+                    <a href="#common" data-toggle="tab"><li><img src="../images/ico0.png" alt="">概况</li></a>
+                    <a href="#shop" data-toggle="tab"><li><img src="../images/ico1.png" alt="">店铺</li></a>
+                    <a href="#product" data-toggle="tab"><li><img src="../images/ico2.png" alt="">商品</li></a>
+                    <a href="#team" data-toggle="tab"><li><img src="../images/ico3.png" alt="">商家</li></a>
+                    <a href="#order" data-toggle="tab"><li class="active"><img src="../images/ico4.png" alt="">订单</li></a>
+                    <a href="#authen" data-toggle="tab"><li><img src="../images/ico5.png" alt="">审核</li></a>
+                    <a href="#sale" data-toggle="tab"><li><img src="../images/ico6.png" alt="">营销</li></a>
+                    <a href="#data" data-toggle="tab"><li><img src="../images/ico7.png" alt="">数据</li></a>
+                    <a href="#assets" data-toggle="tab"><li><img src="../images/ico8.png" alt="">资产</li></a>
+                    <a href="#setting" data-toggle="tab"><li><img src="../images/ico9.png" alt="">设置</li></a>
+                </ul>
+                <div class="row dropup fixed pdh10 pdw5 cur-po">
+                    <div id="l-l-btn">
+                        <img src="../images/ico_nav3_2.png" class="pull-left"/>
+                        <p class="ellipsis" style="width:78px;">xxx小卖部啊</p>
+                        <span class="caret pull-right abs"></span>
+                    </div>
+                    <ul id="l-loginBox" class="abs pdw6 bg-white text-center img-rounded" data-btn="no">
+                        <li><a href="#" class="text-939393">修改密码</a></li>
+                        <li><a href="#" class="text-939393">退出登录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="item-tab tab-content">
+            <div role="tabpanel" class="tab-pane fade" id="shop">
+                <div class="pdh20 text-color fs16 bold text-center">店铺中心</div>
+                <ul class="text-center">
+                    <a href=""><li class="active">店铺概况</li></a>
+                    <a href=""><li>微页面</li></a>
+                    <a href=""><li>页面分类</li></a>
+                    <a href=""><li>店铺主页</li></a>
+                    <a href=""><li>店铺导航</li></a>
+                    <a href=""><li>公共广告</li></a>
+                    <a href=""><li>自定义模块</li></a>
+                    <a href=""><li>我的文件</li></a>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane fade in active" id="order">
+                <div class="pdh20 text-color fs16 bold text-center">订单中心</div>
+                <ul class="text-center">
+                    <a href=""><li class="active">全部订单</li></a>
+                    <a href=""><li>平台自营</li></a>
+                    <a href=""><li>平台分销</li></a>
+                    <a href=""><li>售后订单</li></a>
+                    <a href=""><li>评价管理</li></a>
+                    <a href=""><li>举报订单</li></a>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="sale">
+                <div class="pdh20 text-color fs16 bold text-center">营销中心</div>
+                <ul class="text-center">
+                    <a href=""><li class="active">拼团</li></a>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="data">
+                <div class="pdh20 text-color fs16 bold text-center">数据中心</div>
+                <ul class="text-center">
+                    <a href=""><li class="active">数据概况</li></a>
+                    <a href=""><li>交易数据</li></a>
+                    <a href=""><li>产品数据</li></a>
+                    <a href=""><li>收支数据</li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container-fluid pdw40 pdh32">
+            <div class="col-xs-12 text-333333">
+                <h1 class="fs16">我的图片</h1>
+                <div class="pdh22">
+                    <input type="checkbox" id="c-1" class="mgw5 ver-textbottom" />
+                    <label class="nw" for="c-1">全选</label>
+                    <a href="javascript:;" class="text-5faaff pdw15 filedelAll">删除</a>
+                </div>
+            </div>
+            <div class="col-xs-12 text-939393 text-center" id="s-fileBox">
+                <div class="col-xs-2 mgh10">
+                    <input type="file" id="f-1" class="hidden" multiple/>
+                    <label for="f-1"><img src="../images/shop_ico_fileImg.png"/></label>
+                    <p class="pdh8">添加图片</p>
+                </div>
+                <div class="col-xs-2 s-fileImg s-f-Img">
+                    <div class="s-imgBox re">
+                        <img src="../images/shop_img2.png"/>
+                    </div>
+                    <p class="ellipsis">sfsadfsdaf</p>
+                    <a href="javascript:;" class="text-5faaff s-f-name">改名</a>
+                    <a href="javascript:;" class="text-5faaff s-f-del">删除</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="right-part">
+        <div class="container-fluid r-div1">
+            <div class="row">
+                <div class="col-sm-12 fs14 text-333333">
+                    <div class="col-sm-12 pdh20 border-b npl npr"><span class="glyphicon glyphicon-question-sign text-cecece">
+                        </span>&nbsp; 帮助和服务
+                        <img class="pull-right cur-po" src="../images/ico11.png"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row mgh20">
+                <div class="col-sm-12 flex space-between">
+                    <font class="fs14 bold">帮助中心</font>
+                    <a href="" class="fs12 text-blue">进入></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="fs14 text-333333">商品在出售中列表找不到？</p>
+                    <p class="fs12">1.商品被手动下架，在仓库中，重新编辑上架即可。</p>
+                    <p class="fs12">2.商品售罄库存为0，在已售罄列表中，提醒您 该添加库存了。待付款订单也会占据库存，其超时关闭后库存才会释放</p>
+                </div>
+            </div>
+            <div class="row mgh20">
+                <div class="col-sm-12">
+                    <p class="fs14 text-333333">如何推广商品？</p>
+                    <p class="fs12">点击[推广商品]，就可以获取商品二维码/商品链接，还能设置商品优惠二维码。</p>
+                    <p class="fs12">将商品分享到朋友圈，或群发时带上商品链接去推广。</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12"><div class="col-sm-12 border-b"></div></div>
+            </div>
+        </div>
+        <div class="container-fluid r-div2">
+            <div class="row">
+                <div class="col-sm-12 fs14 text-333333">
+                    <div class="col-sm-12 pdh20 npl npr cur-po"><span class="glyphicon glyphicon-question-sign text-cecece"></span>&nbsp; 帮助和服务</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function(){
+        var sbox=$('#s-fileBox'),
+            imgBox=$('.s-imgBox');
+
+        $('#f-1').change(function(){
+            fileRead('f-1',sbox);
+        });
+        //判断选中图片
+        sbox.on('click','.s-imgBox',function(e){
+            e.preventDefault()
+            if(!$(this).hasClass('s-i-active')){
+                $(this).addClass('s-i-active');
+            }else{
+                $(this).removeClass('s-i-active');
+            }
+        });
+
+        //全选
+        $('#c-1').change(function(){
+            var Listimg=$('.s-imgBox');
+            if($(this).is(':checked')){
+                Listimg.addClass('s-i-active');
+            }else{
+                Listimg.removeClass('s-i-active');
+            }
+        });
+        //全部删除
+        $('.filedelAll').click(function(){
+            var Listimg=$('.s-imgBox');
+            if(Listimg.is('.s-i-active')){
+                layer.msg('你确定要删除全部图片？', {
+                    time: 0 //不自动关闭
+                    ,btn: ['是', '否']
+                    ,yes: function(index){
+                        $('.s-i-active').parent().remove();
+                        layer.close(index);
+                        layer.msg('已删除',{time:500});
+                    }
+                });
+            }
+        });
+
+        //改名
+        sbox.on('click','.s-f-name',function(){
+            var That=$(this);
+
+            layer.prompt({value:That.parent().find('p').html()},function(val,index){
+                That.parent().find('p').html(val);
+                layer.close(index)
+            })
+        });
+
+        //删除
+        sbox.on('click','.s-f-del',function(){
+            var That=$(this);
+
+            layer.msg('你确定要删除该图片？', {
+                time: 0 //不自动关闭
+                ,btn: ['是', '否']
+                ,yes: function(index){
+                    That.parent().remove();
+                    layer.close(index);
+                    layer.msg('已删除',{time:500});
+                }
+            });
+        });
+
+        function fileRead(file,obj){
+            var oFile=document.getElementById(file).files;
+            var arr=[];
+
+            for(var i=0,len=oFile.length; i<len; i++){
+                var reader=new FileReader();
+
+                reader.readAsDataURL(oFile[i])
+                reader.onload=function(e){
+                    var img=document.createElement('img'),
+                        num=Math.floor(Math.random()*10000);
+                    img.src=e.target.result;
+                    var arr='<div class="col-md-2 s-fileImg s-f-Img"> <div class="s-imgBox re" id="s-file-'+ num +'"></div> <p class="ellipsis">'+ num +'</p> <a href="javascript:;" class="text-5faaff s-f-name">改名</a> <a href="javascript:;" class="text-5faaff s-f-del">删除</a> </div>';
+                    obj.append(arr);
+                    $('#s-file-'+num).append(img);
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>

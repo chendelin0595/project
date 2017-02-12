@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>天下果园水果军团</title>
+    <link rel="stylesheet" href="../../../../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../../../../javascript/jquery-weui/jquery-weui.css">
+    <link rel="stylesheet" href="../../../../stylesheet/common-rem.css">
+    <link rel="stylesheet" href="../../../../stylesheet/color.css">
+    <script src="../../../../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../../../../javascript/common-rem.js"></script>
+    <script src="../../../../javascript/jquery-weui/jquery-weui.min.js"></script>
+    <script src="../../../../javascript/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css" media="screen">
+.top_banner { background: url('../../../../images/top_banner.png'); background-size: 100% 100%; }
+.top_banner .active div { border-bottom: solid 0.05333333rem #fff; width: 51.2%; box-sizing: border-box; }
+#order-type .active { color: #4c4c4c; }
+</style>
+<body>
+    <div id="page">
+        <header>
+            <div class="text-center head-top">
+                <a href=""><img src="../../../../images/ico_back.png" alt=""></a>
+                <span>天下果园水果军团</span>
+                <img src="../../../../images/ico_trans.png" alt="">
+            </div>
+            <div style="height:1.17333333rem;"></div>
+        </header>
+        <!-- /header -->
+        <div class="container-fluid">
+            <div class="row top_banner fs32 text-white text-center">
+                <div class="height100"></div>
+                <a href="" class="col-xs-4"><div class="pdh25 center-block">动态</div></a>
+                <a href="" class="col-xs-4"><div class="pdh25 center-block">商品</div></a>
+                <a href="" class="col-xs-4 active"><div class="pdh25 center-block">订单</div></a>
+                <div class="height3"></div>
+            </div>
+            <div class="height26"></div>
+            <!-- 搜索 -->
+            <div class="row">
+                <div class="col-xs-12 pdw36">
+                    <div class="bg-white pdh10 img-rounded re" style="border: 0.04rem solid rgb(238, 238, 238);">
+                        <input class="weui-input fs24 pdw10" type="text" name="" value="" placeholder="输入收货人姓名、手机号搜索">
+                        <a href=""><img src="../../../../images/ico_search.png" alt="" class="abs" style="width:0.48rem;right:0.13333333rem;top:0.13333333rem"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="height20"></div>
+            <!-- 订单类型 -->
+            <div id="order-type" class="row weui-flex text-center bg-white fs28 pdh20 border-b text-muted">
+                <a href="军团长打开军团_全部订单.html" class="weui-flex__item">全部</a>
+                <a href="军团长打开军团_待支付订单.html" class="weui-flex__item">待支付</a>
+                <a href="军团长打开军团_待发货订单.html" class="weui-flex__item">待发货</a>
+                <a href="军团长打开军团_待收货订单.html" class="weui-flex__item">待收货</a>
+                <a href="军团长打开军团_已完成订单.html" class="weui-flex__item active">已完成</a>
+            </div>
+            <!-- 订单列表 -->
+            <div class="row height115 bg-white"></div>
+            <div class="row bg-white">
+                <div class="col-xs-12 text-center">
+                    <img src="../../../../images/ico_order.png" alt="" style="width:0.85333333rem">
+                    <div class="height10"></div>
+                    <p class="text-muted fs28">暂无相关订单信息</p>
+                </div>
+            </div>
+            <div class="row height115 bg-white"></div>
+            <div class="row bg-white text-center">
+                <a href="" class="fs28 btn bg-color pdw100 pdh15 img-rounded">去选货</a>
+            </div>
+            <div class="row height333 bg-white"></div>
+        </div>
+        <!-- footer nav -->
+        <div class="height130"></div>
+        <div class="container-fluid footer-nav navbar-fixed-bottom">
+            <div class="row fs20 text-center bg-f4f7f8 text-333333">
+                <div class="height16"></div>
+                <a href="" class="col-xs-3 np">
+                    <img src="../../../../images/ico_nav0.png" alt="">
+                    <p>军团</p>
+                </a>
+                <a href="" class="col-xs-3 np">
+                    <img src="../../../../images/ico_nav4.png" alt="">
+                    <p>业绩</p>
+                </a>
+                <a href="" class="col-xs-3 np">
+                    <img src="../../../../images/ico_nav5.png" alt="">
+                    <p>管理</p>
+                </a>
+                <a href="" class="col-xs-3 np">
+                    <img src="../../../../images/ico_nav3.png" alt="">
+                    <p>我</p>
+                </a>
+                <div class="height12"></div>
+            </div>
+        </div><!-- /footer nav -->
+    </div>
+</body>
+</html>
+
+
+============
+<li onclick="gallery'+"('"+this.result+"',this)"+'" class="weui-uploader__file" style="background-image:url('+this.result+')"></li>

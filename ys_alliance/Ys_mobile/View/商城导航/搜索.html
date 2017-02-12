@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>搜索</title>
+    <link rel="stylesheet" href="../../Public/style/common/bootstrap.min.css">
+    <link rel="stylesheet" href="../../Public/style/common/weui.min.css">
+    <link rel="stylesheet" href="../../Public/style/common/jquery-weui.css">
+    <link rel="stylesheet" href="../../Public/style/common/common.css">
+    <link rel="stylesheet" href="../../Public/style/main.css">
+    <script src="../../Public/javascript/common/jquery-3.1.1.min.js"></script>
+    <script src="../../Public/javascript/common/bootstrap.min.js"></script>
+    <script src="../../Public/javascript/common/jquery-weui.min.js"></script>
+    <script src="../../Public/javascript/common/iscroll.js"></script>
+    <script src="../../Public/javascript/common/common.js"></script>
+</head>
+<body>
+<div class="page" style="padding-bottom:2.35rem;" data-color="#fff">
+    <div class="container-fluid">
+        <div class="row">
+            <!--搜索-->
+            <!--<div class="col-xs-12 pdh15">-->
+                <!--<div class="s-searchBox fs24 re">-->
+                    <!--<img class="abs" src="../../Public/images/icon_search.png" />-->
+                    <!--<input type="text" class="no-border pdh15 pdw30 bg-eeefef" placeholder="搜索您想要的商品"/>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="col-xs-12 pdh20 bg-eeefef s-addBox">
+            </div>
+
+            <div class="col-xs-12 s-li-init">
+                <p class="pdh30 text-333333">使用人群</p>
+                <a href="javascript:;" class="bg-eeefef pdw25 pdh10 mgb20 border-radius">男鞋</a>
+                <a href="javascript:;" class="bg-eeefef pdw25 pdh10 mgb20 border-radius">男鞋</a>
+            </div>
+            <div class="col-xs-12 pdh10 s-li-init">
+                <p class="pdh30 text-333333">价格区间（元）</p>
+                <a href="javascript:;" class="bg-eeefef pdw25 pdh10 mgb20 border-radius">0-199</a>
+                <a href="javascript:;" class="bg-eeefef pdw25 pdh10 mgb20 border-radius">200-299</a>
+                <a href="javascript:;" class="bg-eeefef pdw25 pdh10 mgb20 border-radius">200-299</a>
+                <a href="javascript:;" class="bg-eeefef pdw25 pdh10 mgb20 border-radius">200-299</a>
+                <a href="javascript:;" class="bg-eeefef pdw25 pdh10 mgb20 border-radius">200-299</a>
+            </div>
+            <div class="col-xs-12 pdh10 s-li-init">
+                <p class="pdh30 text-333333">鞋子材质</p>
+                <a href="javascript:;" class="bg-eeefef pdw25 pdh10 mgb20 border-radius">头层牛皮</a>
+                <a href="javascript:;" class="bg-eeefef pdw25 pdh10 mgb20 border-radius">牛皮</a>
+                <a href="javascript:;" class="bg-eeefef pdw25 pdh10 mgb20 border-radius">羊皮</a>
+                <a href="javascript:;" class="bg-eeefef pdw25 pdh10 mgb20 border-radius">人造皮</a>
+                <a href="javascript:;" class="bg-eeefef pdw25 pdh10 mgb20 border-radius">猪皮</a>
+            </div>
+            <div class="col-xs-12 pdh10 s-li-init">
+                <p class="pdh30 text-333333">闭合方式</p>
+                <a href="javascript:;" class="bg-eeefef pdw25 pdh10 mgb20 border-radius">套脚</a>
+                <a href="javascript:;" class="bg-eeefef pdw25 pdh10 mgb20 border-radius">不系带</a>
+                <a href="javascript:;" class="bg-eeefef pdw25 pdh10 mgb20 border-radius">松紧带</a>
+                <a href="javascript:;" class="bg-eeefef pdw25 pdh10 mgb20 mgb border-radius">系带</a>
+                <a href="javascript:;" class="bg-eeefef pdw25 pdh10 mgb20 border-radius">魔术贴</a>
+                <a href="javascript:;" class="bg-eeefef pdw25 pdh10 mgb20 border-radius">其他</a>
+            </div>
+        </div>
+    </div>
+    <div class="maxWidth container-fluid footer-nav navbar-fixed-bottom text-center bg-white pdh10 overhide" style="bottom:0.2rem;">
+        <a href="javascript:;" id="s-reset" class="pdh20 pdw100 mgw5 inline-block btn-21a2fe border-radius">重置</a>
+        <a href="javascript:;" class="pdh20 pdw100 mgw5 inline-block btn-21a2fe border-radius">确定</a>
+    </div>
+</div>
+<script>
+    $(function(){
+        var sInit=$('.s-li-init'),
+                addBox=$('.s-addBox'),
+                num=0;
+
+        //每行定义类名
+        sInit.each(function(){
+            $(this).data('num',num);
+            num++;
+        });
+
+        //点击变色添加
+        $('a.bg-eeefef').on('click',function(){
+            var parent=$(this).parent(),
+                    pData=parent.data('num'),
+                    addA=addBox.find('a[data-num='+ pData +']'),
+                    addHtml;
+            parent.find('a').addClass('bg-eeefef').removeClass('btn-ff7272');
+            $(this).addClass('btn-ff7272');
+            if(addA.length ===0){
+                addHtml='<a href="javascript:;" class="s-li-acive bg-white pd10 text-999999 fs28 border-radius" data-num="'+ pData +'"><span>'+ $(this).text() +'</span><img class="ver-textbottom s-li-close" src="../../Public/images/icon_btn_close.png"/></a>';
+                addBox.append(addHtml);
+            }else{
+                addA.find('span').text($(this).text());
+            }
+        });
+
+        //点击删除
+        $('body').on('click','.s-li-close',function(){
+            var parent=$(this).parent(),
+                    pData=parent.data('num');
+            parent.remove();
+            sInit.each(function(){
+                if($(this).data('num')==pData){
+                    $(this).find('a').addClass('bg-eeefef').removeClass('btn-ff7272');
+                }
+            })
+        });
+
+        //重置
+        $('#s-reset').on('click',function(){
+            $('a.bg-eeefef').removeClass('btn-ff7272');
+            addBox.find('a').remove();
+        });
+
+    })
+</script>
+</body>
+</html>

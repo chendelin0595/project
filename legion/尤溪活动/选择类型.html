@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>选择类型</title>
+    <link rel="stylesheet" href="../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../javascript/jquery-weui/jquery-weui.css">
+    <link rel="stylesheet" href="../stylesheet/common-rem.css">
+    <link rel="stylesheet" href="../stylesheet/color.css">
+    <link rel="stylesheet" href="../stylesheet/yx-main.css">
+    <script src="../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../javascript/common-rem.js"></script>
+    <script src="../javascript/jquery-weui/jquery-weui.min.js"></script>
+    <script src="../javascript/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div id="page">
+        <div class="yx-topInfo bg-white fixed">
+            <a class="pull-right mgw30 fs20" href="#">
+                <img class="radius50" src="../images/ico_nav3_1.png"/>
+                15844747777
+            </a>
+        </div>
+        <div class="container-fluid bg-white mgh100">
+            <div class="row pdh80 border-b">
+                <img class="pull-left" style="width:3rem; margin-left:0.8rem;" src="images/yx_ico_face.png"/>
+                <div class="pull-left mgh20 mgw30">
+                    <p class="fs40 text-color bold mgh15">恭喜您，报名成功</p>
+                    <p class="fs28">您的帐号：13566897874</p>
+                    <p class="fs28">您的密码：123456</p>
+                </div>
+            </div>
+
+            <div class="col-xs-12 pdh20">
+                <p class="pdh20 fs36 text-333333">请选择您要参加的活动类型</p>
+                <div class="border-radius bg-eeefef yx-actType overhide pdh24 pdw20 mgh20">
+                    <a href="登录.html">
+                        <div class="act-img a-img1 pull-left"></div>
+                        <div class="mgh15">
+                            <strong class="fs36 bold text-e44a62 pdw10">个人参赛</strong>
+                            <span class="fs36 bold text-dddddd">Single</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="border-radius bg-eeefef yx-actType overhide pdh24 pdw20 mgh20">
+                    <a href="#">
+                        <div class="act-img a-img2 pull-left"></div>
+                        <div class="mgh15">
+                            <strong class="fs36 bold text-28e2c1 pdw10">加入团队</strong>
+                            <span class="fs36 bold text-dddddd">Join</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="border-radius bg-eeefef yx-actType overhide pdh24 pdw20 mgh20">
+                    <a href="#">
+                        <div class="act-img a-img3 pull-left"></div>
+                        <div class="mgh15">
+                            <strong class="fs36 bold text-28cae2 pdw10">创建团队</strong>
+                            <span class="fs36 bold text-dddddd">Create</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center yx-footer">
+            <img class="mgh20" style="width:6rem;" src="images/yx-f-logo3.png"/>
+            <p class="text-939393 fs16">Copyright © 2014-2016 闽ICP备15018819号-1</p>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            function getResize(){
+                //监听窗口高度 判断底部的位置
+                if($('#page').height()-$(window).height() <15){
+                    $('.yx-footer').addClass('fixed');
+                }else{
+                    $('.yx-footer').removeClass('fixed');
+                }
+            };
+            getResize();
+            $(window).resize(function(){
+                getResize();
+            })
+        });
+    </script>
+</body>
+</html>

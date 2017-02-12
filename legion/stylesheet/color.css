@@ -1,0 +1,53 @@
+/*
+* @Author: Wu
+* @Date:   2016-09-07 10:04:16
+* @Last Modified by:   Wu
+* @Last Modified time: 2016-10-15 15:07:39
+* @note 被使用的颜色名不要去修改颜色值，新增一个。命名规则：[bg|text]-[colorName|HEX]
+*/
+
+/* tune color */
+.text-color { color: #e44a62 !important; }
+.bg-color { background-color: #e44a62; color: #fff; }
+.bg-color1{background-color:#ffa044 !important; color: #fff;}
+
+/* bg-color */
+.bg-white { background-color: #fff; }
+.bg-gray { background-color: #999999 !important; color: #fff; }
+.bg-yellow { background-color: #ffaa00; color: #fff; }
+.bg-f4f7f8 { background-color: #f4f7f8; }
+.bg-f7f7f7 { background-color: #f7f7f7; }
+.bg-mask { background-color: rgba(0, 0, 0, 0.5); }
+.bg-fafafa { background-color: #fafafa; }
+.bg-eeeaeb { background-color: #eeeaeb; }
+.bg-cccccc { background-color: #cccccc; }
+.bg-eeefef{background-color:#eeefef;}
+.bg-7342e1{background-color:#7342e1 !important;}
+.bg-ffc730{background-color:#ffc730;}
+.bg-ffd83a{background-color:#ffd83a;}
+.bg-ff643f{background-color:#ff643f;}
+.bg-ff4d4b{background-color:#ff4d4b;}
+
+/* text-color */
+.text-muted { color: #999999 !important; }
+.text-white { color: #fff !important; }
+.text-black { color: #000 !important; }
+.text-blue { color: #157efb !important; }
+.text-333333 { color: #333333 !important; }
+.text-666666 { color: #666666 !important; }
+.text-ff6600 { color: #ff6600 !important; }
+.text-b2b2b2 { color: #b2b2b2 !important; }
+.text-939393 { color: #939393 !important; }
+.text-1db15a { color: #1db15a !important; }
+.text-337ab7 { color: #337ab7 !important; }
+.text-da9c16{color:#da9c16 !important;}
+.text-ffa044{color:#ffa044 !important;}
+.text-dddddd{color:#dddddd !important;}
+.text-e44a62{color:#e44a62 !important;}
+.text-28e2c1{color:#28e2c1 !important;}
+.text-28cae2{color:#28cae2 !important;}
+.text-c99b1e{color:#c99b1e !important;}
+
+
+/* border-style */
+.border-cecece{border-color:#cecece;}

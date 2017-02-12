@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>装修店铺</title>
+    <link rel="stylesheet" href="../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../javascript/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../stylesheet/jquery.dad.css">
+    <link rel="stylesheet" href="../javascript/swiper/swiper.min.css">
+    <link rel="stylesheet" href="../stylesheet/common.css">
+    <link rel="stylesheet" href="../stylesheet/color.css">
+    <link rel="stylesheet" href="../stylesheet/main.css">
+    <script src="../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../javascript/jquery.dad.min.js"></script>
+    <script src="../javascript/layer/layer.js"></script>
+    <script src="../javascript/common.js"></script>
+    <script src="../javascript/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../javascript/swiper/swiper.min.js"></script>
+</head>
+</head>
+<body>
+<div class="page">
+    <div class="left-part">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 mgh30"><img src="../images/logo.png" alt="" width="100"></div>
+            </div>
+            <div class="row">
+                <ul class="text-center l-uiList">
+                    <a href="#common" data-toggle="tab"><li><img src="../images/ico0.png" alt="">概况</li></a>
+                    <a href="#shop" data-toggle="tab"><li><img src="../images/ico1.png" alt="">店铺</li></a>
+                    <a href="#product" data-toggle="tab"><li><img src="../images/ico2.png" alt="">商品</li></a>
+                    <a href="#team" data-toggle="tab"><li><img src="../images/ico3.png" alt="">商家</li></a>
+                    <a href="#order" data-toggle="tab"><li class="active"><img src="../images/ico4.png" alt="">订单</li></a>
+                    <a href="#authen" data-toggle="tab"><li><img src="../images/ico5.png" alt="">审核</li></a>
+                    <a href="#sale" data-toggle="tab"><li><img src="../images/ico6.png" alt="">营销</li></a>
+                    <a href="#data" data-toggle="tab"><li><img src="../images/ico7.png" alt="">数据</li></a>
+                    <a href="#assets" data-toggle="tab"><li><img src="../images/ico8.png" alt="">资产</li></a>
+                    <a href="#setting" data-toggle="tab"><li><img src="../images/ico9.png" alt="">设置</li></a>
+                </ul>
+                <div class="row dropup fixed pdh10 pdw5 cur-po">
+                    <div id="l-l-btn">
+                        <img src="../images/ico_nav3_2.png" class="pull-left"/>
+                        <p class="ellipsis" style="width:78px;">xxx小卖部啊</p>
+                        <span class="caret pull-right abs"></span>
+                    </div>
+                    <ul id="l-loginBox" class="abs pdw6 bg-white text-center img-rounded" data-btn="no">
+                        <li><a href="#" class="text-939393">修改密码</a></li>
+                        <li><a href="#" class="text-939393">退出登录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="item-tab tab-content">
+            <div role="tabpanel" class="tab-pane fade" id="shop">
+                <div class="pdh20 text-color fs16 bold text-center">店铺中心</div>
+                <ul class="text-center">
+                    <a href=""><li class="active">店铺概况</li></a>
+                    <a href=""><li>微页面</li></a>
+                    <a href=""><li>页面分类</li></a>
+                    <a href=""><li>店铺主页</li></a>
+                    <a href=""><li>店铺导航</li></a>
+                    <a href=""><li>公共广告</li></a>
+                    <a href=""><li>自定义模块</li></a>
+                    <a href=""><li>我的文件</li></a>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane fade in active" id="order">
+                <div class="pdh20 text-color fs16 bold text-center">订单中心</div>
+                <ul class="text-center">
+                    <a href=""><li class="active">全部订单</li></a>
+                    <a href=""><li>平台自营</li></a>
+                    <a href=""><li>平台分销</li></a>
+                    <a href=""><li>售后订单</li></a>
+                    <a href=""><li>评价管理</li></a>
+                    <a href=""><li>举报订单</li></a>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="sale">
+                <div class="pdh20 text-color fs16 bold text-center">营销中心</div>
+                <ul class="text-center">
+                    <a href=""><li class="active">拼团</li></a>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="data">
+                <div class="pdh20 text-color fs16 bold text-center">数据中心</div>
+                <ul class="text-center">
+                    <a href=""><li class="active">数据概况</li></a>
+                    <a href=""><li>交易数据</li></a>
+                    <a href=""><li>产品数据</li></a>
+                    <a href=""><li>收支数据</li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="content bg-eeefef font-weiruan">
+        <div class="container-fluid">
+            <div class="l-setNavBox row bg-white pull-left mgw12">
+                <div class="re pdh15 border-b pdw12">
+                    <h2 class="fs16 text-333333">页面地图</h2>
+                    <a href="javascript:;" class="abs" style="top:14px; right:10px;"><img src="../images/shop_ico_add.png"/></a>
+                </div>
+                <div class="col-md-12 fs16" style="min-height:220px; max-height:220px; overflow-y:auto;">
+                    <div class="row pdw12 pdh10 border-b">
+                        <a href="javascript:;">
+                            首页
+                            <img src="../images/shop_ico_remove.png" class="abs r-0" style="top:10px;"/>
+                        </a>
+                    </div>
+                    <div class="row pdw12 pdh10 border-b">
+                        <a href="javascript:;">
+                            首页
+                            <img src="../images/shop_ico_remove.png" class="abs r-0" style="top:10px;"/>
+                        </a>
+                    </div>
+                    <div class="row pdw12 pdh10 border-b">
+                        <a href="javascript:;">
+                            首页
+                            <img src="../images/shop_ico_remove.png" class="abs r-0" style="top:10px;"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="height10 bg-eeefef"></div>
+                <div class="col-md-12">
+                    <div class="pdh15 fs14">
+                        <strong class="text-333333 nw fs16">组件库</strong>
+                        <span class="pdw15">拖拽组建到右侧可直接添加</span>
+                    </div>
+                    <div class="pdh5 text-center">
+                        <div class="col-md-3 s-n-img">
+                            <div class="s-n-i1"></div>
+                            <p class="pdh3">菜单</p>
+                        </div>
+                        <div class="col-md-3 s-n-img">
+                            <div class="s-n-i2"></div>
+                            <p class="pdh3">商品</p>
+                        </div>
+                        <div class="col-md-3 s-n-img">
+                            <div class="s-n-i3"></div>
+                            <p class="pdh3">幻灯片</p>
+                        </div>
+                        <div class="col-md-3 s-n-img">
+                            <div class="s-n-i4" data-type="textHref"></div>
+                            <p class="pdh3">文字连接</p>
+                        </div>
+                        <div class="col-md-3 s-n-img">
+                            <div class="s-n-i5"></div>
+                            <p class="pdh3">语音</p>
+                        </div>
+                        <div class="col-md-3 s-n-img">
+                            <div class="s-n-i6"></div>
+                            <p class="pdh3">商品组</p>
+                        </div>
+                        <div class="col-md-3 s-n-img">
+                            <div class="s-n-i7"></div>
+                            <p class="pdh3">关键连接</p>
+                        </div>
+                        <div class="col-md-3 s-n-img">
+                            <div class="s-n-i8" data-type="search"></div>
+                            <p class="pdh3">搜索框</p>
+                        </div>
+                        <div class="col-md-3 s-n-img">
+                            <div class="s-n-i9"></div>
+                            <p class="pdh3">公告栏</p>
+                        </div>
+                        <div class="col-md-3 s-n-img">
+                            <div class="s-n-i10"></div>
+                            <p class="pdh3">魔方</p>
+                        </div>
+                        <div class="col-md-3 s-n-img">
+                            <div class="s-n-i11"></div>
+                            <p class="pdh3">标题</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- phone -->
+            <div class="left-phoneBox bg-959595 pull-left mgw46 pdw13 pdh25">
+                <div class="l-p-content bg-eeefef re overhide">
+                    <!--
+                    <div class="l-app-file">
+                        <div class="shop-search bg-white" data-id="321">
+                            <a href="#" class="abs"><img src="../images/shop_ico_search1.png"/></a>
+                            <input class="fs14 no-border border-radius bg-eeefef" type="text" placeholder="请输入您想搜索的店面、商品名"/>
+                        </div>
+
+                        <div class="s-actions">
+                            <a class="abs bg-00b7ee r-0 t-0 text-white s-a-btn" href="javascript:;">删除</a>
+                        </div>
+                    </div>
+                    -->
+                    <div class="l-app-file">
+                        <div class="shop-voice">
+                            <img class="s-v-left" src="../images/ico_m_img.png"/>
+                            <img class="s-v-btn" src="../images/ico_m_start"/>
+                            <img class="s-v-right" src="../images/ico_m_img.png"/>
+                            <span>快点点我!快点点我!!!—abwqei</span>
+                        </div>
+                        <div class="s-actions">
+                            <a class="abs bg-00b7ee r-0 t-0 text-white s-a-btn" href="javascript:;">删除</a>
+                        </div>
+                    </div>
+                    <div class="l-app-file">
+                        <ul class="shop-navBar">
+                            <li class="active">
+                                <a href="#">首页</a>
+                            </li>
+                            <li>
+                                <a href="#">生鲜馆</a>
+                            </li>
+                            <li>
+                                <a href="#">果蔬馆</a>
+                            </li>
+                            <li>
+                                <a href="#">奶蛋馆</a>
+                            </li>
+                        </ul>
+                        <div class="s-actions">
+                            <a class="abs bg-00b7ee r-0 t-0 text-white s-a-btn" href="javascript:;">删除</a>
+                        </div>
+                    </div>
+                    <div class="l-app-file">
+                        <div class="shop-textTitle">
+                            <h2></h2>
+                        </div>
+                    </div>
+                    <div class="l-app-file">
+                        <div class="shop-productList s-p-1">
+                            <div class="s-li">
+                                <a href="#">
+                                    <div class="re">
+                                        <img class="w-100" src="../images/shop_pro1.png"/>
+                                        <div class="title">
+                                            <span>日式小清新家庭装11饰无印良品配饰文艺个性装饰瓶…</span>
+                                            <img class="pull-right" src="../images/shop_ico_coll.png"/>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        <span class="text-color">￥6.00</span>
+                                        <del class="text-939393">￥9.00</del>
+                                        <img class="s-shopcar" src="../images/shop_ico_shopCar.png"/>
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="shop-productList s-p-1">
+                            <div class="s-li">
+                                <a href="#">
+                                    <div class="re">
+                                        <img class="w-100" src="../images/shop_pro1.png"/>
+                                        <div class="title">
+                                            <span>日式小清新家庭装11饰无印良品配饰文艺个性装饰瓶…</span>
+                                            <img class="pull-right" src="../images/shop_ico_coll.png"/>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        <span class="text-color">￥6.00</span>
+                                        <del class="text-939393">￥9.00</del>
+                                        <img class="s-shopcar" src="../images/shop_ico_shopCar.png"/>
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="s-actions">
+                            <a class="abs bg-00b7ee r-0 t-0 text-white s-a-btn" href="javascript:;">删除</a>
+                        </div>
+                    </div>
+
+                    <div class="l-app-file">
+                        <div class="shop-slider">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide s-slide">
+                                        <a href="#"><img style="width:100%;" src="../images/shop_pro7.png"/></a>
+                                    </div>
+                                    <div class="swiper-slide s-slide">
+                                        <a href="#"><img style="width:100%;" src="../images/shop_pro7.png"/></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="s-actions">
+                            <a class="abs bg-00b7ee r-0 t-0 text-white s-a-btn" href="javascript:;">删除</a>
+                        </div>
+                    </div>
+
+                    <div class="l-app-file">
+                        <ul class="shop_listHref">
+                            <li>
+                                <a class="ellipsis" href="#">最热商品</a>
+                            </li>
+                            <li>
+                                <a class="ellipsis" href="#">冬季养生新品</a>
+                            </li>
+                            <li>
+                                <a class="ellipsis" href="#">特色产品主推</a>
+                            </li>
+                        </ul>
+                        <div class="s-actions">
+                            <a class="abs bg-00b7ee r-0 t-0 text-white s-a-btn" href="javascript:;">删除</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 设置栏 -->
+            <div class="iphone-option" data-id="123" style="display: block;">
+                <div class="shop-option__textTitle">
+                    <h2>组件属性</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="right-part">
+        <div class="container-fluid r-div1">
+            <div class="row">
+                <div class="col-sm-12 fs14 text-333333">
+                    <div class="col-sm-12 pdh20 border-b npl npr"><span class="glyphicon glyphicon-question-sign text-cecece">
+                        </span>&nbsp; 帮助和服务
+                        <img class="pull-right cur-po" src="../images/ico11.png"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row mgh20">
+                <div class="col-sm-12 flex space-between">
+                    <font class="fs14 bold">帮助中心</font>
+                    <a href="" class="fs12 text-blue">进入></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="fs14 text-333333">商品在出售中列表找不到？</p>
+                    <p class="fs12">1.商品被手动下架，在仓库中，重新编辑上架即可。</p>
+                    <p class="fs12">2.商品售罄库存为0，在已售罄列表中，提醒您 该添加库存了。待付款订单也会占据库存，其超时关闭后库存才会释放</p>
+                </div>
+            </div>
+            <div class="row mgh20">
+                <div class="col-sm-12">
+                    <p class="fs14 text-333333">如何推广商品？</p>
+                    <p class="fs12">点击[推广商品]，就可以获取商品二维码/商品链接，还能设置商品优惠二维码。</p>
+                    <p class="fs12">将商品分享到朋友圈，或群发时带上商品链接去推广。</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12"><div class="col-sm-12 border-b"></div></div>
+            </div>
+        </div>
+        <div class="container-fluid r-div2">
+            <div class="row">
+                <div class="col-sm-12 fs14 text-333333">
+                    <div class="col-sm-12 pdh20 npl npr cur-po"><span class="glyphicon glyphicon-question-sign text-cecece"></span>&nbsp; 帮助和服务</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        // Enable debugger
+        debugger: true
+    });
+
+
+    $(function(){
+        var Ulhrefhtml='<ul class="set-diaList abs bg-white" style="left:37px;top:35px;"> <li data-href="http://www.baidu.com">微页面及分类</li> <li data-href="#">商品及分类</li> <li data-href="#">店铺主页</li> <li data-href="#">会员主页</li> <li data-href="#">自定义外链</li></ul>';
+        var data_obj={
+            search:'<div class=shop-search><a href=# class=abs><img src=../images/shop_ico_search1.png></a> <input class=fs14 type=text placeholder=请输入您想搜索的店面、商品名></div><div class=s-actions><a class=s-a-btn href=javascript:;>删除</a> </div>',
+            search_option:'<div class=shop-option__search>背景色: <input type=color class=no-border style=width:70%; value=#ffffff/> <button>重置</button> </div>',
+            textHref:'<div class="shop-textHref"><a href="#" class="fs16"></a></div>',
+            textHref_option:'<div class="shop-option__textHref"><h2>组件属性</h2><div><p id="s-o-Tp">链接文字 <span class="pull-right">0/60</span></p><textarea id="s-o-textarea" class="w-100"></textarea><div class="s-o-Thref"><span>链接</span> <a href="javascript:;" class="text-5faaff pdw3 f-href-a"><span>设置链接地址</span>'+Ulhrefhtml+'</a><span class="caret"></span></div></div></div>'
+        },
+        body=$('body'),
+        iPhoneBox=$('.left-phoneBox'),
+        iPcontent=$('.l-p-content'),
+        iOption=$('.iphone-option');
+
+        /*重置拖动*/
+        function setClength(){
+            iPcontent.dad();
+        }
+
+        setClength();
+
+        /*鼠标点击显示*/
+        body.on('click','.l-app-file',function(e){
+            e.preventDefault();
+            $('.s-actions').each(function(){
+                $(this).hide();
+            });
+            $(this).find('.s-actions').show();
+        });
+
+        /* 鼠标点击删除 */
+        body.on('click','.s-a-btn',function(){
+            var That=$(this);
+            layer.msg('你确定删除吗？', {
+                time: 0
+                ,btn: ['是', '否']
+                ,yes: function(index){
+                    That.parents('.l-app-file').remove();
+                    iOption.hide().find('div').remove();
+                    layer.close(index);
+                    layer.msg('删除成功')
+                }
+            });
+        });
+
+
+        /*选择显示*/
+        $('.s-n-img >div').on('click',function(){
+            var ThisName=$(this).data('type'),num=parseInt(Math.random()*100000),
+                iphoneHtml='<div class="l-app-file" data-id='+num+'>'+ data_obj[ThisName] +'<div class="s-actions"><a class="abs bg-00b7ee r-0 t-0 text-white s-a-btn" href="javascript:;">删除</a></div></div>';
+            if(iOption.find('>div').length !==0){
+                iOption.find('>div').remove();
+            }else{
+                iOption.show();
+            }
+            iPcontent.append(iphoneHtml);
+            iOption.data('id',num).append(data_obj[ThisName+'_option']);
+            setClength()
+        });
+
+        /*链接显示选择*/
+        body.on('mouseover','.f-href-a',function(){
+            var ul=$(this).find('ul');
+            if(ul.length>0){
+                ul.show();
+            }
+        });
+        body.on('mouseout','.f-href-a',function(){
+            $(this).find('ul').hide();
+        });
+
+
+
+
+        /*****属性设置*****/
+
+        /*搜索*/
+        body.on('change','.shop-option__search input',function(){
+            var ThisId=$(this).parents('.iphone-option').data('id');
+            $('.l-app-file[data-id='+ ThisId +']').find('.shop-search').css('background',$(this).val())
+        });
+        body.on('click','.shop-option__search button',function(){
+            var ThisId=$(this).parents('.iphone-option').data('id');
+            $(this).prev().val('#ffffff');
+            $('.l-app-file[data-id='+ ThisId +']').find('.shop-search').css('background','#fff');
+        });
+
+        /*文字链接*/
+        body.on('input','#s-o-textarea',function(){
+            var text=$('#s-o-Tp span'),
+                ThisId=$(this).parents('.iphone-option').data('id');
+            if($(this).val().length>60){
+                $(this).val($(this).val().slice(0,60));
+            };
+            text.html($(this).val().length+'/60');
+            $('.l-app-file[data-id='+ ThisId +']').find('.shop-textHref a').html($(this).val());
+        });
+
+        body.on('click','.shop-option__textHref .set-diaList li',function(){
+            var thatHref=$(this).data('href'),
+                ThisId=$(this).parents('.iphone-option').data('id');
+            $(this).parents('.f-href-a').find('span').text($(this).html())
+            $('.l-app-file[data-id='+ ThisId +']').find('.shop-textHref a').prop('href',thatHref);
+            $(this).parent().hide();
+        })
+
+        /*****属性设置结束*****/
+
+    });
+</script>
+</body>
+</html>

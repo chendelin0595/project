@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>留言评价</title>
+    <link rel="stylesheet" href="../../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../javascript/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../../stylesheet/color.css">
+    <link rel="stylesheet" href="../../stylesheet/common.css">
+    <link rel="stylesheet" href="../../stylesheet/main.css">
+    <script src="../../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../../javascript/common.js"></script>
+    <script src="../../javascript/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../javascript/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body>
+<div class="page">
+    <div class="left-part">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 mgh30"><img src="../../images/logo.png" alt="" width="100"></div>
+            </div>
+            <div class="row text-center bg-363840">
+                <div class="col-sm-12 mgh10">
+                    <img src="../../images/headimg.png" alt="" width="40" class="img-circle">
+                    <img src="../../images/vip.png" alt="" width="10" class="abs" style="right:40px;bottom:5px">
+                </div>
+                <div class="col-sm-12 ellipsis">xxx小卖部啊xxx小卖部啊</div>
+                <a href="" class="col-sm-12 mgh10"><img src="../../images/logout.png" alt="" width="22"></a>
+            </div>
+            <div class="row">
+                <ul class="text-center">
+                    <a href="#common" data-toggle="tab"><li><img src="../../images/ico0.png" alt="">概括</li></a>
+                    <a href="#shop" data-toggle="tab"><li><img src="../../images/ico1.png" alt="">店铺</li></a>
+                    <a href="#product" data-toggle="tab"><li><img src="../../images/ico2.png" alt="">商品</li></a>
+                    <a href="#team" data-toggle="tab"><li><img src="../../images/ico3.png" alt="">军团</li></a>
+                    <a href="#order" data-toggle="tab"><li class="active"><img src="../../images/ico4.png" alt="">订单</li></a>
+                    <a href="#authen" data-toggle="tab"><li><img src="../../images/ico5.png" alt="">认证</li></a>
+                    <a href="#sale" data-toggle="tab"><li><img src="../../images/ico6.png" alt="">营销</li></a>
+                    <a href="#data" data-toggle="tab"><li><img src="../../images/ico7.png" alt="">数据</li></a>
+                    <a href="#assets" data-toggle="tab"><li><img src="../../images/ico8.png" alt="">资产</li></a>
+                    <a href="#setting" data-toggle="tab"><li><img src="../../images/ico9.png" alt="">设置</li></a>
+                    <a href="#help" data-toggle="tab"><li><img src="../../images/ico10.png" alt="">帮助</li></a>
+                </ul>
+            </div>
+        </div>
+        <div class="item-tab tab-content">
+            <div role="tabpanel" class="tab-pane fade" id="common">...</div>
+            <div role="tabpanel" class="tab-pane fade" id="shop">
+                <div class="pdh20 text-color fs14 bold text-center">店铺管理</div>
+                <ul class="text-center">
+                    <a href=""><li class="active">店铺管理</li></a>
+                    <a href=""><li>店铺装修</li></a>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="product">
+                <div class="pdh20 text-color fs14 bold text-center">商品管理</div>
+                <ul class="text-center">
+                    <a href=""><li class="active">商品列表</li></a>
+                    <a href=""><li>分类列表</li></a>
+                    <a href=""><li>添加商品</li></a>
+                    <a href=""><li>导入商品</li></a>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="team">
+                <div class="pdh20 text-color fs14 bold text-center">军团</div>
+                <ul class="text-center">
+                    <a href=""><li class="active">军团概括</li></a>
+                    <a href=""><li>团队详情</li></a>
+                    <a href=""><li>雇佣团</li></a>
+                    <a href=""><li>直属团</li></a>
+                    <a href=""><li>招募设置</li></a>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane fade in active" id="order">
+                <div class="pdh20 text-color fs14 bold text-center">所有订单</div>
+                <ul class="text-center">
+                    <a href=""><li>所有订单</li></a>
+                    <a href=""><li class="active">售后订单</li></a>
+                    <a href=""><li>发货管理</li></a>
+                    <a href=""><li>批量发货</li></a>
+                    <a href=""><li>评价管理</li></a>
+                    <a href=""><li>订单设置</li></a>
+                    <a href=""><li>订单数据</li></a>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="authen">
+                <div class="pdh20 text-color fs14 bold text-center">认证中心</div>
+                <ul class="text-center">
+                    <a href=""><li class="active">个人认证</li></a>
+                    <a href=""><li>企业认证</li></a>
+                    <a href=""><li>官方认证</li></a>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="sale">
+                <div class="pdh20 text-color fs14 bold text-center">营销中心</div>
+                <ul class="text-center">
+                    <a href=""><li class="active">营销中心</li></a>
+                    <a href=""><li>多人拼团</li></a>
+                    <a href=""><li>限时秒杀</li></a>
+                    <a href=""><li>1元购</li></a>
+                    <a href=""><li>满立减</li></a>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="data">
+                <div class="pdh20 text-color fs14 bold text-center">数据中心</div>
+                <ul class="text-center">
+                    <a href=""><li class="active">活动分析</li></a>
+                    <a href=""><li>交易分析</li></a>
+                    <a href=""><li>商品分析</li></a>
+                    <a href=""><li>数据概括</li></a>
+                    <a href=""><li>页面流量</li></a>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="assets">
+                <div class="pdh20 text-color fs14 bold text-center">资产管理</div>
+                <ul class="text-center">
+                    <a href=""><li class="active">资产管理</li></a>
+                    <a href=""><li>收支明细</li></a>
+                    <a href=""><li>待结算</li></a>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="setting">
+                <div class="pdh20 text-color fs14 bold text-center">设置</div>
+                <ul class="text-center">
+                    <a href=""><li class="">门店管理</li></a>
+                    <a href=""><li>门店设置</li></a>
+                    <a href=""><li>通用设置</li></a>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="help">...</div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container-fluid">
+            <ul class="row fs14 conTop-ul border-b">
+                <li class="pdh10 mgw10 active"><a href="举报-二稿.html">举报记录</a></li>
+                <li class="pdh10 mgw10"><a href="已删除.html">已删除</a></li>
+            </ul>
+            <div class="row mgh20 search">
+                <div class="col-sm-12 flex mgh5">
+                    <div class="mgw15 nml">
+                        <font>订单号:</font>
+                        <input type="text" placeholder="01221215656523"/>
+                    </div>
+                    <div class="re">
+                        <font>评价时间：</font><input class="date-picker" type="text" name="" value="" placeholder="2016-10-27">
+                        <i class="glyphicon glyphicon-calendar abs text-muted" style="top:8px;right:6px"></i>
+                    </div>
+                    <div class="re mgw15 pdh5 fs14">至</div>
+                    <div class="mgw15 nml re">
+                        <input class="date-picker" type="text" name="" value="" placeholder="2016-10-27">
+                        <i class="glyphicon glyphicon-calendar abs text-muted" style="top:8px;right:6px"></i>
+                    </div>
+                </div>
+                <div class="col-sm-12 flex mgh5">
+                    <div class="mgw15 nml">
+                        <font>订单编号:</font>
+                        <input type="text" placeholder="索尼爱立信然后呢"/>
+                    </div>
+                    <div class="mgw15 nml">
+                        <font>回复状态:</font>
+                        <select name="" class="bg-eeefef fs12">
+                            <option value="">已回复</option>
+                            <option value="">已回复</option>
+                            <option value="">已回复</option>
+                        </select>
+                    </div>
+                    <div class="mgw15 nml">
+                        <font>星级:</font>
+                        <select name="" class="bg-eeefef fs12">
+                            <option value="">全部</option>
+                            <option value="">全部</option>
+                            <option value="">全部</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-12 flex mgh5">
+                    <div class="mgw15 nml">
+                        <font>会员名称:</font>
+                        <input type="text" placeholder="索尼大法好"/>
+                    </div>
+                    <a href="#" class="btn mgw10 pdw30 bg-color  pull-left fs14">筛选</a>
+                </div>
+            </div>
+
+            <div>
+                <div class="yx-torM-title text-center bg-eeefef">
+                    <div class="col-xs-2 text-left">评分</div>
+                    <div class="col-xs-4 text-left">商品评价</div>
+                    <div class="col-xs-1">商家信息</div>
+                    <div class="col-xs-2">订单号</div>
+                    <div class="col-xs-1">买家</div>
+                    <div class="col-xs-1">商品信息</div>
+                    <div class="col-xs-1">操作</div>
+                </div>
+            </div>
+
+            <div>
+                <table cellpadding="0" cellspacing="0" class="border-a text-center overhide yx-torM-listBox text-j">
+                    <tr class="border-b">
+                        <td class="col-xs-2 pdh15 pdw5 border-r">
+                            <img style="width:12px;" src="../../images/ico_star.png"/>
+                            <img style="width:12px;" src="../../images/ico_star.png"/>
+                            <img style="width:12px;" src="../../images/ico_star.png"/>
+                            <img style="width:12px;" src="../../images/ico_star.png"/>
+                        </td>
+                        <td class="col-xs-4 text-left border-r pdh15">
+                            <p class="text-666666">很好，但是宝贝收到时有破损，唉。还好这卖家及
+                                时的协商，这才让这次购买体验变得不算糟糕不过
+                                讲真的客服挺客气的，而且补发还送了小礼品...  </p>
+                            <p class="text-939393 mgh2">2016-09-06 14:30:35</p>
+                        </td>
+                        <td class="col-xs-1 border-r pdh15">
+                            <p>伊文兔店铺</p>
+                        </td>
+                        <td class="col-xs-2 border-r pdh15">
+                            <p>160903170624</p>
+                        </td>
+                        <td class="col-xs-1 border-r pdh15">
+                            <p>依旧深蓝天</p>
+                        </td>
+                        <td class="col-xs-1 border-r pdh15">
+                            <p>sony 索尼K702HiFi耳机黑色限量款</p>
+                            <p class="text-color">3999.0元</p>
+                        </td>
+                        <td class="col-xs-1 pdh5 text-center">
+                            <div class="col-xs-12 pdw0 pdh5">
+                                <a class="text-color" href="#">举报详情</a>
+                            </div>
+                            <div class="col-xs-12 pdw0 pdh5">
+                                <a class="text-337ab7" href="#">查看详情</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="col-xs-2 pdh15 pdw5 border-r">
+                            <img style="width:12px;" src="../../images/ico_star.png"/>
+                            <img style="width:12px;" src="../../images/ico_star.png"/>
+                            <img style="width:12px;" src="../../images/ico_star.png"/>
+                            <img style="width:12px;" src="../../images/ico_star.png"/>
+                            <img style="width:12px;" src="../../images/ico_star.png"/>
+                        </td>
+                        <td class="col-xs-4 text-left border-r pdh15">
+                            <p class="text-666666">很好，但是宝贝收到时有破损，唉。还好这卖家及
+                                时的协商，这才让这次购买体验变得不算糟糕不过
+                                讲真的客服挺客气的，而且补发还送了小礼品...  </p>
+                            <div>
+                                <img class="mgw3" style="width:36px; height:36px;" src="../../images/yx-torder-img2.png"/>
+                                <img class="mgw3" style="width:36px; height:36px;" src="../../images/yx-torder-img2.png"/>
+                                <img class="mgw3" style="width:36px; height:36px;" src="../../images/yx-torder-img2.png"/>
+                            </div>
+                            <p class="text-939393 mgh2">2016-09-06 14:30:35</p>
+                        </td>
+                        <td class="col-xs-1 border-r pdh15">
+                            <p>伊文兔店铺</p>
+                        </td>
+                        <td class="col-xs-2 border-r pdh15">
+                            <p>160903170624</p>
+                        </td>
+                        <td class="col-xs-1 border-r pdh15">
+                            <p>依旧深蓝天</p>
+                        </td>
+                        <td class="col-xs-1 border-r pdh15">
+                            <p>sony 索尼K702HiFi耳机黑色限量款</p>
+                            <p class="text-color">3999.0元</p>
+                        </td>
+                        <td class="col-xs-1 pdh5 text-center">
+                            <div class="col-xs-12 pdw0 pdh5">
+                                <a class="text-color" href="#">举报详情</a>
+                            </div>
+                            <div class="col-xs-12 pdw0 pdh5">
+                                <a class="text-337ab7" href="#">查看详情</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-xs-2 pdh15 pdw5 border-r">
+                            <img style="width:12px;" src="../../images/ico_star.png"/>
+                            <img style="width:12px;" src="../../images/ico_star.png"/>
+                            <img style="width:12px;" src="../../images/ico_star.png"/>
+                            <img style="width:12px;" src="../../images/ico_star.png"/>
+                            <img style="width:12px;" src="../../images/ico_star.png"/>
+                        </td>
+                        <td class="col-xs-4 text-left border-r pdh15">
+                            <p class="text-666666">很好，但是宝贝收到时有破损，唉。还好这卖家及
+                                时的协商，这才让这次购买体验变得不算糟糕不过
+                                讲真的客服挺客气的，而且补发还送了小礼品...  </p>
+                            <p class="text-939393 mgh2">2016-09-06 14:30:35</p>
+                            <p class="text-666666 text-ffa044">掌柜回复：非常感謝親的認真評語哈! 歡迎親再次</p>
+                            <p class="text-939393 mgh2">2016-09-06 14:30:35</p>
+                        </td>
+                        <td class="col-xs-1 border-r pdh15">
+                            <p>伊文兔店铺</p>
+                        </td>
+                        <td class="col-xs-2 border-r pdh15">
+                            <p>160903170624</p>
+                        </td>
+                        <td class="col-xs-1 border-r pdh15">
+                            <p>依旧深蓝天</p>
+                        </td>
+                        <td class="col-xs-1 border-r pdh15">
+                            <p>sony 索尼K702HiFi耳机黑色限量款</p>
+                            <p class="text-color">3999.0元</p>
+                        </td>
+                        <td class="col-xs-1 pdh5 text-center">
+                            <div class="col-xs-12 pdw0 pdh5">
+                                <a class="text-color" href="#">举报详情</a>
+                            </div>
+                            <div class="col-xs-12 pdw0 pdh5">
+                                <a class="text-337ab7" href="#">查看详情</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <!-- 分页 -->
+                <div class="row">
+                    <div class="col-sm-12 mgh20">
+                        <ul class="pageBox">
+                            <li><a href="#">上一页</a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">下一页</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="right-part">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 fs14 text-333333">
+                    <div class="col-sm-12 pdh20 border-b npl npr"><span class="glyphicon glyphicon-question-sign text-cecece"></span>&nbsp; 帮助和服务</div>
+                </div>
+            </div>
+            <div class="row mgh20">
+                <div class="col-sm-12 flex space-between">
+                    <font class="fs14 bold">帮助中心</font>
+                    <a href="" class="fs12 text-blue">进入></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="fs14 text-333333">商品在出售中列表找不到？</p>
+                    <p class="fs12">1.商品被手动下架，在仓库中，重新编辑上架即可。</p>
+                    <p class="fs12">2.商品售罄库存为0，在已售罄列表中，提醒您 该添加库存了。待付款订单也会占据库存，其超时关闭后库存才会释放</p>
+                </div>
+            </div>
+            <div class="row mgh20">
+                <div class="col-sm-12">
+                    <p class="fs14 text-333333">如何推广商品？</p>
+                    <p class="fs12">点击[推广商品]，就可以获取商品二维码/商品链接，还能设置商品优惠二维码。</p>
+                    <p class="fs12">将商品分享到朋友圈，或群发时带上商品链接去推广。</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12"><div class="col-sm-12 border-b"></div></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('.date-picker').datetimepicker({
+        format: 'yyyy-mm-dd h:i:s',
+        language: 'zh-CN',
+        autoclose: true,
+        todayBtn: 'linked'
+    });
+</script>
+</body>
+</html>

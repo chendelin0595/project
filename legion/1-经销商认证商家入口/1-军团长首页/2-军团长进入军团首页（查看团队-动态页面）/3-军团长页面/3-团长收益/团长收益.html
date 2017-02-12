@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>团长收益</title>
+    <link rel="stylesheet" href="../../../../../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../../../../../javascript/jquery-weui/jquery-weui.css">
+    <link rel="stylesheet" href="../../../../../stylesheet/common-rem.css">
+    <link rel="stylesheet" href="../../../../../stylesheet/color.css">
+    <script src="../../../../../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../../../../../javascript/common-rem.js"></script>
+    <script src="../../../../../javascript/jquery-weui/jquery-weui.min.js"></script>
+    <script src="../../../../../javascript/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css" media="screen">
+.table { table-layout: fixed; }
+.table img { width: 0.77333333rem; }
+.table>tbody>tr>td { vertical-align: middle; padding: 0.2rem 0; }
+.table td:nth-child(2) { text-align: left; }
+</style>
+<body>
+    <div id="page">
+        <header>
+            <div class="text-center head-top">
+                <a href=""><img src="../../../../../images/ico_back.png" alt=""></a>
+                <span>团长收益</span>
+                <img src="../../../../../images/ico_trans.png" alt="">
+            </div>
+            <div style="height:1.17333333rem;"></div>
+        </header>
+        <!-- /header -->
+        <div class="container-fluid">
+            <div class="row bg-color">
+                <div class="col-xs-12 height30"></div>
+            </div>
+            <div class="row flex center text-center bg-color fs24 lh1">
+                <div style="width:3.05rem">
+                    <p>总收益(元)</p>
+                    <div class="height30"></div>
+                    <p class="fs32 flex center">0.00</p>
+                </div>
+                <div class="height68 border-r"></div>
+                <div style="width:3.05rem">
+                    <p>已结算(元)</p>
+                    <div class="height30"></div>
+                    <p class="fs32">0.00</p>
+                </div>
+                <div class="height68 border-r"></div>
+                <div style="width:3.05rem">
+                    <p>已退回(元)</p>
+                    <div class="height30"></div>
+                    <p class="fs32">0.00</p>
+                </div>
+                <div id="help" class="text-left" style="width:0.85rem"><img src="../../../../../images/ico_help.png" alt="" style="width:0.48rem"></div>
+            </div>
+            <div class="row bg-color">
+                <div class="col-xs-12 height40"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 pdh27 fs24">本月 <span class="pull-right">总额：0.00 &nbsp;实收：+0.00</span></div>
+            </div>
+            <!-- 条目 -->
+            <div class="row bg-white">
+                <table class="fs24 table table-hover text-center nmb">
+                    <tbody>
+                        <tr>
+                            <td width="22%">9月8日</td>
+                            <td width="57%" class="ellipsis">
+                                <img src="../../../../../images/p2.png" alt="" class="img-circle" data-size="58*58">&nbsp;&nbsp;欣欣食品欣欣食品欣欣食品欣欣食品欣欣食品欣欣食品欣欣食品
+                            </td>
+                            <td class="text-color">¥ 2.00</td>
+                        </tr>
+                        <tr>
+                            <td>9月8日</td>
+                            <td class="ellipsis">
+                                <img src="../../../../../images/p2.png" alt="" class="img-circle" data-size="58*58">&nbsp;&nbsp;欣欣食品
+                            </td>
+                            <td class="text-color">¥ 2.00</td>
+                        </tr>
+                        <tr>
+                            <td>9月8日</td>
+                            <td class="ellipsis">
+                                <img src="../../../../../images/p2.png" alt="" class="img-circle" data-size="58*58">&nbsp;&nbsp;欣欣食品
+                            </td>
+                            <td class="text-color">¥ 2.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- 帮助信息 -->
+        <div id="help-info" class="mask">
+            <div class="container-fluid center-block mgh50" style="width:7.53333333rem">
+                <div class="row bg-white img-rounded overhide">
+                    <div class="col-xs-12">
+                        <div class="height68"></div>
+                        <p class="fs28 bold text-center">团长收益说明</p>
+                        <div class="height50"></div>
+                        <p class="fs24 text-muted pdh28 npt">团长收益是团员成单后供应商根据相应的返佣规则奖励给团长的收益，可在我的收入中进行提现。</p>
+                        <p class="fs24 pdh10 npt">总收益：</p>
+                        <p class="fs24 text-muted pdh28 npt">团内所有成员销售商品带来的预期收益总额。</p>
+                        <p class="fs24 pdh10 npt">已结算：</p>
+                        <p class="fs24 text-muted pdh28 npt">交易完成后团长获得的实际收益金额，该收益将自动结算至团长个人资金账户。</p>
+                        <p class="fs24 pdh10 npt">已退回：</p>
+                        <p class="fs24 text-muted pdh28 npt">订单发生退款时，系统自动根据退款比例扣除相应的预期收益。</p>
+                    </div>
+                    <div class="height100"></div>
+                    <div id="checked" class="col-xs-12 text-center fs28 bg-eeeaeb pdh35">我知道了</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('#help').on('click', function(event) {
+            event.preventDefault();
+            $('#help-info').fadeIn('fast');
+        });
+        $('#checked').on('click', function(event) {
+            event.preventDefault();
+            $('#help-info').fadeOut('fast');
+        });
+    </script>
+</body>
+
+</html>

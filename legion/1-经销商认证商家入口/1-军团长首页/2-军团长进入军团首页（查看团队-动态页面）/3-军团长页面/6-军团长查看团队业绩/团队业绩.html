@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>团队业绩</title>
+    <link rel="stylesheet" href="../../../../../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../../../../../javascript/jquery-weui/jquery-weui.css">
+    <link rel="stylesheet" href="../../../../../stylesheet/common-rem.css">
+    <link rel="stylesheet" href="../../../../../stylesheet/color.css">
+    <script src="../../../../../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../../../../../javascript/common-rem.js"></script>
+    <script src="../../../../../javascript/jquery-weui/jquery-weui.min.js"></script>
+    <script src="../../../../../javascript/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css" media="screen">
+.caret { border-width: 0.2rem 0.16rem 0 0.16rem; }
+#menu .active span { border-bottom: solid 0.05333333rem #e44a62; box-sizing: border-box; }
+.table { table-layout: fixed; }
+#daily img, #rank img, #sales img { width: 0.77333333rem; }
+#daily td, #rank td, #sales td { vertical-align: middle; padding: 0.2rem 0; }
+#daily td:nth-child(2), #rank td:nth-child(2), #sales td:nth-child(2) { text-align: left; }
+.weui-flex__item { padding-top: 0.4rem; padding-bottom: 0.2rem; }
+#calendar-info { z-index:2; top:3.25333333rem; display: none;}
+#calendar-info .fixed { top:3.25333333rem; height:100%; max-width:750px; }
+</style>
+<body>
+    <div id="page">
+        <header>
+            <div class="text-center head-top">
+                <a href=""><img src="../../../../../images/ico_back.png" alt=""></a>
+                <span>团队业绩</span>
+                <img src="../../../../../images/ico_trans.png" alt="">
+            </div>
+            <div style="height:1.17333333rem;"></div>
+        </header>
+        <!-- /header -->
+        <div class="container-fluid">
+            <div class="row bg-color">
+                <div class="col-xs-12 height30"></div>
+            </div>
+            <div class="row flex center text-center bg-color fs24 lh1">
+                <div id="calendar" style="width:2.89333333rem">
+                    <p>2016年</p>
+                    <div class="height30"></div>
+                    <p class="fs32 flex center">9月 &nbsp;<span class="caret"></span></p>
+                </div>
+                <div class="height68 border-r"></div>
+                <div style="width:3.53333333rem">
+                    <p>总成交额(元)</p>
+                    <div class="height30"></div>
+                    <p class="fs32">6.00</p>
+                </div>
+                <div class="height68 border-r"></div>
+                <div style="width:3.53333333rem">
+                    <p>总成交量(单)</p>
+                    <div class="height30"></div>
+                    <p class="fs32">1</p>
+                </div>
+            </div>
+            <div class="row bg-color">
+                <div class="col-xs-12 height40"></div>
+            </div>
+            <!-- calendar -->
+            <div id="calendar-info" class="row re">
+                <div class="col-xs-12 np fs28 bg-white fixed">
+                    <div class="col-xs-12 weui-flex text-muted text-center">
+                        <div class="weui-flex__item">2016</div>
+                        <div class="weui-flex__item"></div>
+                        <div class="weui-flex__item"></div>
+                        <div class="weui-flex__item"></div>
+                        <div class="weui-flex__item"></div>
+                    </div>
+                    <div class="col-xs-12 weui-flex text-center">
+                        <a href="" class="weui-flex__item">1月</a>
+                        <a href="" class="weui-flex__item">2月</a>
+                        <a href="" class="weui-flex__item">3月</a>
+                        <a href="" class="weui-flex__item">4月</a>
+                        <a href="" class="weui-flex__item">5月</a>
+                    </div>
+                    <div class="col-xs-12 weui-flex text-center">
+                        <a href="" class="weui-flex__item">6月</a>
+                        <a href="" class="weui-flex__item">7月</a>
+                        <a href="" class="weui-flex__item">8月</a>
+                        <a href="" class="weui-flex__item">9月</a>
+                        <a href="" class="weui-flex__item">10月</a>
+                    </div>
+                    <div class="col-xs-12 weui-flex text-center">
+                        <a href="" class="weui-flex__item">11月</a>
+                        <a href="" class="weui-flex__item">12月</a>
+                        <div class="weui-flex__item"></div>
+                        <div class="weui-flex__item"></div>
+                        <div class="weui-flex__item"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="menu" class="row text-center fs24 pdh27">
+                <a href="#daily" data-toggle="tab" class="col-xs-4 np active"><span class="pd27">每日明细</span></a>
+                <a href="#rank" data-toggle="tab" class="col-xs-4 np"><span class="pd27">成交排行</span></a>
+                <a href="#sales" data-toggle="tab" class="col-xs-4 np"><span class="pd27">商品销量</span></a>
+            </div>
+
+            <!-- Tab panes -->
+            <div class="row tab-content bg-white">
+                <!-- 每日明细 -->
+                <div role="tabpanel" class="tab-pane fade in active" id="daily">
+                    <table class="fs24 table table-hover text-center nmb">
+                        <tbody>
+                            <tr>
+                                <td width="22%">9月8日</td>
+                                <td width="57%" class="ellipsis">
+                                    <img src="../../../../../images/p2.png" alt="" class="img-circle" data-size="58*58">&nbsp;&nbsp;欣欣食品欣欣食品欣欣食品欣欣食品欣欣食品欣欣食品欣欣食品
+                                </td>
+                                <td class="text-color">¥ 2.00</td>
+                            </tr>
+                            <tr>
+                                <td>9月8日</td>
+                                <td class="ellipsis">
+                                    <img src="../../../../../images/p2.png" alt="" class="img-circle" data-size="58*58">&nbsp;&nbsp;欣欣食品
+                                </td>
+                                <td class="text-color">¥ 2.00</td>
+                            </tr>
+                            <tr>
+                                <td>9月8日</td>
+                                <td class="ellipsis">
+                                    <img src="../../../../../images/p2.png" alt="" class="img-circle" data-size="58*58">&nbsp;&nbsp;欣欣食品
+                                </td>
+                                <td class="text-color">¥ 2.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 成交排行 -->
+                <div role="tabpanel" class="tab-pane fade" id="rank">
+                    <table class="fs24 table table-hover text-center nmb">
+                        <tbody>
+                            <tr>
+                                <td width="8%">1</td>
+                                <td width="74%" class="ellipsis">
+                                    <img src="../../../../../images/p2.png" alt="" class="img-circle" data-size="58*58">&nbsp;&nbsp;欣欣食品
+                                </td>
+                                <td class="text-muted">5 单</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="ellipsis">
+                                    <img src="../../../../../images/p2.png" alt="" class="img-circle" data-size="58*58">&nbsp;&nbsp;欣欣食品
+                                </td>
+                                <td class="text-muted">4 单</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="ellipsis">
+                                    <img src="../../../../../images/p2.png" alt="" class="img-circle" data-size="58*58">&nbsp;&nbsp;欣欣食品
+                                </td>
+                                <td class="text-muted">1 单</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 商品销量 -->
+                <div role="tabpanel" class="tab-pane fade" id="sales">
+                    <table class="fs24 table table-hover text-center nmb">
+                        <tbody>
+                            <tr>
+                                <td width="8%">1</td>
+                                <td width="74%" class="ellipsis">
+                                    <img src="../../../../../images/p2.png" alt="" class="img-circle" data-size="58*58">&nbsp;&nbsp;纯手工制作牛轧糖纯手工制作牛轧糖纯手工制作牛轧糖纯手工制作牛轧糖
+                                </td>
+                                <td class="text-muted">500 件</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="ellipsis">
+                                    <img src="../../../../../images/p2.png" alt="" class="img-circle" data-size="58*58">&nbsp;&nbsp;红枣味纯手工牛轧
+                                </td>
+                                <td class="text-muted">458 件</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="ellipsis">
+                                    <img src="../../../../../images/p2.png" alt="" class="img-circle" data-size="58*58">&nbsp;&nbsp;欣欣食品凤凰卷
+                                </td>
+                                <td class="text-muted">326 件</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        // 表单切换
+        $('[data-toggle=tab]').on('click', function(event) {
+            event.preventDefault();
+            $(this).tab('show').addClass('active').siblings().removeClass('active');
+        });
+        // 日历显示
+        var flag = false;
+        $('#calendar').on('click', function(event) {
+            event.preventDefault();
+            if (flag) {
+                flag = false;
+                $('#calendar-info').fadeOut('fast');
+            }else{
+                flag = true;
+                $('#calendar-info').fadeIn('fast');
+            }
+        });
+
+    </script>
+</body>
+
+</html>

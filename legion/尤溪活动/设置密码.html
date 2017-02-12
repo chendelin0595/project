@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>注册</title>
+    <link rel="stylesheet" href="../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../javascript/jquery-weui/jquery-weui.css">
+    <link rel="stylesheet" href="../stylesheet/common-rem.css">
+    <link rel="stylesheet" href="../stylesheet/color.css">
+    <link rel="stylesheet" href="../stylesheet/yx-main.css">
+    <script src="../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../javascript/common-rem.js"></script>
+    <script src="../javascript/jquery-weui/jquery-weui.min.js"></script>
+    <script src="../javascript/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body class="bg-ffc730">
+<div id="page">
+    <div class="container-fluid">
+        <div class="mgh70 yx-logo">
+            <img src="images/yx-logo.png"/>
+        </div>
+        <div class="yx-loginBox pdw50 bg-ffd83a text-center border-radius overhide">
+            <div class="mgh20">
+                <p class="pd30 fs40 bold text-ffa044 text-center">恭喜您，报名成功!</p>
+            </div>
+            <div class="mgh20">
+                <input type="text" placeholder="查询密码"/>
+            </div>
+            <div class="mgh20">
+                <input type="text" placeholder="确认查询密码"/>
+            </div>
+            <div class="mgh30">
+                <input class="bg-color1" type="submit" value="确认保存"/>
+            </div>
+        </div>
+
+        <div class="text-center yx-footer" style="margin-top:0.5rem;">
+            <img class="mgh20" style="width:6rem;" src="images/yx-f-logo2.png"/>
+            <p class="text-c99b1e fs16">Copyright © 2014-2016 闽ICP备15018819号-1</p>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        //监听窗口高度 判断底部的位置
+        if($('.container-fluid').height()<$(window).height()){
+            $('.yx-footer').addClass('fixed');
+        }else{
+            $('.yx-footer').removeClass('fixed');
+        }
+    });
+</script>
+</body>
+</html>

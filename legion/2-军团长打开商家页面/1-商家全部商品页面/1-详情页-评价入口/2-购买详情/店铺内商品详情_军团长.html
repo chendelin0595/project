@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" href="../../../../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../../../../javascript/jquery-weui/jquery-weui.css">
+    <link rel="stylesheet" href="../../../../javascript/swiper/swipe.css">
+    <link rel="stylesheet" href="../../../../stylesheet/common-rem.css">
+    <link rel="stylesheet" href="../../../../stylesheet/color.css">
+    <script src="../../../../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../../../../javascript/common-rem.js"></script>
+    <script src="../../../../javascript/jquery-weui/jquery-weui.min.js"></script>
+    <script src="../../../../javascript/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../../javascript/swiper/swipe.js"></script>
+    <script src="../../../../javascript/iscroll.js"></script>
+</head>
+<style type="text/css" media="screen">
+.op { position: relative; float: left; padding: 0.2rem 0.66666667rem; border:solid 0.04rem; box-sizing: border-box; border-radius: 0.2rem; margin-right: 0.4rem; overflow: hidden; margin-bottom: 0.2rem; }
+.op.checked:after{content:"\EA08"; font-family: "weui"; position: absolute; bottom: 0; right: 0; color: #fff; }
+.op.checked:before{content:''; position: absolute; bottom: 0; right: 0; width: 0; height: 0; border-style: solid; border-width: 0 0 0.6rem 0.6rem; border-color: transparent transparent #e54b5e transparent;}
+#options-content { max-height: 4.0rem; max-height: 36vh; overflow: hidden; }
+
+</style>
+<body>
+    <div id="page">
+        <header>
+            <div class="text-center head-top">
+                <a href="新建军团.html"><img src="../../../../images/ico_back.png" alt=""></a>
+                <span class="ellipsis">欣欣食品   饼干/原味牛轧糖/夹心蛋卷/凤凰卷168g包邮</span>
+                <img src="../../../../images/ico_trans.png" alt="">
+            </div>
+            <div style="height:1.17333333rem;"></div>
+        </header>
+        <!-- /header -->
+        <!--addWrap-->
+        <div class="addWrap">
+            <div class="swipe" id="mySwipe">
+                <div class="swipe-wrap">
+                    <div><img src="../../../../images/p.png" title="" alt="" width="100%" class="img-responsive"></div>
+                    <div><img src="../../../../images/p.png" title="" alt="" width="100%" class="img-responsive"></div>
+                    <div><img src="../../../../images/p.png" title="" alt="" width="100%" class="img-responsive"></div>
+                </div>
+            </div>
+            <div class="abs fs24 text-white" style="bottom:0.46666667rem;right:0.37333333rem"><span id="count">1</span>/3</div>
+        </div>
+        <!--/addWrap-->
+        <div class="container-fluid">
+            <div class="row bg-white pdh20">
+                <div class="col-xs-12 text-muted fs28">【攀枝花吉禄紫芒果8斤】大青香芒小贵妃芒凯特桂七新鲜水果包邮</div>
+                <div class="col-xs-12 lh1 pdh25"><font class="fs40 text-color">¥ 42.00</font>&nbsp;&nbsp;&nbsp;&nbsp;<font class="fs24 text-muted">零售价：¥ 50.00</font><font class="abs fs20 text-muted" style="right:15px;bottom:0.33333333rem">能赚：¥ 8.00</font></div>
+                <div class="col-xs-12 fs20 text-muted">
+                    <font>快递：0.00</font> <font class="pull-right">销量 2478件 | 转发682次</font>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 pdh30">
+                    <ul class="fs20 approve text-center">
+                        <li><img src="../../../../images/ico_vote.png" alt=""> &nbsp;&nbsp;担保交易</li>
+                        <li><img src="../../../../images/ico_vote.png" alt=""> &nbsp;&nbsp;先行赔付</li>
+                        <li><img src="../../../../images/ico_vote.png" alt=""> &nbsp;&nbsp;24小时发货</li>
+                        <li><img src="../../../../images/ico_vote.png" alt=""> &nbsp;&nbsp;七天退换</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row weui-cells nmt">
+                <a class="weui-cell pdh12" href="">
+                    <div class="weui-cell__hd"><img src="../../../../images/shop_img.png" class="img-circle" alt="" style="width:1.17333333rem;border:solid 0.05333333rem #e5e5e5;"></div>
+                    <div class="weui-cell__bd pdw16 npr lh1">
+                        <p class="fs26 mgh10">商品来自 天下果园水果军团</p>
+                        <p class="fs24 text-muted"><img src="../../../../images/ico_approve.png" style="width:1.46666667rem;" alt=""></p>
+                    </div>
+                    <div class="weui-cell__ft">
+                        <img src="../../../../images/ico_in.png" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="height20"></div>
+            <div class="row nmb fs28 text-center bg-white pdh22">
+                <a href="#info" data-toggle="tab" class="col-xs-6 np border-r text-color">图文详情</a>
+                <a href="#eval" data-toggle="tab" class="col-xs-6 np">商品评价</a>
+            </div>
+            <div class="row bg-white">
+                <div class="col-xs-12"><div class="col-xs-12 border-b"></div></div>
+            </div>
+            <div class="row bg-white">
+                <div class="col-xs-12 tab-content">
+                    <div class="height30"></div>
+                    <!-- 图文详情 -->
+                    <div role="tabpanel" class="tab-pane active" id="info">
+                        <font class="fs24"> 【攀枝花吉禄紫芒果8斤】大青香芒小贵妃芒凯特桂七 新鲜水果包邮，快来看看，团内更多优惠~</font>
+                        <img src="../../../../images/p.png" alt="" width="100%">
+                    </div>
+                    <!-- 商品评价 -->
+                    <div role="tabpanel" class="tab-pane" id="eval">无设计稿</div>
+                </div>
+            </div>
+            <div class="height100"></div>
+            <div class="row fs36 text-center navbar-fixed-bottom">
+                <div class="col-xs-12 pdh23 bg-color" id="">一键上架</div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    // 轮播
+    var banner = Swipe(document.getElementById('mySwipe'), {
+        auto: 2000,
+        continuous: true,
+        disableScroll: false,
+        draggable: true,
+        callback: function(pos) {
+            $('#count').text(pos+1);
+        }
+    });
+    // 产品详情、评价
+        $('[data-toggle=tab]').on('click', function(event) {
+            event.preventDefault();
+            $(this).tab('show').addClass('text-color').siblings().removeClass('text-color');
+        });
+    </script>
+
+</body>
+
+</html>

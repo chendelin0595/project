@@ -1,0 +1,7 @@
+.addWrap {position: relative;width: 100%;margin: 0;padding: 0;background: #FFF;}
+.addWrap .swipe { position: relative; visibility: hidden; overflow: hidden; }
+.addWrap .swipe-wrap { position: relative; overflow: hidden; }
+.addWrap .swipe-wrap > div { position: relative; float: left; width: 100%; }
+#position, .myposition { position: absolute; right: 0; bottom: 0; width: 100%; margin: 0;text-align: center; opacity: 0.8; filter: alpha(opacity=80); }
+#position li, .myposition li { display: inline-block; width: 7px; height: 7px; margin: 0 1px; -webkit-border-radius: 5px; border-radius: 5px; background-color: #afafaf; }
+#position li.cur, .myposition li.cur { background-color: #ff7451; }

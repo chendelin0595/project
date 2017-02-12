@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" href="../../../../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../../../../javascript/jquery-weui/jquery-weui.css">
+    <link rel="stylesheet" href="../../../../stylesheet/common-rem.css">
+    <link rel="stylesheet" href="../../../../stylesheet/color.css">
+    <script src="../../../../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../../../../javascript/common-rem.js"></script>
+    <script src="../../../../javascript/jquery-weui/jquery-weui.min.js"></script>
+    <script src="../../../../javascript/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css" media="screen">
+.minus{width:0.90666667rem; height:0.90666667rem}
+.plus{width:0.90666667rem; height:0.90666667rem}
+.img-class{width:0.37333333rem; height:0.37333333rem; vertical-align: super;}
+.quantity{width:1.38666667rem; height:0.90666667rem}
+</style>
+<body>
+    <div id="page">
+        <header>
+            <div class="text-center head-top">
+                <a href="新建军团.html"><img src="../../../../images/ico_back.png" alt=""></a>
+                <span class="ellipsis">欣欣食品   饼干/原味牛轧糖/夹心蛋卷/凤凰卷168g包邮</span>
+                <img src="../../../../images/ico_trans.png" alt="">
+            </div>
+            <div style="height:1.17333333rem;"></div>
+        </header>
+        <!-- /header -->
+        <div class="container-fluid mgh30 nmb">
+            <div class="row weui-cells nmt">
+                <div class="weui-cell">
+                    <div class="weui-cell__hd mgw20 nml"><img src="../../../../images/p3.png" alt="" style="width:1.65333333rem"></div>
+                    <div class="weui-cell__bd" style="width:6.96rem">
+                        <p class="mgh10 fs28 text-333333 ellipsis">欣欣食品 芝麻/海苔/香葱/原味凤凰欣欣食品 芝麻/海苔/香葱/原味凤凰</p>
+                        <div class="height35"></div>
+                        <p class="text-muted fs20">代理价：<font id="agent-price" class="text-color fs28">¥ 9.90</font></p>
+                    </div>
+                    <div id="close-item" class="weui-cell__ft"><a href=""><img src="../../../../images/ico_close4.png" alt="" style="width:0.4rem"></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row nmb fs32 text-center border-t border-b bg-white pdh22">
+                <a href="#Valet" data-toggle="tab" class="col-xs-6 np border-r text-color">代客下单</a>
+                <a href="#Pur" data-toggle="tab" class="col-xs-6 border-l np">采购进货</a>
+            </div>
+            <div class="row bg-white fs28 text-muted">
+
+            </div>
+            <div class="row bg-white fs28 text-muted">
+                <div class="col-xs-12 tab-content">
+                    <!-- 代客下单 -->
+                    <div role="tabpanel" class="tab-pane active text-666666 fs28" id="Valet">
+                        <div class="col-xs-12 mgh35">
+                            默认规格
+                        </div>
+                        <div class="col-xs-12 pdh70 npt border-b">
+                            <span class="border-a mgw5 img-rounded pdw35 pdh10"><span class="taggle">海苔</span></span>
+                            <span class="border-a mgw5 img-rounded pdw35 pdh10"><span class="taggle">海苔</span></span>
+                            <span class="border-a mgw5 img-rounded pdw35 pdh10"><span class="taggle">海苔</span></span>
+                            <span class="border-a mgw5 img-rounded pdw35 pdh10"><span class="taggle">海苔</span></span>
+                        </div>
+                        <div class="col-xs-12 mgh47">
+                            数量
+                        </div>
+                        <div class="col-xs-12 pdh40 npt border-b">
+                            <div class="btn-group pull-left">
+                                <button class="text-center pdw20 pdh20 bg-white minus btn border-a"><img class="img-class" src="../../../../images/btn-minus.png" alt="" ></button>
+                                <input type="text" class="btn text-center quantity weui-input border-a text-666666" value="0">
+                                <button class="text-center pdw20 pdh20 bg-white plus btn border-a"><img class="img-class" src="../../../../images/btn-plug.png" alt="" ></button>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 mgh25 pdh180 npb">
+                            <p class="fs32 text-666666">支付：<span class="text-color fs36"> ¥ 19.8</span></p>
+                        </div>
+                    </div>
+                    <!-- 采购进货 -->
+                    <div role="tabpanel" class="tab-pane" id="Pur">
+                        <div class="col-xs-12 npl npr pdh30 border-b">
+                            <div class="col-xs-6">
+                                <p>芝麻</p>
+                                <p>￥9.9</p>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="btn-group pull-right">
+                                    <button class="text-center pdw20 pdh20 bg-white minus btn border-a"><img class="img-class" src="../../../../images/btn-minus.png" alt="" ></button>
+                                    <input type="text" class="btn text-center quantity weui-input border-a text-666666" value="0">
+                                    <button class="text-center pdw20 pdh20 bg-white plus btn border-a"><img class="img-class" src="../../../../images/btn-plug.png" alt="" ></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 npl npr pdh30 border-b">
+                            <div class="col-xs-6">
+                                <p>芝麻</p>
+                                <p>￥9.9</p>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="btn-group pull-right">
+                                    <button class="text-center pdw20 pdh20 bg-white minus btn border-a"><img class="img-class" src="../../../../images/btn-minus.png" alt="" ></button>
+                                    <input type="text" class="btn text-center quantity weui-input border-a text-666666" value="0">
+                                    <button class="text-center pdw20 pdh20 bg-white plus btn border-a"><img class="img-class" src="../../../../images/btn-plug.png" alt="" ></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 npl npr pdh30 border-b">
+                            <div class="col-xs-6">
+                                <p>芝麻</p>
+                                <p>￥9.9</p>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="btn-group pull-right">
+                                    <button class="text-center pdw20 pdh20 bg-white minus btn border-a"><img class="img-class" src="../../../../images/btn-minus.png" alt="" ></button>
+                                    <input type="text" class="btn text-center quantity weui-input border-a text-666666" value="0">
+                                    <button class="text-center pdw20 pdh20 bg-white plus btn border-a"><img class="img-class" src="../../../../images/btn-plug.png" alt="" ></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 npl npr pdh30 border-b">
+                            <div class="col-xs-6">
+                                <p>芝麻</p>
+                                <p>￥9.9</p>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="btn-group pull-right">
+                                    <button class="text-center pdw20 pdh20 bg-white minus btn border-a"><img class="img-class" src="../../../../images/btn-minus.png" alt="" ></button>
+                                    <input type="text" class="btn text-center quantity weui-input border-a text-666666" value="0">
+                                    <button class="text-center pdw20 pdh20 bg-white plus btn border-a"><img class="img-class" src="../../../../images/btn-plug.png" alt="" ></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 mgh25 pdh180 npb">
+                            <p class="fs32 text-666666">支付：<span class="text-color fs36"> ¥ 79.2</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="height100"></div>
+
+
+            <!-- 两个按钮 -->
+            <!--<div class="row fs36 text-center navbar-fixed-bottom">-->
+                <!--<div class="col-xs-6 pdh23 bg-white text-color" id="">加入购物车</div>-->
+                <!--<div class="col-xs-6 pdh23 bg-color" id="">直接购买</div>-->
+            <!--</div>-->
+
+            <!-- 单个按钮 -->
+            <div class="row fs36 text-center navbar-fixed-bottom">
+                <div class="col-xs-12 pdh23 bg-color" id="">直接购买</div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        // 产品详情、评价
+        $('[data-toggle=tab]').on('click', function(event) {
+            event.preventDefault();
+            $(this).tab('show').addClass('text-color').siblings().removeClass('text-color');
+        });
+        // 规格选择
+        $('.taggle').on('click', function(event) {
+            event.preventDefault();
+            $(this).parents('.col-xs-12').find('.border-a').removeClass('bg-color');
+            $(this).parent().addClass('bg-color');
+        });
+        // 购买数量
+        $('.minus').on('click', function(event) {
+            event.preventDefault();
+            var q = ~~$(this).next('.quantity').val();
+            if(q > 0){
+                $(this).next('.quantity').val(q - 1);
+            }
+        });
+        $('.plus').on('click', function(event) {
+            event.preventDefault();
+            var q = ~~$(this).prev('.quantity').val();
+            $(this).prev('.quantity').val(q + 1);
+        });
+        // 结算
+        $('#checkout').on('click', function(event) {
+            event.preventDefault();
+            checkout();
+        });
+        function checkout() {
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" href="../../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../../javascript/jquery-weui/jquery-weui.css">
+    <link rel="stylesheet" href="../../stylesheet/common-rem.css">
+    <link rel="stylesheet" href="../../stylesheet/color.css">
+    <script src="../../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../../javascript/common-rem.js"></script>
+    <script src="../../javascript/jquery-weui/jquery-weui.min.js"></script>
+    <script src="../../javascript/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css" media="screen">
+#shop-headimg { width: 1.70666667rem; border: solid 0.05333333rem #f4f4f4; box-sizing: border-box; }
+.caret { border-width: 0.12rem 0.12rem 0 0.12rem; margin-left: 0.37333333rem; }
+.filter-list { width: 100%; top: 0.2rem; z-index: 6; display: none; }
+.filter-in:before { content: ''; z-index: 5; display: block; position: absolute; width: 100%; height: 200%; background: rgba(0, 0, 0, 0.5); top: 0; }
+#p-l .weui-cell__bd.lh1 { width: 7.21333333rem; }
+</style>
+<body>
+    <div id="page">
+        <header>
+            <div class="text-center head-top">
+                <a href=""><img src="../../images/ico_back.png" alt=""></a>
+                <span>加加食品旗舰店</span>
+                <img src="../../images/ico_trans.png" alt="">
+            </div>
+            <div style="height:1.17333333rem;"></div>
+        </header><!-- /header -->
+        <div class="container-fluid">
+            <div class="row bg-white pdh30">
+                <div class="col-xs-12">
+                    <img id="shop-headimg" src="../../images/shop_img.png" class="pull-left img-circle">
+                    <div class="pull-left mgw25 nmr">
+                        <p class="mgh15 fs36 text-333333">加加食品旗舰店</p>
+                        <p><img src="../../images/ico_approve.png" alt="" style="width:1.28rem"></p>
+                    </div>
+                    <div class="pull-right mgh30">
+                        <a href="tel:110" class="mgw50 nml"><img src="../../images/ico_tel.png" alt="" style="width:0.76rem"></a>
+                        <a onclick="showQR()"><img src="../../images/ico_wx.png" alt="" style="width:0.76rem"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row fs28 text-center pdh15 bg-white border-b">
+                <a href="#all" class="col-xs-6 border-r text-color" data-toggle="tab" >全部商品</a>
+                <a href="#sum" class="col-xs-6" data-toggle="tab">商家介绍</a>
+            </div>
+            <div class="row text-center pdh27 fs28 bg-white">
+                <div class="col-xs-12">基础代理享受<font class="text-color">返点10%</font>，月销售额</div>
+                <div class="col-xs-12">每满5万团长另外奖励<font class="text-color">3千</font></div>
+                <div class="col-xs-8 col-xs-offset-2 mgh20 nmb">
+                    <a href="" class="pdh12 btn btn-block bg-color fs28">我要代理</a>
+                </div>
+            </div>
+            <div class="tab-content">
+                <!-- 全部商品 -->
+                <div role="tabpanel" class="tab-pane fade in active" id="all">
+                    <div class="row mgh20 pdh15 fs28 text-333333 text-center bg-white">
+                        <div class="col-xs-6 filter border-r" data-target="#filter-category">全部商品<span class="caret text-muted"></span></div>
+                        <div class="col-xs-6 filter" data-target="#filter-order">商品排序<span class="caret text-muted"></span></div>
+                        <!-- 筛选 -->
+                        <div class="col-xs-12 np">
+                            <ul id="filter-category" class="filter-list bg-white text-left fs24 lighter nm abs">
+                                <a href=""><li class="pd27 border-b text-color">全部商品</li></a>
+                                <a href=""><li class="pd27 border-b ">干货</li></a>
+                                <a href=""><li class="pd27 border-b ">新鲜果蔬</li></a>
+                            </ul>
+                            <ul id="filter-order" class="filter-list bg-white text-left fs24 lighter nm abs">
+                                <a href=""><li class="pd27 border-b text-color">没设计图</li></a>
+                                <a href=""><li class="pd27 border-b ">没设计图</li></a>
+                                <a href=""><li class="pd27 border-b ">没设计图</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 商品列表 -->
+                    <div id="p-l" class="row weui-cells nmt re">
+                        <a href="" class="weui-cell">
+                            <div class="weui-cell__hd mgw27 nml">
+                                <img src="../../images/p3.png" alt="" style="width:1.70666667rem" data-size="128*128">
+                            </div>
+                            <div class="weui-cell__bd lh1">
+                                <p class="fs28 bold ellipsis pdh2">欣欣食品 芝麻/海苔/香葱/原味凤凰卷</p>
+                                <p class="mgh25 fs24 text-muted ellipsis">转发345次，已销售5555件</p>
+                                <p class="fs24 text-muted">能赚3元 <span class="pull-right">采购 <font class="text-color">¥ 9.90</font></span></p>
+                            </div>
+                        </a>
+                        <a href="" class="weui-cell">
+                            <div class="weui-cell__hd mgw27 nml">
+                                <img src="../../images/p3.png" alt="" style="width:1.70666667rem" data-size="128*128">
+                            </div>
+                            <div class="weui-cell__bd lh1">
+                                <p class="fs28 bold ellipsis">欣欣食品 芝麻/海苔/香葱/原味凤凰卷</p>
+                                <p class="mgh25 fs24 text-muted ellipsis">转发345次，已销售5555件</p>
+                                <p class="fs24 text-muted">能赚3元 <span class="pull-right">采购 <font class="text-color">¥ 9.90</font></span></p>
+                            </div>
+                        </a>
+                        <a href="" class="weui-cell">
+                            <div class="weui-cell__hd mgw27 nml">
+                                <img src="../../images/p3.png" alt="" style="width:1.70666667rem" data-size="128*128">
+                            </div>
+                            <div class="weui-cell__bd lh1">
+                                <p class="fs28 bold ellipsis">欣欣食品 芝麻/海苔/香葱/原味凤凰卷</p>
+                                <p class="mgh25 fs24 text-muted ellipsis">转发345次，已销售5555件</p>
+                                <p class="fs24 text-muted">能赚3元 <span class="pull-right">采购 <font class="text-color">¥ 9.90</font></span></p>
+                            </div>
+                        </a>
+                        <a href="" class="weui-cell">
+                            <div class="weui-cell__hd mgw27 nml">
+                                <img src="../../images/p3.png" alt="" style="width:1.70666667rem" data-size="128*128">
+                            </div>
+                            <div class="weui-cell__bd lh1">
+                                <p class="fs28 bold ellipsis">欣欣食品 芝麻/海苔/香葱/原味凤凰卷</p>
+                                <p class="mgh25 fs24 text-muted ellipsis">转发345次，已销售5555件</p>
+                                <p class="fs24 text-muted">能赚3元 <span class="pull-right">采购 <font class="text-color">¥ 9.90</font></span></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- 商家介绍 -->
+                <div role="tabpanel" class="tab-pane fade" id="sum">
+                    <div class="row weui-cells fs24">
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd text-333333">企业介绍</div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">欣欣商城以“专注用户，用心服务”为核心价值，一切以用户需求为中心，希望通过专业水平和不懈努力，重塑企业形象，为企业产品推广文化发展提供服务指导。</div>
+                        </div>
+                        <div class="weui-cell no-border">
+                            <div class="weui-cell__bd text-333333">代理政策</div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">精品鞋服商城以“专注用户，用心服务”为核心价值,一切以用户需求为中心,希望通过专业水平和不懈努力,重塑企业形象,为企业产品推广文化发展提供服务指导。</div>
+                        </div>
+                        <div class="weui-cell no-border">
+                            <div class="weui-cell__bd text-333333">服务承诺</div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">
+                                <ul class="fs20 approve">
+                                    <li><img src="../../images/ico_vote.png" alt=""> &nbsp;&nbsp;担保交易</li>
+                                    <li><img src="../../images/ico_vote.png" alt=""> &nbsp;&nbsp;先行赔付</li>
+                                    <li><img src="../../images/ico_vote.png" alt=""> &nbsp;&nbsp;24小时发货</li>
+                                    <li><img src="../../images/ico_vote.png" alt=""> &nbsp;&nbsp;7天退换</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 二维码 -->
+        <div id="qrcode" class="container-fluid mask">
+            <div class="height130"></div>
+            <div class="row">
+                <div class="center-block bg-white img-rounded overhide" style="width:5.33333333rem">
+                    <div class="wf bg-white">
+                        <img class="pd27" src="../../images/wxqrcode.png" alt="" width="100%">
+                        <div class="col-xs-12"><div class="col-xs-12 border-b"></div></div>
+                        <div class="pdh36 col-xs-12 text-center fs24 text-black">长按识别二维码联系商家微信</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="height60"></div>
+                    <div class="col-xs-12 text-center">
+                        <a onclick="closeQR()"><img src="../../images/ico_close3.png" alt="" style="width:0.77333333rem"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer nav -->
+        <div class="height130"></div>
+        <div class="container-fluid footer-nav navbar-fixed-bottom">
+            <div class="row pdh14 fs20 text-center bg-f4f7f8 text-333333">
+                <a href="" class="col-xs-3 np">
+                    <img src="../../images/ico_nav0.png" alt="" >
+                    <p>军团</p>
+                </a>
+                <a href="" class="col-xs-3 np">
+                    <img src="../../images/ico_nav1.png" alt="" >
+                    <p>动态</p>
+                </a>
+                <a href="" class="col-xs-3 np">
+                    <img src="../../images/ico_nav2.png" alt="" >
+                    <p>订单</p>
+                </a>
+                <a href="" class="col-xs-3 np">
+                    <img src="../../images/ico_nav3.png" alt="" >
+                    <p>我</p>
+                </a>
+            </div>
+        </div><!-- /footer nav -->
+    </div>
+    <script type="text/javascript">
+        function showQR(){
+            $('#qrcode').fadeIn('fast');
+        }
+        function closeQR(){
+            $('#qrcode').fadeOut('fast');
+        }
+        $('[data-toggle=tab]').on('click', function(event) {
+            event.preventDefault();
+            $(this).tab('show').addClass('text-color').siblings().removeClass('text-color');
+        });
+        $('.filter').on('click', function(event) {
+            event.preventDefault();
+            $('#p-l').addClass('filter-in');
+            $('.filter-list').hide();
+            $($(this).data('target')).slideDown('fast');
+        });
+        $('#page').on('click', '#p-l', function(event) {
+            event.preventDefault();
+            $('#p-l').removeClass('filter-in');
+            $('.filter-list').hide();
+        });
+    </script>
+</body>
+
+</html>

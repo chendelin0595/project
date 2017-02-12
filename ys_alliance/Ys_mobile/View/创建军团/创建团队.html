@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" href="../../Public/style/common/bootstrap.min.css">
+    <link rel="stylesheet" href="../../Public/style/common/weui.min.css">
+    <link rel="stylesheet" href="../../Public/style/common/jquery-weui.css">
+    <link rel="stylesheet" href="../../Public/style/common/common.css">
+    <link rel="stylesheet" href="../../Public/style/main.css">
+    <script src="../../Public/javascript/common/jquery-3.1.1.min.js"></script>
+    <script src="../../Public/javascript/common/bootstrap.min.js"></script>
+    <script src="../../Public/javascript/common/jquery-weui.min.js"></script>
+    <script src="../../Public/javascript/common/iscroll.js"></script>
+    <script src="../../Public/javascript/common/common.js"></script>
+</head>
+<body>
+    <div class="page">
+        <div class="container-fluid">
+            <form action="" method="post" accept-charset="utf-8">
+                <div class="row mgh30 nmb bg-white text-center">
+                    <div class="col-xs-12 pdh40">
+                        <label class="mg0" for="photo"><img class="img-circle" src="../../Public/images/ico_photo.png" alt="" style="width:2.666rem;"></label>
+                        <input type="file" name="" value="" id="photo" class="hidden">
+                    </div>
+                    <div class="col-xs-12 pdb20"><input id="name" type="text" name="" value="" placeholder="团队名称（3-20字）" class="weui-input fs24 lighter text-center"></div>
+                    <div class="height20"></div>
+                </div>
+                <div class="row weui-cells mgh20 nmb fs28">
+                    <a class="weui-cell" href="javascript:;">
+                        <div class="weui-cell__bd">
+                            <p>团队类目</p>
+                        </div>
+                        <div class="weui-cell__ft">
+                            <span class="pdw52 npl">水果</span>
+                            <img src="../../Public/images/ico_in.png" alt="" style="width:0.375rem;">
+                        </div>
+                    </a>
+                    <a class="weui-cell" href="#">
+                        <div class="weui-cell__bd">
+                            <p>团队属性</p>
+                        </div>
+                        <div class="weui-cell__ft">
+                            <span class="npl center-block">雇佣团</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="row weui-cells weui-cells_form mgh20 nmb fs28">
+                    <div class="weui-cell weui-cell_switch pdh20">
+                        <div class="weui-cell__bd">团队动态</div>
+                        <div class="weui-cell__ft">
+                            <input class="weui-switch nm" type="checkbox">
+                        </div>
+                    </div>
+                    <div class="weui-cell weui-cell_switch pdh20">
+                        <div class="weui-cell__bd">入团审核</div>
+                        <div class="weui-cell__ft">
+                            <input class="weui-switch nm" type="checkbox">
+                        </div>
+                    </div>
+                    <div class="weui-cell weui-cell_switch pdh20">
+                        <div class="weui-cell__bd">管理权限</div>
+                        <div class="weui-cell__ft">
+                            <input class="weui-switch nm" type="checkbox">
+                        </div>
+                    </div>
+                    <div class="weui-cell weui-cell_switch pdh20">
+                        <div class="weui-cell__bd">团队业绩</div>
+                        <div class="weui-cell__ft">
+                            <input class="weui-switch nm" type="checkbox">
+                        </div>
+                    </div>
+                    <div class="weui-cell weui-cell_switch pdh20">
+                        <div class="weui-cell__bd">私密团队</div>
+                        <div class="weui-cell__ft">
+                            <input class="weui-switch nm" type="checkbox">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mgh20 nmb fs28 bg-white">
+                    <div class="col-xs-12 pdw28 mgh30 nmb">团队介绍</div>
+                    <div class="col-xs-12 pdw30 re">
+                        <textarea id="summary" class="weui-textarea border-a mgh20 pdh20 pdw20 fs24" placeholder="为你的团队写些介绍吧" style="height:5.416rem"></textarea>
+                        <div class="abs fs24 text-muted" style="right:0.8rem; bottom:0.44rem;"><span id="count">0</span>/100</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 pdw28 mgh30">
+                        <button type="submit" id="submit" class="btn pdh27 btn-21a2fe fs36 text-center btn-block">创建团队</button>
+                    </div>
+                    <div class="height127"></div>
+                </div>
+            </form>
+        </div>
+        <!-- 创建团队成功提示 -->
+        <div id="success" class="container-fluid mask">
+            <div class="row text-center bg-white abs t-50 l-50 img-rounded overhide" style="width:11.041rem;margin:-4rem 0 0 -5.2rem;">
+                <img src="../../Public/images/ico_na.png" class="img-circle bg-21a2fe mgh35" style="width:1.208rem">
+                <p class="fs32 mgh15">团队创建成功</p>
+                <div class="height20"></div>
+                <a href=""><p class="pdh20 fs32 btn-21a2fe">查看团队</p></a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    // 团队名检测
+    $('#name').on('input propertychange', function(event) {
+        event.preventDefault();
+        if ($(this).val().length < 3 || $(this).val().length > 30) {
+            $('#submit').removeClass('bg-color').addClass('bg-gray');
+        }else{
+            $('#submit').removeClass('bg-gray').addClass('bg-color');
+        }
+    });
+    $('#name').trigger('input');
+    // 提交劫持
+    $('#submit').on('click', function(event) {
+        event.preventDefault();
+        if ($(this).hasClass('bg-color')) {
+            $('#success').fadeIn();
+        }
+    });
+    // 简介计数
+    $('#summary').on('input propertychange', function(event) {
+        event.preventDefault();
+        var text = $(this).val();
+        if (text.length<=100) {
+            $('#count').text(text.length);
+        }else{
+            $('#count').text(100);
+            $(this).val(text.substring(0,100));
+        }
+    });
+</script>
+</body>
+</html>

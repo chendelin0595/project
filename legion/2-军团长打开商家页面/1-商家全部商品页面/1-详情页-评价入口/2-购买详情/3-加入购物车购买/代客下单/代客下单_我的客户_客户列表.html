@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" href="../../../../../../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../../../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../../../../../../javascript/jquery-weui/jquery-weui.css">
+    <link rel="stylesheet" href="../../../../../../stylesheet/common-rem.css">
+    <link rel="stylesheet" href="../../../../../../stylesheet/color.css">
+    <script src="../../../../../../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../../../../../../javascript/common-rem.js"></script>
+    <script src="../../../../../../javascript/jquery-weui/jquery-weui.min.js"></script>
+    <script src="../../../../../../javascript/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../../../../javascript/iscroll.js"></script>
+</head>
+<style type="text/css" media="screen">
+    .weui-label { width: 1.33333333rem; }
+    .abs { width: 12.10666667rem;}
+    .abs .weui-cell { width: 10.0rem; }
+    .weui-cells>.re { height: 1.50666667rem; overflow: hidden; border-bottom:solid 1px #cecece; }
+    .del { padding: 0.36rem 0; height: 1.50666667rem;  display: flex; align-items: center; justify-content: center;}
+    .re-customerBtn{position: absolute;right: 2.22rem; top: 0.53rem;}
+</style>
+<body>
+    <div id="page">
+        <header>
+            <div class="text-center head-top">
+                <a href=""><img src="../../../../../../images/ico_back.png" alt=""></a>
+                <span>我的客户</span>
+                <img src="../../../../../../images/ico_trans.png" alt="">
+            </div>
+            <div style="height:1.17333333rem;"></div>
+        </header><!-- /header -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="height30"></div>
+                <div class="col-xs-12 pdw36">
+                    <div class="bg-white pdh10 img-rounded re" style="border:solid 0.04rem #eeeeee;">
+                        <input class="weui-input fs24 pdw10" type="text" name="" value="" placeholder="输入收货人姓名、手机号搜索">
+                        <a href=""><img src="../../../../../../images/ico_search.png" alt="" class="abs" style="width:0.48rem;right:0.13333333rem;top:0.13333333rem"></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 收货人列表 -->
+            <div class="row">
+                <div class="col-xs-12 mgh20 nmb fs32">A</div>
+            </div>
+            <div class="row mgh20 weui-cells fs24">
+                <div class="re">
+                    <div class="abs">
+                        <div class="weui-cell pull-left">
+                            <div class="weui-cell__hd mgw32 nml">
+                                <img class="img-circle" src="../../../../../../images/shop_img.png" alt="" style="width:0.77333333rem" data-size="58*58">
+                            </div>
+                            <div class="weui-cell__hd">
+                                <div class="weui-label ellipsis">阿一</div>
+                            </div>
+                            <div class="weui-cell__hd mgw45 nml">15394536241</div>
+                            <div class="weui-cell__hd">1个收货地址</div>
+                        </div>
+                        <div class="weui-cell__hd re-customerBtn">
+                            <label class="mgw20 nml qx-checkbox__label" for="s1">
+                                <input class="qx-checkbox" type="checkbox" name="id[]" value="1" id="s1">
+                                <span class="qx-icon-checked"></span>
+                            </label>
+                        </div>
+                        <a href=""><div class="del bg-color">删除</div></a>
+                    </div>
+                </div>
+                <div class="re">
+                    <div class="abs">
+                        <div class="weui-cell pull-left">
+                            <div class="weui-cell__hd mgw32 nml">
+                                <img class="img-circle" src="../../../../../../images/shop_img.png" alt="" style="width:0.77333333rem" data-size="58*58">
+                            </div>
+                            <div class="weui-cell__hd">
+                                <div class="weui-label ellipsis">阿一</div>
+                            </div>
+                            <div class="weui-cell__hd mgw45 nml">15394536241</div>
+                            <div class="weui-cell__hd">1个收货地址</div>
+                        </div>
+                        <div class="weui-cell__hd re-customerBtn">
+                            <label class="mgw20 nml qx-checkbox__label" for="s2">
+                                <input class="qx-checkbox" type="checkbox" name="id[]" value="2" id="s2">
+                                <span class="qx-icon-checked"></span>
+                            </label>
+                        </div>
+                        <a href=""><div class="del bg-color">删除</div></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 mgh20 nmb fs32">S</div>
+            </div>
+            <div class="row mgh20 weui-cells fs24">
+                <div class="re">
+                    <div class="abs">
+                        <div class="weui-cell pull-left">
+                            <div class="weui-cell__hd mgw32 nml">
+                                <img class="img-circle" src="../../../../../../images/shop_img.png" alt="" style="width:0.77333333rem" data-size="58*58">
+                            </div>
+                            <div class="weui-cell__hd">
+                                <div class="weui-label ellipsis">阿一</div>
+                            </div>
+                            <div class="weui-cell__hd mgw45 nml">15394536241</div>
+                            <div class="weui-cell__hd">1个收货地址</div>
+                        </div>
+                        <div class="weui-cell__hd re-customerBtn">
+                            <label class="mgw20 nml qx-checkbox__label" for="s3">
+                                <input class="qx-checkbox" type="checkbox" name="id[]" value="3" id="s3">
+                                <span class="qx-icon-checked"></span>
+                            </label>
+                        </div>
+                        <a href=""><div class="del bg-color">删除</div></a>
+                    </div>
+                </div>
+                <div class="re">
+                    <div class="abs">
+                        <div class="weui-cell pull-left">
+                            <div class="weui-cell__hd mgw32 nml">
+                                <img class="img-circle" src="../../../../../../images/shop_img.png" alt="" style="width:0.77333333rem" data-size="58*58">
+                            </div>
+                            <div class="weui-cell__hd">
+                                <div class="weui-label ellipsis">阿一</div>
+                            </div>
+                            <div class="weui-cell__hd mgw45 nml">15394536241</div>
+                            <div class="weui-cell__hd">2个收货地址</div>
+                        </div>
+
+                        <div class="weui-cell__hd re-customerBtn">
+                            <label class="mgw20 nml qx-checkbox__label" for="s4">
+                                <input class="qx-checkbox" type="checkbox" name="id[]" value="4" id="s4">
+                                <span class="qx-icon-checked"></span>
+                            </label>
+                        </div>
+                        <a href=""><div class="del bg-color">删除</div></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 mgh20 nmb fs32">W</div>
+            </div>
+            <div class="row mgh20 weui-cells fs24">
+                <div class="re">
+                    <div class="abs">
+                        <div class="weui-cell pull-left">
+                            <div class="weui-cell__hd mgw32 nml">
+                                <img class="img-circle" src="../../../../../../images/shop_img.png" alt="" style="width:0.77333333rem" data-size="58*58">
+                            </div>
+                            <div class="weui-cell__hd">
+                                <div class="weui-label ellipsis">阿一</div>
+                            </div>
+                            <div class="weui-cell__hd mgw45 nml">15394536241</div>
+                            <div class="weui-cell__hd">1个收货地址</div>
+                        </div>
+                        <div class="weui-cell__hd re-customerBtn">
+                            <label class="mgw20 nml qx-checkbox__label" for="s5">
+                                <input class="qx-checkbox" type="checkbox" name="id[]" value="5" id="s5">
+                                <span class="qx-icon-checked"></span>
+                            </label>
+                        </div>
+                        <a href=""><div class="del bg-color">删除</div></a>
+                    </div>
+                </div>
+                <div class="re">
+                    <div class="abs">
+                        <div class="weui-cell pull-left">
+                            <div class="weui-cell__hd mgw32 nml">
+                                <img class="img-circle" src="../../../../../../images/shop_img.png" alt="" style="width:0.77333333rem" data-size="58*58">
+                            </div>
+                            <div class="weui-cell__hd">
+                                <div class="weui-label ellipsis">阿一</div>
+                            </div>
+                            <div class="weui-cell__hd mgw45 nml">15394536241</div>
+                            <div class="weui-cell__hd">1个收货地址</div>
+                        </div>
+                        <div class="weui-cell__hd re-customerBtn">
+                            <label class="mgw20 nml qx-checkbox__label" for="s6">
+                                <input class="qx-checkbox" type="checkbox" name="id[]" value="5" id="s6">
+                                <span class="qx-icon-checked"></span>
+                            </label>
+                        </div>
+                        <a href=""><div class="del bg-color">删除</div></a>
+                    </div>
+                </div>
+            </div>
+            <div class="height90"></div>
+            <div class="row navbar-fixed-bottom">
+                <a href="" class="col-xs-12 pdh27 text-center fs36 lh1 text-color bg-white">+新增客户地址</a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('.weui-cells .re').each(function(index, el) {
+            new IScroll(el, {
+                eventPassthrough: true,
+                scrollX: true,
+                scrollY: false,
+                snap: true
+            });
+        });
+        $(function(){
+            var startX,endX,
+                thisBtn=$(this).find('.re-customerBtn');
+            $('.abs').bind('touchstart',function(event){
+                startX=event.changedTouches[0].pageX;
+            });
+            $('.abs').bind('touchend',function(event){
+                endX=event.changedTouches[0].pageX;
+
+                if(endX-startX>0){
+                    thisBtn.show();
+                }else if(endX-startX<0){
+                    thisBtn.hide();
+                }else{
+                    return
+                }
+            });
+
+            $('.qx-checkbox').on('click',function(){
+                if($(this).is(':checked')){
+                    console.log(1)
+                }else{
+                    console.log(2)
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

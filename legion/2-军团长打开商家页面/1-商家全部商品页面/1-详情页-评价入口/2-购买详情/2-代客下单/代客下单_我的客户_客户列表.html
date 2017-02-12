@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" href="../../../../../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../../../../../javascript/jquery-weui/jquery-weui.css">
+    <link rel="stylesheet" href="../../../../../stylesheet/common-rem.css">
+    <link rel="stylesheet" href="../../../../../stylesheet/color.css">
+    <script src="../../../../../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../../../../../javascript/common-rem.js"></script>
+    <script src="../../../../../javascript/jquery-weui/jquery-weui.min.js"></script>
+    <script src="../../../../../javascript/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../../../javascript/iscroll.js"></script>
+</head>
+<style type="text/css" media="screen">
+    .weui-label { width: 1.33333333rem; }
+    .abs1 { width: 12.10666667rem;}
+    .abs .weui-cell { width: 10.0rem; }
+    .abs .weui-cell .sel{left:0.25rem; top:0.45rem;}
+    .abs .weui-cell .address{top:0.45rem; right:0.3rem;}
+    .weui-cells>.re { height: 2.40666667rem; overflow: hidden; border-bottom:solid 1px #cecece; }
+    .del { padding:0.36rem 0.678rem; height: 2.40666667rem;  display: flex; align-items: center; justify-content: center;}
+    .re-customerBtn{top:0.55rem;right:0.36rem}
+</style>
+<body>
+<div id="page">
+    <header>
+        <div class="text-center head-top">
+            <a href=""><img src="../../../../../images/ico_back.png" alt=""></a>
+            <span>我的客户</span>
+            <img src="../../../../../images/ico_trans.png" alt="">
+        </div>
+        <div style="height:1.17333333rem;"></div>
+    </header><!-- /header -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="height30"></div>
+            <div class="col-xs-12 pdw36">
+                <div class="bg-white pdh10 img-rounded re" style="border:solid 0.04rem #eeeeee;">
+                    <input class="weui-input fs24 pdw10" type="text" name="" value="" placeholder="输入收货人姓名、手机号搜索">
+                    <a href=""><img src="../../../../../images/ico_search.png" alt="" class="abs" style="width:0.48rem;right:0.13333333rem;top:0.13333333rem"></a>
+                </div>
+            </div>
+        </div>
+        <!-- 收货人列表 -->
+        <div class="row">
+            <div class="col-xs-12 mgh20 nmb fs32">A</div>
+        </div>
+        <div class="row mgh20 weui-cells fs24">
+            <div class="re">
+                <div class="abs abs1">
+                    <div class="pull-left overhide">
+                        <div class="weui-cell re pdh20 border-b">
+                            <div class="weui-cell__hd sel abs">
+                                <label class="qx-checkbox__label re-customerBtn" for="s1">
+                                    <input class="qx-checkbox" type="checkbox" name="id[]" value="14" id="s1">
+                                    <span class="qx-icon-checked"></span>
+                                </label>
+                            </div>
+                            <div class="mgw40">
+                                <img class="img-circle" src="../../../../../images/shop_img.png" alt="" style="width:0.77333333rem" data-size="58*58">
+                            </div>
+                            <div class="weui-cell__hd">
+                                <div class="weui-label ellipsis">阿一</div>
+                            </div>
+                            <div class="weui-cell__hd abs address">15394536241</div>
+                        </div>
+                        <div class="col-xs-12 pdh20" style="padding-left: 2.15rem;">
+                            <p class="ellipsis pull-left" style="width:85%;">上海市静安区天目西路1086号</p>
+                            <a href="#" class="pull-right"><img src="../../../../../images/ico_revise.png" style="width:0.41rem;"/></a>
+                        </div>
+                    </div>
+                    <a href="" class="pull-right"><div class="del bg-color">删除</div></a>
+                </div>
+            </div>
+            <div class="re">
+                <div class="abs abs1">
+                    <div class="pull-left overhide">
+                        <div class="weui-cell re pdh20 border-b">
+                            <div class="weui-cell__hd sel abs">
+                                <label class="qx-checkbox__label re-customerBtn" for="s2">
+                                    <input class="qx-checkbox" type="checkbox" name="id[]" value="14" id="s2">
+                                    <span class="qx-icon-checked"></span>
+                                </label>
+                            </div>
+                            <div class="mgw40">
+                                <img class="img-circle" src="../../../../../images/shop_img.png" alt="" style="width:0.77333333rem" data-size="58*58">
+                            </div>
+                            <div class="weui-cell__hd">
+                                <div class="weui-label ellipsis">阿一</div>
+                            </div>
+                            <div class="weui-cell__hd abs address">15394536241</div>
+                        </div>
+                        <div class="col-xs-12 pdh20" style="padding-left: 2.15rem;">
+                            <p class="ellipsis pull-left" style="width:85%;">上海市静安区天目西路1086号</p>
+                            <a href="#" class="pull-right"><img src="../../../../../images/ico_revise.png" style="width:0.41rem;"/></a>
+                        </div>
+                    </div>
+                    <a href="" class="pull-right"><div class="del bg-color">删除</div></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 mgh20 nmb fs32">S</div>
+        </div>
+        <div class="row mgh20 weui-cells fs24">
+            <div class="re">
+                <div class="abs abs1">
+                    <div class="pull-left overhide">
+                        <div class="weui-cell re pdh20 border-b">
+                            <div class="weui-cell__hd sel abs">
+                                <label class="qx-checkbox__label re-customerBtn" for="s3">
+                                    <input class="qx-checkbox" type="checkbox" name="id[]" value="14" id="s3">
+                                    <span class="qx-icon-checked"></span>
+                                </label>
+                            </div>
+                            <div class="mgw40">
+                                <img class="img-circle" src="../../../../../images/shop_img.png" alt="" style="width:0.77333333rem" data-size="58*58">
+                            </div>
+                            <div class="weui-cell__hd">
+                                <div class="weui-label ellipsis">阿一</div>
+                            </div>
+                            <div class="weui-cell__hd abs address">15394536241</div>
+                        </div>
+                        <div class="col-xs-12 pdh20" style="padding-left: 2.15rem;">
+                            <p class="ellipsis pull-left" style="width:85%;">上海市静安区天目西路1086号</p>
+                            <a href="#" class="pull-right"><img src="../../../../../images/ico_revise.png" style="width:0.41rem;"/></a>
+                        </div>
+                    </div>
+                    <a href="" class="pull-right"><div class="del bg-color">删除</div></a>
+                </div>
+            </div>
+            <div class="re">
+                <div class="abs abs1">
+                    <div class="pull-left overhide">
+                        <div class="weui-cell re pdh20 border-b">
+                            <div class="weui-cell__hd sel abs">
+                                <label class="mgw20 nml qx-checkbox__label re-customerBtn" for="s8">
+                                    <input class="qx-checkbox" type="checkbox" name="id[]" value="14" id="s8">
+                                    <span class="qx-icon-checked"></span>
+                                </label>
+                            </div>
+                            <div class="mgw40">
+                                <img class="img-circle" src="../../../../../images/shop_img.png" alt="" style="width:0.77333333rem" data-size="58*58">
+                            </div>
+                            <div class="weui-cell__hd">
+                                <div class="weui-label ellipsis">阿一</div>
+                            </div>
+                            <div class="weui-cell__hd abs address">15394536241</div>
+                        </div>
+                        <div class="col-xs-12 pdh20" style="padding-left: 2.15rem;">
+                            <p class="ellipsis pull-left" style="width:85%;">上海市静安区天目西路1086号</p>
+                            <a href="#" class="pull-right"><img src="../../../../../images/ico_revise.png" style="width:0.41rem;"/></a>
+                        </div>
+                    </div>
+                    <a href="" class="pull-right"><div class="del bg-color">删除</div></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 mgh20 nmb fs32">W</div>
+        </div>
+        <div class="row mgh20 weui-cells fs24">
+            <div class="re">
+                <div class="abs abs1">
+                    <div class="pull-left overhide">
+                        <div class="weui-cell re pdh20 border-b">
+                            <div class="weui-cell__hd sel abs">
+                                <label class="qx-checkbox__label re-customerBtn" for="s14">
+                                    <input class="qx-checkbox" type="checkbox" name="id[]" value="14" id="s14">
+                                    <span class="qx-icon-checked"></span>
+                                </label>
+                            </div>
+                            <div class="mgw40">
+                                <img class="img-circle" src="../../../../../images/shop_img.png" alt="" style="width:0.77333333rem" data-size="58*58">
+                            </div>
+                            <div class="weui-cell__hd">
+                                <div class="weui-label ellipsis">阿一</div>
+                            </div>
+                            <div class="weui-cell__hd abs address">15394536241</div>
+                        </div>
+                        <div class="col-xs-12 pdh20" style="padding-left: 2.15rem;">
+                            <p class="ellipsis pull-left" style="width:85%;">上海市静安区天目西路1086号</p>
+                            <a href="#" class="pull-right"><img src="../../../../../images/ico_revise.png" style="width:0.41rem;"/></a>
+                        </div>
+                    </div>
+                    <a href="" class="pull-right"><div class="del bg-color">删除</div></a>
+                </div>
+            </div>
+            <div class="re">
+                <div class="abs abs1">
+                    <div class="pull-left overhide">
+                        <div class="weui-cell re pdh20 border-b">
+                            <div class="weui-cell__hd abs sel">
+                                <label class="qx-checkbox__label re-customerBtn" for="s15">
+                                    <input class="qx-checkbox" type="checkbox" name="id[]" value="14" id="s15">
+                                    <span class="qx-icon-checked"></span>
+                                </label>
+                            </div>
+                            <div class="mgw40">
+                                <img class="img-circle" src="../../../../../images/shop_img.png" alt="" style="width:0.77333333rem" data-size="58*58">
+                            </div>
+                            <div class="weui-cell__hd">
+                                <div class="weui-label ellipsis">阿一</div>
+                            </div>
+                            <div class="weui-cell__hd abs address">15394536241</div>
+                        </div>
+                        <div class="col-xs-12 pdh20" style="padding-left: 2.15rem;">
+                            <p class="ellipsis pull-left" style="width:85%;">上海市静安区天目西路1086号</p>
+                            <a href="#" class="pull-right"><img src="../../../../../images/ico_revise.png" style="width:0.41rem;"/></a>
+                        </div>
+                    </div>
+                    <a href="" class="pull-right"><div class="del bg-color">删除</div></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="height90"></div>
+        <div class="row navbar-fixed-bottom">
+            <a href="" class="col-xs-6 pdh27 text-center fs36 lh1 bg-gray">新增客户地址</a>
+            <a href="" class="col-xs-6 pdh27 text-center fs36 lh1 bg-color">确定</a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $('.weui-cells .re').each(function(index, el) {
+        new IScroll(el, {
+            eventPassthrough: true,
+            scrollX: true,
+            scrollY: false,
+            snap: true
+        });
+    });
+</script>
+</body>
+
+</html>

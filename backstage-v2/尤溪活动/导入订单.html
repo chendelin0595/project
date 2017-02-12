@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>导入订单</title>
+    <link rel="stylesheet" href="../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../stylesheet/color.css">
+    <link rel="stylesheet" href="../stylesheet/common.css">
+    <link rel="stylesheet" href="../stylesheet/yx-main.css">
+    <script src="../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../javascript/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../javascript/common.js"></script>
+</head>
+<body>
+<!-- 登录头部 -->
+<div class="row login-header bg-white mg0 fixed">
+    <div class="container pdh18 pdw0">
+        <div class="col-md-4 pdw0">
+            <img class="pull-left" src="../images/login_logo.png"/>
+            <div class="head-infoText border-l border-w2 pull-left">
+                <p class="fs16 pdh12">个人订单</p>
+            </div>
+        </div>
+        <div class="col-md-8 text-right yx-useState fs16 pdh8 pdw0">
+            <img src="../images/ico_nav3.png"/>
+            <span class="mgw10">15844747777</span>
+            <a href="#">退出登录</a>
+        </div>
+    </div>
+</div>
+
+<div class="container bg-white mgh118">
+    <div class="row bg-eeefef pdh15 fs14">
+        <a class="text-color" href="#">个人订单</a>&nbsp;&gt;
+        <span class="text-black">个人订单</span>
+    </div>
+    <div class="row text-center fs20 bold yx-imorder-info">
+        <div class="col-xs-6 pdh16 bg-color">
+            1&nbsp;&nbsp;上传客户文件
+        </div>
+        <div class="col-xs-6 pdh16 bg-cccccc">
+            2&nbsp;&nbsp;确认导入
+        </div>
+    </div>
+    <div class="bg-eeefef mgh20 pdh22 pdw38 fs16 overhide">
+        <h2 class="fs20 bold">1、下载导出模板</h2>
+        <p class="pull-left pdw32" style="line-height: 38px;">
+            模板表格使用说明:<br/>
+            1、导入文件仅支持xls格式以及xlsx格式;<br/>
+            2、商品货号不允许为空，一旦为空，则本行数据不允许导入;<br/>
+            3、手机号不允许为空，一旦为空或者重复，则本行数据不允许导入;<br/>
+            4、客户类型允许为空，为空则本行数据不允许导入;<br/>
+            5、一次最多上传2000条数据;
+        </p>
+        <a class="pull-right mgh60 pdw50 pdh26 bg-color border-radius fs20 bold hover" href="#">
+            <img src="images/yx-import-img1.png"/> 下载模板
+        </a>
+    </div>
+    <div class="bg-eeefef mgh20 pdh60 pdw38 fs16 overhide">
+        <h2 class="fs20 bold pull-left mgh30">2、上传订单模板</h2>
+        <a href="javascript:;" id="yx-unload" class="pull-right pdw50 pdh26 bg-color border-radius fs20 bold hover">
+            <img src="images/yx-import-img2.png"/> 上传模板
+        </a>
+    </div>
+    <div class="bg-eeefef mgh20 pdh20 pdw38 fs16 overhide">
+        <h2 class="fs20 bold">2、商品信息格式</h2>
+        <table cellspacing="0" cellpadding="0" class="table-list1 text-center border-a border-w2 bg-white mgh20 fs16">
+            <thead>
+                <tr class="border-b">
+                    <td>订单号</td>
+                    <td>收件人电话</td>
+                    <td>收件人名字</td>
+                    <td>商品货号</td>
+                    <td>所属军团</td>
+                    <td>订单类型</td>
+                    <td>结算价格</td>
+                    <td>买家备注</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- 上传模板遮罩 -->
+<div class="mask"></div>
+<div class="fixed yx-upload-box bg-white fs16 uploadBox" style=" display: none;">
+    <div class="yx-up-title">
+        <strong class="fs16 bold text-333333">上传文件</strong>
+    </div>
+    <div class="yx-up-con">
+        <form>
+            <p class="mgh15">允许上传附件类型(xls、xlsx)，最大不能超过6MB</p>
+            <label class="bg-color pdh8 pdw20" for="yx-up-file">+点击选择文件</label>
+            <input type="file" id="yx-up-file" style="display: none;"/>
+            <div class="text-right fs18 bold mgh50">
+                <a href="javascript:;" id="up-sure" class="bg-color pdw36 pdh10 mg10 border-radius no-border">确定上传</a>
+                <a href="javascript:;"   id="up-cancel" class="bg-gray pdw36 pdh10 border-radius no-border">取消</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- 上传成功 -->
+<div class="fixed yx-upload-box bg-white fs16" style=" display: none;">
+    <div class="yx-up-title">
+        <strong class="fs16 bold text-333333">上传文件</strong>
+    </div>
+    <div class="yx-up-con">
+        <form>
+            <p class="mgh15">允许上传附件类型(xls、xlsx)，最大不能超过6MB</p>
+            <div class="yx-up-proBox bg-eeefef text-center">
+                <div class="upPro-width bg-color"></div>
+                <p class="upPro-text pdh5">20%</p>
+            </div>
+            <div class="text-right fs18 bold mgh50">
+                <a href="javascript:;" class="bg-gray pdw36 pdh10 border-radius no-border">取消</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- 底部 -->
+<div class="yx-footer fixed text-center" style="margin-top: 122px;">
+    <img src="images/yx-f-logo1.png"/>
+    <p class="fs12 mgh16 text-939393">Copyright © 2014-2016  闽ICP备15018819号-1</p>
+</div>
+
+<script>
+    $(function(){
+        var upBox= $('.uploadBox'),mask=$('.mask');
+        //上传显示
+        $('#yx-unload').on('click',function(){
+            mask.show();
+            upBox.slideDown();
+        });
+
+        //取消
+        $('#up-cancel').on('click',function(){
+            mask.hide();
+            upBox.slideUp();
+        })
+        //确定
+        $('#up-sure').on('click',function(){
+            $('#up-cancel').trigger('click');
+        })
+
+        //进度条值
+        var proWidth=$('.upPro-width'),
+            proText=$('.upPro-text').html().split('%')[0];
+        proWidth.css('width',proText+'%')
+    });
+</script>
+</body>
+</html>

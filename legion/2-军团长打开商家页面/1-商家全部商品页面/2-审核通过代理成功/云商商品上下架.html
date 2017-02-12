@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" href="../../../javascript/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../stylesheet/weui/weui.min.css">
+    <link rel="stylesheet" href="../../../javascript/jquery-weui/jquery-weui.css">
+    <link rel="stylesheet" href="../../../stylesheet/common-rem.css">
+    <link rel="stylesheet" href="../../../stylesheet/color.css">
+    <link rel="stylesheet" href="../../../stylesheet/main.css">
+    <script src="../../../javascript/jquery-3.1.1.min.js"></script>
+    <script src="../../../javascript/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../javascript/jquery-weui/jquery-weui.min.js"></script>
+    <script src="../../../javascript/iscroll.js"></script>
+    <script src="../../../javascript/common-rem.js"></script>
+    <script src="../../../javascript/common.js"></script>
+</head>
+<body>
+<div id="page">
+    <div class="container-fluid">
+        <div class="row bg-white pdh30">
+            <div class="col-xs-12">
+                <img src="../../../images/shop_img.png" class="shop-headimg pull-left img-circle">
+                <div class="pull-left mgw25 nmr">
+                    <p class="mgh15 fs36 text-333333">加加食品旗舰店</p>
+                    <p><img src="../../../images/ico_approve.png" alt="" style="width:1.28rem"></p>
+                </div>
+                <div class="pull-right mgh30">
+                    <a href="tel:110" class="mgw50 nml"><img src="../../../images/ico_tel.png" alt="" style="width:0.76rem"></a>
+                    <a onclick="showQR()"><img src="../../../images/ico_wx.png" alt="" style="width:0.76rem"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 搜索 -->
+        <div class="row mgh20">
+            <div class="col-xs-12 pdw36">
+                <div class="bg-white pdh10 img-rounded re" style="border: 0.04rem solid rgb(238, 238, 238);">
+                    <input class="weui-input fs24 pdw10" type="text" name="" value="" placeholder="输入收货人姓名、手机号搜索">
+                    <a href=""><img src="../../../images/ico_search.png" alt="" class="abs" style="width:0.48rem;right:0.13333333rem;top:0.13333333rem"></a>
+                </div>
+            </div>
+        </div>
+        <ul class="row weui-flex text-center mgb0 bg-white pro-list fs28 re border-b border-w2">
+            <li class="weui-flex__item">
+                <div class="btn-group w-100">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-default dropdown-toggle w-100 no-border pdh20 fs36" data-toggle="dropdown">
+                        <strong class="nw text-color">云商已上架</strong>
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu no-border no-radius pdh0" role="menu" aria-labelledby="btnGroupDrop1" style="width:10rem;">
+                        <li class="active"><a href="#" class="border-b pdh20">云商已上架</a></li>
+                        <li><a href="#" class="border-b pdh20">云商已下架</a></li>
+                    </ul>
+                </div>
+            </li>
+            <a href="军团商品上下架.html" class="weui-flex__item">
+                <li>
+                    <span class="pdh20 pdw5 re fs36" style="display: inline-block;">军团已上架</span>
+                </li>
+            </a>
+        </ul>
+        <div class="p-l row weui-cells nmt">
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label class="mgw20 nml qx-checkbox__label" for="s21">
+                        <input class="qx-checkbox" type="checkbox" name="id[]" value="13" id="s21">
+                        <span class="qx-icon-checked"></span>
+                    </label>
+                </div>
+                <div class="weui-cell__hd mgw27 nml">
+                    <img src="../../../images/p3.png" alt="" style="width:1.70666667rem" data-size="128*128">
+                </div>
+                <div class="weui-cell__bd lh1">
+                    <p class="fs28 bold ellipsis">欣欣食品 芝麻/海苔/香葱/原味凤凰卷欣欣食品 芝麻/海苔/香葱/原味凤凰卷欣欣食品 芝麻/海苔/香葱/原味凤凰卷</p>
+                    <p class="mgh25 fs24 text-muted ellipsis">转发345次，已销售5555件</p>
+                    <p class="fs24 text-muted">能赚3元 <span class="pull-right">采购 <font class="text-color">¥ 9.90</font></span></p>
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label class="mgw20 nml qx-checkbox__label" for="s21">
+                        <input class="qx-checkbox" type="checkbox" name="id[]" value="13" id="s21">
+                        <span class="qx-icon-checked"></span>
+                    </label>
+                </div>
+                <div class="weui-cell__hd mgw27 nml">
+                    <img src="../../../images/p3.png" alt="" style="width:1.70666667rem" data-size="128*128">
+                </div>
+                <div class="weui-cell__bd lh1">
+                    <p class="fs28 bold ellipsis">欣欣食品 芝麻/海苔/香葱/原味凤凰卷欣欣食品 芝麻/海苔/香葱/原味凤凰卷欣欣食品 芝麻/海苔/香葱/原味凤凰卷</p>
+                    <p class="mgh25 fs24 text-muted ellipsis">转发345次，已销售5555件</p>
+                    <p class="fs24 text-muted">能赚3元 <span class="pull-right">采购 <font class="text-color">¥ 9.90</font></span></p>
+                </div>
+            </div>
+        </div>
+        <div class="height150"></div>
+        <div class="row fs36 text-center maxWidth navbar-fixed-bottom">
+            <div id="put-batch" class="col-xs-6 pdh30  bg-white text-color">批量操作</div>
+            <div id="put-all" class="col-xs-6 pdh30 bg-color">一键上架</div>
+        </div>
+    </div>
+    <!-- 二维码 -->
+    <div id="qrcode" class="container-fluid mask">
+        <div class="height130"></div>
+        <div class="row">
+            <div class="center-block bg-white img-rounded overhide" style="width:5.33333333rem">
+                <div class="wf bg-white">
+                    <img class="pd27" src="../../../images/wxqrcode.png" alt="" width="100%">
+                    <div class="col-xs-12"><div class="col-xs-12 border-b"></div></div>
+                    <div class="pdh36 col-xs-12 text-center fs24 text-black">长按识别二维码联系商家微信</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="height60"></div>
+                <div class="col-xs-12 text-center">
+                    <a onclick="closeQR()"><img src="../../../images/ico_close3.png" alt="" style="width:0.77333333rem"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function showQR(){
+        $('#qrcode').fadeIn('fast');
+    }
+    function closeQR(){
+        $('#qrcode').fadeOut('fast');
+    }
+    var oSelALL=$('#put-all');
+    $('#put-batch').on('click', function(event) {
+        event.preventDefault();
+        var flag = $(this).data('flag');
+        if (flag == undefined || flag) {
+            $('.p-l').addClass('select');
+            $(this).text('选中上架');
+            oSelALL.text('上架');
+            $(this).data('flag',false);
+        }else{
+            $.post('../../../../test.php', $('[type=checkbox]:checked'), function(data, textStatus, xhr) {
+                /*optional stuff to do after success */
+            });
+            $('.p-l').removeClass('select');
+            $(this).text('批量上架');
+            oSelALL.text('一键上架');
+            $('[type=checkbox]').prop('checked', false);
+            $(this).data('flag',true);
+        }
+    });
+    $('#put-all').on('click', function(event) {
+        event.preventDefault();
+        $.post('../../../../test.php', $('[type=checkbox]'), function(data, textStatus, xhr) {
+            /*optional stuff to do after success */
+        });
+    });
+
+    //选择上下架
+    var oListBtn=$('#btnGroupDrop1');
+    $('body').on('click','ul.dropdown-menu li',function(){
+        var liHtml=$(this).text();
+        $(this).addClass('active').siblings().removeClass('active');
+        oListBtn.find('strong').text(liHtml);
+    })
+</script>
+</body>
+
+</html>
